@@ -12,7 +12,7 @@ int main(void){
     
   for(int i = 0; i < no_sudoku; i++){
 
-          = inputSudoku(no_sudoku, diff_level);
+          = inputSudoku();
 
        generateSudokuTemplate(sudoku_template);
 
