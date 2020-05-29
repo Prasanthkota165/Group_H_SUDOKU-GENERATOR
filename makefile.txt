@@ -1,0 +1,34 @@
+CC = gcc
+
+#CALLING DECLARATION FILES LOCATION 
+INCLUDEOUTPUT = -I../include/output_sudoku.h
+
+#CREATE BIN AND BUILD FOLDERS TO SAVE THE COMPILED FILES DURING RUNTIME
+bin_folder := $(shell mkdir -p bin)
+build_folder := $(shell mkdir -p build)
+results_folder := $(shell mkdir -p output)
+
+#TARGET TO COMPILE ALL THE TESTS TOGETHER (NOT SIMULATOR)
+sudoku_output.o: src/sudoku_output.c
+	gcc -g -c $(INCLUDEOUTPUT) src/sudoku_output.c -o build/sudoku_output.o
+
+#REST OF MAKEFILE TO BE COMPLETED
+main_top.o: top_model/main.cpp
+	$(CC) -g -c $(INCLUDECADMIUM) $(INCLUDEDESTIMES) top_model/main.cpp -o build/main_top.o
+	
+main_subnet_test.o: test/main_subnet_test.cpp
+	$(CC) -g -c  $(INCLUDECADMIUM) $(INCLUDEDESTIMES) test/main_subnet_test.cpp -o build/main_subnet_test.o
+
+#TARGET TO COMPILE ONLY ABP SIMULATOR
+sneaks: main_top.o message.o 
+	$(CC) -g -o bin/SNEAKS.OUT build/main_top.o build/message.o 
+
+tests: main_subnet_test.o  message.o
+		$(CC) -g -o bin/SUBNET_TEST build/main_subnet_test.o build/message.o
+			
+#TARGET TO COMPILE EVERYTHING (ABP SIMULATOR + TESTS TOGETHER)
+all: snakes tests
+
+#CLEAN COMMANDS
+clean: 
+	rm -f bin/* build/*
