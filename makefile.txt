@@ -6,7 +6,7 @@ INCLUDEOUTPUT = -I../include/output_sudoku.h
 #CREATE BIN AND BUILD FOLDERS TO SAVE THE COMPILED FILES DURING RUNTIME
 bin_folder := $(shell mkdir -p bin)
 build_folder := $(shell mkdir -p build)
-results_folder := $(shell mkdir -p output)
+output_folder := $(shell mkdir -p output)
 
 #TARGET TO COMPILE ALL THE TESTS TOGETHER (NOT SIMULATOR)
 sudoku_output.o: src/sudoku_output.c
