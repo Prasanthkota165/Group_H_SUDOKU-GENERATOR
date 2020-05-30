@@ -18,7 +18,7 @@
 #include <stdlib.h>
 #include <errno.h>
 
-void output_sudoku(int sudoku_solution[][9], int sudoku_puzzle[][9], 
+void output_sudoku(int sudoku_solution[9][9], int sudoku_puzzle[9][9], 
                         int diff_lvl){
            
     static int output_count = 1;/*Output p_counter indicating the number of times the 
