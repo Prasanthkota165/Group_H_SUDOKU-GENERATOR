@@ -12,8 +12,8 @@ output_folder := $(shell mkdir -p output)
 output_sudoku.o: src/output_sudoku.c
 	$(CC) -g $(INCLUDESUDOKU) -c ./src/output_sudoku.c -o ./build/output_sudoku.o
 
-output_sudoku_test.o: test/src/output_sudoku_test.c
-	$(CC) -g $(INCLUDESUDOKU) -c test/src/output_sudoku_test.c -o ./build/output_sudoku_test.o
+#output_sudoku_test.o: test/src/output_sudoku_test.c
+#	$(CC) -g $(INCLUDESUDOKU) -c test/src/output_sudoku_test.c -o ./build/output_sudoku_test.o
 
 #REST OF MAKEFILE TO BE COMPLETED
 #main_top.o: top_model/main.cpp
