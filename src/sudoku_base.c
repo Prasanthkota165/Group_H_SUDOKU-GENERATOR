@@ -3,9 +3,6 @@
 #include <stdlib.h>
 #include "../include/sudoku.h"
 
-void output_sudoku(int sudoku_solution [ROWS][COLS], int sudoku_puzzle [ROWS][COLS], int diff_lvl);
-void create_sudoku_file(int sudoku[ROWS][COLS], char* sudoku_type, int diff_lvl, int output_count);
-
 
 int main(void){
     int no_sudoku, numbers_tobe_shown, diff_level;
