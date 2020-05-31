@@ -59,8 +59,8 @@ int main(void){
  
        if (applySolver(masked_sudoku)){
            outputSudoku(masked_sudoku, sudoku_solution);
-       }else
-       {
+       }
+       else{
            applyMask(rearranged_sudoku, numbers_tobe_shown, masked_sudoku);
        }
 
