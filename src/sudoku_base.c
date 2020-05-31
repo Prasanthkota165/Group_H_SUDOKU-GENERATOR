@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include "../include/sudoku.h"
 
-
+void output_sudoku(int sudoku_solution [ROWS][COLS], int sudoku_puzzle [ROWS][COLS], int diff_lvl);
+void create_sudoku_file(int sudoku[ROWS][COLS], char* sudoku_type, int diff_lvl, int output_count);
 
 
 int main(void){
@@ -17,7 +18,7 @@ int main(void){
    
   for(int i = 0; i < no_sudoku; i++){
 
-          = inputSudoku();
+          = input_sudoku();
 
     switch(diff_level){
         case 0:
@@ -45,23 +46,23 @@ int main(void){
         }
     }
 
-       generateSudokuTemplate(sudoku_template);
+       generate_sudoku_template(sudoku_template);
 
-       rearrangeColsRows(sudoku_template, rearranged_sudoku);
+       rearrange_cols_rows(sudoku_template, rearranged_sudoku);
    
-       if (testSudokuRules(rearranged_sudoku)){
-           applyMask(rearranged_sudoku, numbers_tobe_shown, masked_sudoku);
+       if (test_sudoku_rules(rearranged_sudoku)){
+           apply_mask(rearranged_sudoku, numbers_tobe_shown, masked_sudoku);
        }
        else{
-          generateSudokuTemplate(sudoku_template);
+          generate_sudoku_template(sudoku_template);
        }
    
  
-       if (applySolver(masked_sudoku)){
-           outputSudoku(masked_sudoku, sudoku_solution);
+       if (apply_solver(masked_sudoku)){
+           output_sudoku(masked_sudoku, sudoku_solution, diff_level);
        }
        else{
-           applyMask(rearranged_sudoku, numbers_tobe_shown, masked_sudoku);
+           apply_mask(rearranged_sudoku, numbers_tobe_shown, masked_sudoku);
        }
 
    }
