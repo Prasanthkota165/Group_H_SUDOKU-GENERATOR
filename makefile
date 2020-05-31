@@ -29,8 +29,8 @@ output_sudoku.o: src/output_sudoku.c
 #test: main_subnet_test.o  message.o
 #		$(CC) -g -o bin/SUBNET_TEST build/main_subnet_test.o build/message.o
 
-testoutput : output_sudoku_test.o output_sudoku.o
-		$(CC) -g -o bin/SUDOKU_OUTPUT.exe ./build/output_sudoku_test.o ./build/output_sudoku.o
+#testoutput : output_sudoku_test.o output_sudoku.o
+#		$(CC) -g -o bin/SUDOKU_OUTPUT.exe ./build/output_sudoku_test.o ./build/output_sudoku.o
 			
 #TARGET TO COMPILE EVERYTHING (ABP SIMULATOR + TESTS TOGETHER)
 #all: snakes tests
