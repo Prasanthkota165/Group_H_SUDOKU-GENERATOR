@@ -3,7 +3,7 @@
 
 #define ROWS 9
 #define COLS 9
-
+ 
 
 int *input_sudoku();
 void generate_sudoku_template(int sudoku_temp[ROWS][COLS]);
