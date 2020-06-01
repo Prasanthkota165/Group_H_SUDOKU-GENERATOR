@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void input_sudoku(int arr[2]);
+void input_sudoku(int *diff_level,int *no_sudoku);
 
 
 /*
@@ -16,42 +16,35 @@ void input_sudoku(int arr[2]);
 * Author: Rishith Rao - rishithrao@cmail.carleton.ca
 *
 **/
-void input_sudoku(int arr[2]) { 
-{
-  int diff_level,no_sudoku;
+void input_sudoku(int *diff_level,int *no_sudoku) { 
+
+int i,j;
+printf("....................Welcome to Sudoku Generator......................\n");
  /*This input askes for the difficulty level*/
   while(1){
     printf("Enter difficulty level as(0,1,2 or 3):\nEasy:      0\nMedium:    1\nHard:      2\nVery Hard: 3\n");
-    scanf("%d", &diff_level);
-    if (diff_level != 0 && diff_level !=1 && diff_level !=2 && diff_level !=3) 
-            {
+    scanf("%d", &i);
+    if(i != 0 && i !=1 && i !=2 && i !=3){
               
               printf("..............Invalid input.Please try again.......................\n\n");
-            } 
-
-    else    {
+              } 
+    else{
               
-              break;
-            }
-
-  }
+         break;
+         } }
 /*This input askes for the number of sudokus that a user wants to generate*/
-  while(2)
-  {
+  while(2){
     printf("Enter the number of sudokus you would like to print between 1 to 40:\n");
-    scanf("%d",&no_sudoku);
-    if(!(no_sudoku <= 40) || !(no_sudoku >= 1)) 
-          {                       
+    scanf("%d",&j);
+    if(!(j <= 40) || !(j >= 1)){                       
 	    printf("................Invalid no of sudokus.Please try again...............\n\n");           
 	  }
 
-     else {
+     else{
             break;
-          }
-
-  }
- arr[0]= diff_level;
- arr[1]= no_sudoku;
-}}
+          } }
+*diff_level=i;
+*no_sudoku=j;
+}
 
 
