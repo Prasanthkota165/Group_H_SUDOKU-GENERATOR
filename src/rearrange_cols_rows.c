@@ -10,32 +10,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#include "../include/rearrange_cols_rows.h"
 #include "../include/sudoku.h"
-
-int main(void){
-  int sudoku_template[9][9] = {{1,2,3,4,5,6,7,8,9},
-		     {4,5,6,7,8,9,1,2,3},
-		     {7,8,9,1,2,3,4,5,6},
-		     {2,3,1,5,6,4,8,9,7},
-		     {5,6,4,8,9,7,2,3,1},
-		     {8,9,7,2,3,1,5,6,4},
-		     {3,1,2,6,4,5,9,7,8},
-		     {6,4,5,9,7,8,3,1,2},
-		     {9,7,8,3,1,2,6,4,5}};
-  int rearranged_sudoku[9][9];
-
-  rearrange_cols_rows(sudoku_template, rearranged_sudoku);
-  int i,j;
-  for (i=0;i<9;i++){
- 	for (j=0;j<9;j++){
-		printf("%d ",rearranged_sudoku[i][j]);
-	}
-	printf("\n");
-  }
- 
- return 0;
-}
 
 void rearrange_cols_rows(int sudoku_template[][9], int rearranged_sudoku[][9]){
   int i,j;
@@ -68,6 +43,8 @@ void rearrange_cols_rows(int sudoku_template[][9], int rearranged_sudoku[][9]){
 
 }
 
+  // This function is used to generate random numbers between [1,9].
+
 int choose_number(int rangeLow, int rangeHigh) {
 
   int i;
@@ -79,35 +56,57 @@ int choose_number(int rangeLow, int rangeHigh) {
   return num;
 }
 
-
+  // This function will swap any 3 different numbers in the sudoku template.
 
 void swap(int table[][9]){
  
   int interchange_1;
-  int interchange_2;	
+  int interchange_2;
+  int interchange_3;	
   srand(time(0));	
   interchange_1= choose_number(1,9);
   interchange_2= choose_number(1,9);
-  if(interchange_1 == interchange_2){
-	interchange_2 = choose_number(1,9);	
-	}
-  int i,j;
-
-  for(i=0;i<9;i++){
-  	for(j=0;j<9;j++){
-		if (table[i][j]==interchange_1){
+  interchange_3= choose_number(1,9);
+  while(1){
+	// This condition is to make sure all the 3 numbers are different.
 	
-			table[i][j]=interchange_2;
+  	if((interchange_1 != interchange_2) && \
+	  (interchange_2 != interchange_3) && \
+	  (interchange_1 != interchange_3)){
+  	  int i,j;
+  		for(i=0;i<9;i++){
+  			for(j=0;j<9;j++){
+				if (table[i][j]==interchange_1){
+					table[i][j]=interchange_2;
 		
-		} else if (table[i][j]==interchange_2){
+				} else if (table[i][j]==interchange_2){
 
-			table[i][j]=interchange_1;
+					table[i][j]=interchange_3;
 			
-		} 
- 	}
+				} else if (table[i][j]==interchange_3){
+					
+					table[i][j] = interchange_1;
+				}
+				
+ 			}
+  		}
+ 	break;	
+	} else if((interchange_1 == interchange_2) || \
+		  (interchange_2 == interchange_3) || \
+		  (interchange_1 == interchange_3)){
+		interchange_1= choose_number(1,9);
+  		interchange_2= choose_number(1,9);
+		interchange_3= choose_number(1,9);	
+	}
   }
- 
 }
+
+/**
+* This function is to change the randomly rearrange columns:
+		1, 2 and 3 within themselves;
+		4, 5 and 6 within themselves; and
+		7, 8 and 9 within themselves. 
+*/
 
 void change_columns(int col_matrix[][9], int p, int q, int r){
   int i,count;
@@ -120,6 +119,13 @@ void change_columns(int col_matrix[][9], int p, int q, int r){
 
 }
 
+/**
+* This function is to change the randomly rearrange rows:
+		1, 2 and 3 within themselves;
+		4, 5 and 6 within themselves; and
+		7, 8 and 9 within themselves. 
+*/
+
 void change_rows(int row_matrix[][9], int x, int y, int z){
   int i, count;
   for(i=0;i<9;i++){
@@ -131,6 +137,8 @@ void change_rows(int row_matrix[][9], int x, int y, int z){
 
 }
 
+  /* This function is used to randomly rearrange the sudoku template
+     in 3 column groups of size 9x3. */
 
 void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][3]){
   int i,j;
@@ -150,7 +158,6 @@ void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][
 		l++;
 	} 
   } 
- 
 
   for(i=0;i<9;i++){
 	for(j=0;j<3;j++){
@@ -169,6 +176,9 @@ void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][
   } 
 
 }
+
+  /* This function is used to randomly rearrange the sudoku template 
+     in 3 row groups of size 3x9.*/
 
 void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]){
   int i,j;
