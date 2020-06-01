@@ -7,7 +7,7 @@
 /**
 * apply_mask_test 
 * --------------- 
-* Tests apply_mask function
+* It tests apply_mask function
 * Language C
 * Author Gabriel Seyoum, Group-H member, student # 100333091
 * Date May 31, 2020
