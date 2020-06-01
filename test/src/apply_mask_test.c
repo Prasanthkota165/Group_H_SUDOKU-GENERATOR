@@ -2,8 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-#include "/../../include/sudoku.h"
-#include "/../../src/apply_mask.c"
+#include "../../src/apply_mask.c"
 
 /**
 * apply_mask_test 
