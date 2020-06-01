@@ -11,7 +11,8 @@ output_folder := $(shell mkdir -p output)
 #TARGET TO COMPILE ALL THE TESTS TOGETHER 
 output_sudoku.o: src/output_sudoku.c
 	$(CC) -g $(INCLUDESUDOKU) -c ./src/output_sudoku.c -o ./build/output_sudoku.o
-
+rearrange_cols_rows.o: src/rearrange_cols_rows.c
+	$(CC) -g $(INCLUDESUDOKU) -c ./src/rearrange_cols_rows.c -o ./build/rearrange_cols_rows.o
 #output_sudoku_test.o: test/src/output_sudoku_test.c
 #	$(CC) -g $(INCLUDESUDOKU) -c test/src/output_sudoku_test.c -o ./build/output_sudoku_test.o
 
