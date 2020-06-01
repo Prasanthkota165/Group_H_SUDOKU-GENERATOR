@@ -15,6 +15,12 @@
 void rearrange_cols_rows(int sudoku_template[][9], int rearranged_sudoku[][9]){
   int i,j;
   int a[9][9];
+  int b_1[9][3];
+  int b_2[9][3];
+  int b_3[9][3];
+  int c_1[3][9];
+  int c_2[3][9];
+  int c_3[3][9];
   for (i=0;i<9;i++){
  	for (j=0;j<9;j++){
 		a[i][j] = sudoku_template[i][j];
@@ -27,12 +33,6 @@ void rearrange_cols_rows(int sudoku_template[][9], int rearranged_sudoku[][9]){
   change_rows(a,0,1,2);
   change_rows(a,3,4,5);
   change_rows(a,6,7,8);
-  int b_1[9][3];
-  int b_2[9][3];
-  int b_3[9][3];
-  int c_1[3][9];
-  int c_2[3][9];
-  int c_3[3][9];
   col_groups(a,b_1,b_2,b_3);
   row_groups(a,c_1,c_2,c_3);
   for (i=0;i<9;i++){
