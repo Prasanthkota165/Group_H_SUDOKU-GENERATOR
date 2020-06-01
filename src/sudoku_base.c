@@ -6,7 +6,7 @@
 
 int main(void){
     int no_sudoku, numbers_tobe_shown, diff_level;
-    int sudoku_template [ROWS][COLS];
+    int sudoku_template[ROWS][COLS];
     int rearranged_sudoku[ROWS][COLS];
     bool tester;
     int masked_sudoku[ROWS][COLS];
