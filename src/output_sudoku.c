@@ -1,5 +1,5 @@
-/*
-* TITLE      : output_sudoku.c 
+/**
+* @file output_sudoku.c 
 *
 * Purpose   : Contains the functions to create the sudoku file for the Sudoku 
 *             Generator program. 
@@ -10,11 +10,11 @@
 * GitHub ID : Mathieufalardeau3 
 * Date      : 29 May 2020
 *
-**/
-#if defined(_WIN32)||defined (WIN32) //Define if Microsoft OS                           
+*/
+#if defined(_WIN32)||defined (WIN32) //<Define if Microsoft OS                           
 #include <direct.h>
 #include "..\\include\\sudoku.h"
-#else //Define if Linux OS 
+#else //Define if Linux OS*/ 
 #include "../include/sudoku.h"
 #include <sys/stat.h>
 #endif
@@ -23,9 +23,14 @@
 #include <string.h>
 #include <stdlib.h>
 
-
-
-
+/**
+ *  Creates the two Sudoku CSV files for the Sudoku Puzzle and Solution in 
+ *  an ../output folder. 
+ * 
+ *  @param[in] sudoku_solution The Sudoku Solution that will be created.
+ *  @param[in] sudoku_puzzle The Sudoku Puzzle that will be created.
+ *  @param[in] diff_lvl The difficulty level of the Sudoku Puzzle.
+ */
 void output_sudoku(int sudoku_solution[9][9], int sudoku_puzzle[9][9], 
                         int diff_lvl){
            
@@ -34,10 +39,10 @@ void output_sudoku(int sudoku_solution[9][9], int sudoku_puzzle[9][9],
                                     function creates a Sudokus puzzle and Solution
                                     during the entire run of the program*/
     
-    #if defined(_WIN32)||defined (WIN32) //Create output folder if Microsoft OS                           
+    #if defined(_WIN32)||defined (WIN32) /*Create output folder if Microsoft OS*/                           
     mkdir("..\\output");                    
     #else 
-    mkdir("../output",0777); //Create output folder if Linux OS 
+    mkdir("../output",0777); /*Create output folder if Linux OS */
     #endif
     
     /*Creates the Sudoku Puzzle and Sudoku Solution files*/
@@ -45,19 +50,26 @@ void output_sudoku(int sudoku_solution[9][9], int sudoku_puzzle[9][9],
 
     create_sudoku_file(sudoku_puzzle, "puzzle", diff_lvl, output_count);
     
-    
-    
-    output_count++; //Increments the output p_counter 
+    output_count++; /*Increments the output p_counter*/ 
 
     return;
 }
 
+/**
+ *  Creates a Sudoku file for the output_sudoku() function.
+ *  
+ *  @param[in] sudoku The Sudoku with the data inside.
+ *  @param[in] sudoku_type The Sudoku type chosen by the user.
+ *  @param[in] diff_lvl The difficulty level of the Sudoku.
+ *  @param[in] output_count The current number of times a Sudoku pair has been 
+ *              created. 
+ */
 void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl, 
                             int output_count){
     
     /*Pointers*/
     char *p_file_name = (char*)malloc(50*sizeof(char));
-    char *p_counter = (char*)malloc(sizeof(int)); //String of the Output counter 
+    char *p_counter = (char*)malloc(sizeof(int)); /*String of the Output counter */
 	FILE *p_sudoku_file; 
     
     /*Variables*/
@@ -65,7 +77,7 @@ void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl,
     int k = 0;
 
     /*Initial Naming of the ouput file*/
-    #if defined(_WIN32)||defined(WIN32) //Assign Microsoft OS file name path   
+    #if defined(_WIN32)||defined(WIN32) /*Assign Microsoft OS file name path*/   
     strcpy(p_file_name, "..\\output\\sudoku_");
     strcat(p_file_name,sudoku_type);
     #else
@@ -87,7 +99,7 @@ void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl,
                                         file name*/
     strcat(p_file_name, ".csv"); /*Concatenates the csv file type to the 
                                     file name*/
-    free(p_counter); //Releases memory space of the counter
+    free(p_counter); /*Releases memory space of the counter*/
 
     printf("The file %s has been created.\n", p_file_name);
     

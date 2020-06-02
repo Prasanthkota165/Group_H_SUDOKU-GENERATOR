@@ -1,0 +1,96 @@
+\hypertarget{rearrange__cols__rows_8c}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/src/rearrange\+\_\+cols\+\_\+rows.c File Reference}
+\label{rearrange__cols__rows_8c}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/rearrange\_cols\_rows.c@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/rearrange\_cols\_rows.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/sudoku.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rearrange__cols__rows_8c_a51a78912851d873ccf8255c30dc4b9f8}{rearrange\+\_\+cols\+\_\+rows}} (int sudoku\+\_\+template\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+int \mbox{\hyperlink{rearrange__cols__rows_8c_a5550586cdc7038d979855b3db697c79e}{choose\+\_\+number}} (int range\+Low, int range\+High)
+\item 
+void \mbox{\hyperlink{rearrange__cols__rows_8c_aa1dee361c87260573c757b65119d7487}{swap}} (int table\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+void \mbox{\hyperlink{rearrange__cols__rows_8c_a44b4aeaa82d2fa515890756daa5d074a}{change\+\_\+columns}} (int col\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int p, int q, int r)
+\item 
+void \mbox{\hyperlink{rearrange__cols__rows_8c_a3f58aa094c8bb90fbc1c691bde96df5a}{change\+\_\+rows}} (int row\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int x, int y, int z)
+\item 
+void \mbox{\hyperlink{rearrange__cols__rows_8c_a8c2faf5d403db315f1bfbd6922b7835b}{col\+\_\+groups}} (int column\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int b\+\_\+1\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}, int b\+\_\+2\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}, int b\+\_\+3\mbox{[}9\mbox{]}\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{rearrange__cols__rows_8c_ac277e9e80c0b5026d332d26fd82915ac}{row\+\_\+groups}} (int r\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int c\+\_\+1\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}, int c\+\_\+2\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}, int c\+\_\+3\mbox{[}3\mbox{]}\mbox{[}9\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rearrange__cols__rows_8c_a44b4aeaa82d2fa515890756daa5d074a}\label{rearrange__cols__rows_8c_a44b4aeaa82d2fa515890756daa5d074a}} 
+\index{rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}!change\_columns@{change\_columns}}
+\index{change\_columns@{change\_columns}!rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{change\_columns()}{change\_columns()}}
+{\footnotesize\ttfamily void change\+\_\+columns (\begin{DoxyParamCaption}\item[{int}]{col\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{p,  }\item[{int}]{q,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+This function is to change the randomly rearrange columns\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. 
+
+Definition at line 111 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__cols__rows_8c_a3f58aa094c8bb90fbc1c691bde96df5a}\label{rearrange__cols__rows_8c_a3f58aa094c8bb90fbc1c691bde96df5a}} 
+\index{rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}!change\_rows@{change\_rows}}
+\index{change\_rows@{change\_rows}!rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{change\_rows()}{change\_rows()}}
+{\footnotesize\ttfamily void change\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{row\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+This function is to change the randomly rearrange rows\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. 
+
+Definition at line 129 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__cols__rows_8c_a5550586cdc7038d979855b3db697c79e}\label{rearrange__cols__rows_8c_a5550586cdc7038d979855b3db697c79e}} 
+\index{rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}!choose\_number@{choose\_number}}
+\index{choose\_number@{choose\_number}!rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{choose\_number()}{choose\_number()}}
+{\footnotesize\ttfamily int choose\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{range\+Low,  }\item[{int}]{range\+High }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__cols__rows_8c_a8c2faf5d403db315f1bfbd6922b7835b}\label{rearrange__cols__rows_8c_a8c2faf5d403db315f1bfbd6922b7835b}} 
+\index{rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}!col\_groups@{col\_groups}}
+\index{col\_groups@{col\_groups}!rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{col\_groups()}{col\_groups()}}
+{\footnotesize\ttfamily void col\+\_\+groups (\begin{DoxyParamCaption}\item[{int}]{column\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{b\+\_\+1\mbox{[}9\mbox{]}\mbox{[}3\mbox{]},  }\item[{int}]{b\+\_\+2\mbox{[}9\mbox{]}\mbox{[}3\mbox{]},  }\item[{int}]{b\+\_\+3\mbox{[}9\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__cols__rows_8c_a51a78912851d873ccf8255c30dc4b9f8}\label{rearrange__cols__rows_8c_a51a78912851d873ccf8255c30dc4b9f8}} 
+\index{rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}!rearrange\_cols\_rows@{rearrange\_cols\_rows}}
+\index{rearrange\_cols\_rows@{rearrange\_cols\_rows}!rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{rearrange\_cols\_rows()}{rearrange\_cols\_rows()}}
+{\footnotesize\ttfamily void rearrange\+\_\+cols\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+template\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__cols__rows_8c_ac277e9e80c0b5026d332d26fd82915ac}\label{rearrange__cols__rows_8c_ac277e9e80c0b5026d332d26fd82915ac}} 
+\index{rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}!row\_groups@{row\_groups}}
+\index{row\_groups@{row\_groups}!rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{row\_groups()}{row\_groups()}}
+{\footnotesize\ttfamily void row\+\_\+groups (\begin{DoxyParamCaption}\item[{int}]{r\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+1\mbox{[}3\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+2\mbox{[}3\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+3\mbox{[}3\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 183 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__cols__rows_8c_aa1dee361c87260573c757b65119d7487}\label{rearrange__cols__rows_8c_aa1dee361c87260573c757b65119d7487}} 
+\index{rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}!swap@{swap}}
+\index{swap@{swap}!rearrange\_cols\_rows.c@{rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int}]{table\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+

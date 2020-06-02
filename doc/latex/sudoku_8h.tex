@@ -1,0 +1,234 @@
+\hypertarget{sudoku_8h}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/include/sudoku.h File Reference}
+\label{sudoku_8h}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/include/sudoku.h@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/include/sudoku.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}~9
+\item 
+\#define \mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}~9
+\item 
+\#define \mbox{\hyperlink{sudoku_8h_a77d30e1642d48f4032cd2c317506fe6c}{R\+E\+A\+R\+R\+A\+N\+G\+E\+\_\+\+C\+O\+L\+S\+\_\+\+R\+O\+W\+S\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sudoku_8h_a2005e1e3de2e25debebff5aa9c57e1be}{input\+\_\+sudoku}} (int arr\mbox{[}2\mbox{]})
+\item 
+void \mbox{\hyperlink{sudoku_8h_a5b642d0c1208f771433572f1b09d1024}{generate\+\_\+sudoku\+\_\+template}} (int sudoku\+\_\+temp\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+void \mbox{\hyperlink{sudoku_8h_a5a899730d8ea332424e61d7fef88ed38}{rearrange\+\_\+cols\+\_\+rows}} (int sudoku\+\_\+temp\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int rearranged\+\_\+sudoku\+\_\+temp\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_ad8f2e62d588bf7d109d9a7fe9fed1934}{test\+\_\+sudoku\+\_\+rules}} (int test\+\_\+sudoku\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+void \mbox{\hyperlink{sudoku_8h_aff6e67514460552f4b6f7bfadeba59e3}{apply\+\_\+mask}} (int \mbox{\hyperlink{rearrange__cols__rows_8c_a51a78912851d873ccf8255c30dc4b9f8}{rearrange\+\_\+cols\+\_\+rows}}\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int numbers\+\_\+tobe\+\_\+shown, int masked\+\_\+sudoku\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_ad9ace7b771b3d8ccd35b2417111bf2c3}{apply\+\_\+solver}} (int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+void \mbox{\hyperlink{sudoku_8h_a1e6fb1bfa412138249d6ec34f947ab0b}{output\+\_\+sudoku}} (int sudoku\+\_\+solution\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int diff\+\_\+lvl)
+\begin{DoxyCompactList}\small\item\em Primary function to create the Sudoku Puzzle and Solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_aa30acf5195c73e242ae81eaa726ed89d}{create\+\_\+sudoku\+\_\+file}} (int sudoku\mbox{[}\mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, char $\ast$sudoku\+\_\+type, int diff\+\_\+lvl, int output\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Sub function to create a Sudoku file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sudoku_8h_a17427eb881c978219ba0357da04cab95}{choose\+\_\+number}} (int, int)
+\item 
+void \mbox{\hyperlink{sudoku_8h_aa1dee361c87260573c757b65119d7487}{swap}} (int table\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+void \mbox{\hyperlink{sudoku_8h_a44b4aeaa82d2fa515890756daa5d074a}{change\+\_\+columns}} (int col\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int p, int q, int r)
+\item 
+void \mbox{\hyperlink{sudoku_8h_a3f58aa094c8bb90fbc1c691bde96df5a}{change\+\_\+rows}} (int row\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int x, int y, int z)
+\item 
+void \mbox{\hyperlink{sudoku_8h_a8c2faf5d403db315f1bfbd6922b7835b}{col\+\_\+groups}} (int column\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int b\+\_\+1\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}, int b\+\_\+2\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}, int b\+\_\+3\mbox{[}9\mbox{]}\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{sudoku_8h_ac277e9e80c0b5026d332d26fd82915ac}{row\+\_\+groups}} (int r\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int c\+\_\+1\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}, int c\+\_\+2\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}, int c\+\_\+3\mbox{[}3\mbox{]}\mbox{[}9\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}\label{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}} 
+\index{sudoku.h@{sudoku.h}!COLS@{COLS}}
+\index{COLS@{COLS}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{COLS}{COLS}}
+{\footnotesize\ttfamily \#define C\+O\+LS~9}
+
+
+
+Definition at line 6 of file sudoku.\+h.
+
+\mbox{\Hypertarget{sudoku_8h_a77d30e1642d48f4032cd2c317506fe6c}\label{sudoku_8h_a77d30e1642d48f4032cd2c317506fe6c}} 
+\index{sudoku.h@{sudoku.h}!REARRANGE\_COLS\_ROWS\_H@{REARRANGE\_COLS\_ROWS\_H}}
+\index{REARRANGE\_COLS\_ROWS\_H@{REARRANGE\_COLS\_ROWS\_H}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{REARRANGE\_COLS\_ROWS\_H}{REARRANGE\_COLS\_ROWS\_H}}
+{\footnotesize\ttfamily \#define R\+E\+A\+R\+R\+A\+N\+G\+E\+\_\+\+C\+O\+L\+S\+\_\+\+R\+O\+W\+S\+\_\+H}
+
+
+
+Definition at line 73 of file sudoku.\+h.
+
+\mbox{\Hypertarget{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}\label{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\index{sudoku.h@{sudoku.h}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily \#define R\+O\+WS~9}
+
+
+
+Definition at line 5 of file sudoku.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sudoku_8h_aff6e67514460552f4b6f7bfadeba59e3}\label{sudoku_8h_aff6e67514460552f4b6f7bfadeba59e3}} 
+\index{sudoku.h@{sudoku.h}!apply\_mask@{apply\_mask}}
+\index{apply\_mask@{apply\_mask}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{apply\_mask()}{apply\_mask()}}
+{\footnotesize\ttfamily void apply\+\_\+mask (\begin{DoxyParamCaption}\item[{int}]{rearrange\+\_\+cols\+\_\+rows\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{numbers\+\_\+tobe\+\_\+shown,  }\item[{int}]{masked\+\_\+sudoku\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sudoku_8h_ad9ace7b771b3d8ccd35b2417111bf2c3}\label{sudoku_8h_ad9ace7b771b3d8ccd35b2417111bf2c3}} 
+\index{sudoku.h@{sudoku.h}!apply\_solver@{apply\_solver}}
+\index{apply\_solver@{apply\_solver}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{apply\_solver()}{apply\_solver()}}
+{\footnotesize\ttfamily \+\_\+\+Bool apply\+\_\+solver (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sudoku_8h_a44b4aeaa82d2fa515890756daa5d074a}\label{sudoku_8h_a44b4aeaa82d2fa515890756daa5d074a}} 
+\index{sudoku.h@{sudoku.h}!change\_columns@{change\_columns}}
+\index{change\_columns@{change\_columns}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{change\_columns()}{change\_columns()}}
+{\footnotesize\ttfamily void change\+\_\+columns (\begin{DoxyParamCaption}\item[{int}]{col\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{p,  }\item[{int}]{q,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+This function is to change the randomly rearrange columns\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. 
+
+Definition at line 111 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a3f58aa094c8bb90fbc1c691bde96df5a}\label{sudoku_8h_a3f58aa094c8bb90fbc1c691bde96df5a}} 
+\index{sudoku.h@{sudoku.h}!change\_rows@{change\_rows}}
+\index{change\_rows@{change\_rows}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{change\_rows()}{change\_rows()}}
+{\footnotesize\ttfamily void change\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{row\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+This function is to change the randomly rearrange rows\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. 
+
+Definition at line 129 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a17427eb881c978219ba0357da04cab95}\label{sudoku_8h_a17427eb881c978219ba0357da04cab95}} 
+\index{sudoku.h@{sudoku.h}!choose\_number@{choose\_number}}
+\index{choose\_number@{choose\_number}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{choose\_number()}{choose\_number()}}
+{\footnotesize\ttfamily int choose\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a8c2faf5d403db315f1bfbd6922b7835b}\label{sudoku_8h_a8c2faf5d403db315f1bfbd6922b7835b}} 
+\index{sudoku.h@{sudoku.h}!col\_groups@{col\_groups}}
+\index{col\_groups@{col\_groups}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{col\_groups()}{col\_groups()}}
+{\footnotesize\ttfamily void col\+\_\+groups (\begin{DoxyParamCaption}\item[{int}]{column\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{b\+\_\+1\mbox{[}9\mbox{]}\mbox{[}3\mbox{]},  }\item[{int}]{b\+\_\+2\mbox{[}9\mbox{]}\mbox{[}3\mbox{]},  }\item[{int}]{b\+\_\+3\mbox{[}9\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_aa30acf5195c73e242ae81eaa726ed89d}\label{sudoku_8h_aa30acf5195c73e242ae81eaa726ed89d}} 
+\index{sudoku.h@{sudoku.h}!create\_sudoku\_file@{create\_sudoku\_file}}
+\index{create\_sudoku\_file@{create\_sudoku\_file}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{create\_sudoku\_file()}{create\_sudoku\_file()}}
+{\footnotesize\ttfamily void create\+\_\+sudoku\+\_\+file (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{char $\ast$}]{sudoku\+\_\+type,  }\item[{int}]{diff\+\_\+lvl,  }\item[{int}]{output\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Sub function to create a Sudoku file. 
+
+This function takes-\/in an 9x9 array which representes a Sudoku grid (This can be either a Sudoku Puzzle or a Sudoku Solution). It will create a single C\+SV file in the ../output directory. The function will use three parameters to name the file\+: ~\newline
+ \begin{DoxyVerb}-The Sudoku type (Puzzle or Solution);
+-The difficulty level (easy, normal, hard, very hard);
+-The current iteration of the Sudoku. 
+\end{DoxyVerb}
+
+
+Once the file name is made, the file itself is created and each element of the array is written on the file as a character. If the element is\+: \begin{DoxyVerb}-an int between 1 and 9, then the corresponding character between 
+    1 and 9 will be written; and
+-int 0, then ' ' will be written.
+\end{DoxyVerb}
+
+
+Once it has gone through the entire array, the function will then close file stream and end the function. ~\newline
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku} & The Sudoku with the data inside. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+type} & The Sudoku type chosen by the user. \\
+\hline
+\mbox{\texttt{ in}}  & {\em diff\+\_\+lvl} & The difficulty level of the Sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em output\+\_\+count} & The current number of times a Sudoku pair has been created. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sudoku_8h_a5b642d0c1208f771433572f1b09d1024}\label{sudoku_8h_a5b642d0c1208f771433572f1b09d1024}} 
+\index{sudoku.h@{sudoku.h}!generate\_sudoku\_template@{generate\_sudoku\_template}}
+\index{generate\_sudoku\_template@{generate\_sudoku\_template}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{generate\_sudoku\_template()}{generate\_sudoku\_template()}}
+{\footnotesize\ttfamily void generate\+\_\+sudoku\+\_\+template (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sudoku_8h_a2005e1e3de2e25debebff5aa9c57e1be}\label{sudoku_8h_a2005e1e3de2e25debebff5aa9c57e1be}} 
+\index{sudoku.h@{sudoku.h}!input\_sudoku@{input\_sudoku}}
+\index{input\_sudoku@{input\_sudoku}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{input\_sudoku()}{input\_sudoku()}}
+{\footnotesize\ttfamily void input\+\_\+sudoku (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sudoku_8h_a1e6fb1bfa412138249d6ec34f947ab0b}\label{sudoku_8h_a1e6fb1bfa412138249d6ec34f947ab0b}} 
+\index{sudoku.h@{sudoku.h}!output\_sudoku@{output\_sudoku}}
+\index{output\_sudoku@{output\_sudoku}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{output\_sudoku()}{output\_sudoku()}}
+{\footnotesize\ttfamily void output\+\_\+sudoku (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+solution\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{diff\+\_\+lvl }\end{DoxyParamCaption})}
+
+
+
+Primary function to create the Sudoku Puzzle and Solution. 
+
+This function takes-\/in two sudoku grid (Sudoku Puzzle and Sudoku Solution) and calls on the function \mbox{\hyperlink{sudoku_8h_aa30acf5195c73e242ae81eaa726ed89d}{create\+\_\+sudoku\+\_\+file()}} to create a.\+C\+SV file for each Sudoku. It also creates the destination directory /output, in the event that the directory doesn\textquotesingle{}t exist.
+
+The function also contains a static variable that allows it to count the number of times outpu\+\_\+sudoku has been used. This value is used in the naming of the files in the function \mbox{\hyperlink{sudoku_8h_aa30acf5195c73e242ae81eaa726ed89d}{create\+\_\+sudoku\+\_\+file()}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+solution} & The Sudoku Solution that will be created. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle} & The Sudoku Puzzle that will be created. \\
+\hline
+\mbox{\texttt{ in}}  & {\em diff\+\_\+lvl} & The difficulty level of the Sudoku Puzzle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sudoku_8h_a5a899730d8ea332424e61d7fef88ed38}\label{sudoku_8h_a5a899730d8ea332424e61d7fef88ed38}} 
+\index{sudoku.h@{sudoku.h}!rearrange\_cols\_rows@{rearrange\_cols\_rows}}
+\index{rearrange\_cols\_rows@{rearrange\_cols\_rows}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{rearrange\_cols\_rows()}{rearrange\_cols\_rows()}}
+{\footnotesize\ttfamily void rearrange\+\_\+cols\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\+\_\+temp\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sudoku_8h_ac277e9e80c0b5026d332d26fd82915ac}\label{sudoku_8h_ac277e9e80c0b5026d332d26fd82915ac}} 
+\index{sudoku.h@{sudoku.h}!row\_groups@{row\_groups}}
+\index{row\_groups@{row\_groups}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{row\_groups()}{row\_groups()}}
+{\footnotesize\ttfamily void row\+\_\+groups (\begin{DoxyParamCaption}\item[{int}]{r\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+1\mbox{[}3\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+2\mbox{[}3\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+3\mbox{[}3\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 183 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_aa1dee361c87260573c757b65119d7487}\label{sudoku_8h_aa1dee361c87260573c757b65119d7487}} 
+\index{sudoku.h@{sudoku.h}!swap@{swap}}
+\index{swap@{swap}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int}]{table\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_ad8f2e62d588bf7d109d9a7fe9fed1934}\label{sudoku_8h_ad8f2e62d588bf7d109d9a7fe9fed1934}} 
+\index{sudoku.h@{sudoku.h}!test\_sudoku\_rules@{test\_sudoku\_rules}}
+\index{test\_sudoku\_rules@{test\_sudoku\_rules}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{test\_sudoku\_rules()}{test\_sudoku\_rules()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+sudoku\+\_\+rules (\begin{DoxyParamCaption}\item[{int}]{test\+\_\+sudoku\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+

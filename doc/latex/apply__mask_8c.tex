@@ -1,0 +1,34 @@
+\hypertarget{apply__mask_8c}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/src/apply\+\_\+mask.c File Reference}
+\label{apply__mask_8c}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/apply\_mask.c@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/apply\_mask.c}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{apply__mask_8c_a553b8e1f622f122de4a43793a18ba4ef}{apply\+\_\+mask}} (int rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int cells\+\_\+to\+\_\+remain, int masked\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{apply__mask_8c_a553b8e1f622f122de4a43793a18ba4ef}\label{apply__mask_8c_a553b8e1f622f122de4a43793a18ba4ef}} 
+\index{apply\_mask.c@{apply\_mask.c}!apply\_mask@{apply\_mask}}
+\index{apply\_mask@{apply\_mask}!apply\_mask.c@{apply\_mask.c}}
+\doxysubsubsection{\texorpdfstring{apply\_mask()}{apply\_mask()}}
+{\footnotesize\ttfamily void apply\+\_\+mask (\begin{DoxyParamCaption}\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{cells\+\_\+to\+\_\+remain,  }\item[{int}]{masked\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+\hypertarget{apply__mask_8c_autotoc_md0}{}\doxysubsubsection{Function apply\+\_\+mask}\label{apply__mask_8c_autotoc_md0}
+The function creats unique masks in turn creates a unique Sudoku game. Numbers are masked from the rearranged 2D array locations based on diffculty level. The difficulty levels are catagorized as easy, medium, hard, and very hard, where the easy game only shows 40 numbers, the medium 34 numbers, the hard game 28 and finally the very hard one only 24 numbers showing. The Sudoku game is made of 9x9 matrix with total of 81 cells. The algorithm of this function employs the C random number generator to generate a number between 1 to 81, where each number represens location at the 2D array and these randomly generated numbers are then used to map to locations of the rearranged\+\_\+sudoku array to mask (initialozed to zero) of the array locations. Language C 
+\begin{DoxyParams}{Parameters}
+{\em rearranged\+\_\+sudoku} & \mbox{[}in\mbox{]}, the 2D array containing the rearranged Sudoku game. \\
+\hline
+{\em cells\+\_\+to\+\_\+remain} & \mbox{[}in\mbox{]}, he amount of numbers that should remain after masking. \\
+\hline
+{\em masked\+\_\+sudoku} & \mbox{[}out\mbox{]}, the 2D array containing the masked Sudoku game. Author Gabriel Seyoum, Group-\/H member, student \# 100333091 Date May 31, 2020 \\
+\hline
+\end{DoxyParams}
+Here cells are selected using C random function, the game being 9x9, it has 81 cells total. Based on difficulty level cells are chosen radomly between 1 to 81 and these values are employed to mask numbers at particular cell locations
+
+Here the code checks if duplicate random numbers are generated and re-\/enforces no duplicate random number rule.
+
+Here randomly chosen cell locations are mapped to the actual game cell location, using the randomly selected numbers the following code will use l and m indexes value to locate a cell to mask.
+
+Definition at line 18 of file apply\+\_\+mask.\+c.
+

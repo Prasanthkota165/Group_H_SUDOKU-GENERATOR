@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['change_5fcolumns_4',['change_columns',['../sudoku_8h.html#a44b4aeaa82d2fa515890756daa5d074a',1,'change_columns(int col_matrix[][9], int p, int q, int r):&#160;rearrange_cols_rows.c'],['../rearrange__cols__rows_8c.html#a44b4aeaa82d2fa515890756daa5d074a',1,'change_columns(int col_matrix[][9], int p, int q, int r):&#160;rearrange_cols_rows.c']]],
+  ['change_5frows_5',['change_rows',['../sudoku_8h.html#a3f58aa094c8bb90fbc1c691bde96df5a',1,'change_rows(int row_matrix[][9], int x, int y, int z):&#160;rearrange_cols_rows.c'],['../rearrange__cols__rows_8c.html#a3f58aa094c8bb90fbc1c691bde96df5a',1,'change_rows(int row_matrix[][9], int x, int y, int z):&#160;rearrange_cols_rows.c']]],
+  ['choose_5fnumber_6',['choose_number',['../sudoku_8h.html#a17427eb881c978219ba0357da04cab95',1,'choose_number(int, int):&#160;rearrange_cols_rows.c'],['../rearrange__cols__rows_8c.html#a5550586cdc7038d979855b3db697c79e',1,'choose_number(int rangeLow, int rangeHigh):&#160;rearrange_cols_rows.c']]],
+  ['col_5fgroups_7',['col_groups',['../sudoku_8h.html#a8c2faf5d403db315f1bfbd6922b7835b',1,'col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][3]):&#160;rearrange_cols_rows.c'],['../rearrange__cols__rows_8c.html#a8c2faf5d403db315f1bfbd6922b7835b',1,'col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][3]):&#160;rearrange_cols_rows.c']]],
+  ['cols_8',['COLS',['../sudoku_8h.html#ab59ad2ee1a48b83c2eef1f019ed8cc48',1,'sudoku.h']]],
+  ['create_5fsudoku_5ffile_9',['create_sudoku_file',['../sudoku_8h.html#aa30acf5195c73e242ae81eaa726ed89d',1,'create_sudoku_file(int sudoku[ROWS][COLS], char *sudoku_type, int diff_lvl, int output_count):&#160;sudoku.h'],['../output__sudoku_8c.html#a2e67792bfca0aad9ca6eab62ee4c3a44',1,'create_sudoku_file(int sudoku[][9], char *sudoku_type, int diff_lvl, int output_count):&#160;output_sudoku.c']]]
+];
