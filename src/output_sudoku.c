@@ -46,7 +46,7 @@ void output_sudoku(int sudoku_solution[9][9], int sudoku_puzzle[9][9],
     #endif
     
     /*Creates the Sudoku Puzzle and Sudoku Solution files*/
-    create_sudoku_file(sudoku_solution, "solution", diff_lvl, output_count);
+    create_sudoku_file(sudoku_solution, "answer", diff_lvl, output_count);
 
     create_sudoku_file(sudoku_puzzle, "puzzle", diff_lvl, output_count);
     

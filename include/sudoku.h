@@ -5,7 +5,7 @@
 #define COLS 9
  
 
-void input_sudoku(int arr[2]);
+void input_sudoku(int*, int*);
 void generate_sudoku_template(int sudoku_temp[ROWS][COLS]);
 void rearrange_cols_rows(int sudoku_temp[ROWS][COLS], 
                             int rearranged_sudoku_temp[ROWS][COLS]);

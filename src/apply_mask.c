@@ -17,6 +17,11 @@
 * @param cells_to_remain [in], the amount of numbers shown on Sudoku game after masking.
 * @param masked_sudoku [out], array containing the masked Sudoku game.
 */
+
+#include "../include/sudoku.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 void apply_mask(int rearranged_sudoku [9][9], int cells_to_remain, int masked_sudoku [9][9]){
     int total_num_cells = 81;                                       /* total_num_cells ... number of cells in the Sudoku game */
     int cells_tobe_masked = total_num_cells - cells_to_remain;      /* cells_tobe_masked ... number of cells that needed to be masked */
