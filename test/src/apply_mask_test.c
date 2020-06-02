@@ -9,7 +9,7 @@
 * --------------- 
 * This program tests apply_mask function
 * Language C
-* Author Gabriel Seyoum, Group-H member, student # 100333091
+* Author Gabriel Seyoum, Group H member
 * Date May 31, 2020
 */
 
