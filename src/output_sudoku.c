@@ -129,7 +129,7 @@ void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl,
 
     /*Closes the Sudoku file stream*/
     if(fclose(p_sudoku_file)){
-        printf("The file did not close properly!!\n",k);
+        printf("The file did not close properly!!\n");
     }
     return;
 
