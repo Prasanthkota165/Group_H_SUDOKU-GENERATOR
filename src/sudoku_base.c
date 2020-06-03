@@ -5,7 +5,7 @@
 
 
 int main(void){
-    int no_sudoku, numbers_tobe_shown, diff_level;
+    int no_sudoku, cells_tobe_masked, diff_level;
     
     int sudoku_template[ROWS][COLS];
     int rearranged_sudoku[ROWS][COLS];
@@ -24,19 +24,19 @@ int main(void){
 
     switch(diff_level){
         case 0:
-            numbers_tobe_shown = 40;    //Amount of number that will be shown on Sodoku game is 40
+            cells_tobe_masked = 41;    //The amount of number that will be shown on Sudoku game is 40
             break;
          
         case 1:
-            numbers_tobe_shown = 34;    //Amount of number that will be shown on Sodoku game is 34
+            cells_tobe_masked = 47;    //the amount of number that will be shown on Sudoku game is 34
             break;
         
         case 2:
-            numbers_tobe_shown = 28;    //Amount of number that will be shown on Sodoku game is 28
+            cells_tobe_masked = 53;    //The amount of number that will be shown on Sudoku game is 28
             break;
         
         case 3:
-            numbers_tobe_shown = 24;    //Amount of number that will be shown on Sodoku game is 24
+            cells_tobe_masked = 57;    //The amount of number that will be shown on Sudoku game is 24
             break;
         
         default:
@@ -62,7 +62,7 @@ int main(void){
         }
         scanf("%d",&c);
        //if (test_sudoku_rules(rearranged_sudoku)){
-        apply_mask(rearranged_sudoku, numbers_tobe_shown, masked_sudoku);
+        apply_mask(rearranged_sudoku, cells_tobe_masked, masked_sudoku);
         for(int k = 0; k < 9; k++){
             for(int m = 0; m < 9; m++){
                 printf("%d ", masked_sudoku[k][m]);
@@ -80,7 +80,7 @@ int main(void){
            output_sudoku(rearranged_sudoku, masked_sudoku, diff_level);
       // }
       // else{
-      //     apply_mask(rearranged_sudoku, numbers_tobe_shown, masked_sudoku);
+      //     apply_mask(rearranged_sudoku, cells_tobe_masked, masked_sudoku);
       // }
 
   // }
