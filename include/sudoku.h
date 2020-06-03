@@ -22,9 +22,9 @@ _Bool test_sudoku_rules(int test_sudoku[ROWS][COLS]);
 * and very hard, where 40, 34, 28, 24 numbers are only shown on the Sudoku game
 * respectively. A Sudoku game have a total of 81 cells, and function apply_mask 
 * generates random numbers between 1 to 81, where each radomly generated numbers
-* are representing a location at the 2D array and the location this information 
-* is then used to map array locations at the rearrange_cols_rows [][] location
-* to mask numbers based on the difficulty level.
+* are representing a location at the 2D array and this location information is 
+* then used to map array locations at the rearrange_cols_rows [][] location to 
+* mask numbers based on the difficulty level.
 * 
 * @param rearranged_sudoku [in], Array containing the rearranged Sudoku game.
 * @param cells_tobe_masked [in], Number of cells that needed to be masked.
