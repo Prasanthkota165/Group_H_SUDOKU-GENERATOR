@@ -6,13 +6,36 @@
  
 
 void input_sudoku(int*, int*);
+
 void generate_sudoku_template(int sudoku_temp[ROWS][COLS]);
+
 void rearrange_cols_rows(int sudoku_temp[ROWS][COLS], 
                             int rearranged_sudoku_temp[ROWS][COLS]);
+
 _Bool test_sudoku_rules(int test_sudoku[ROWS][COLS]);
-void apply_mask(int rearrange_cols_rows[ROWS][COLS], int numbers_tobe_shown, 
-                    int masked_sudoku[ROWS][COLS]);
+
+
+/**
+* Function apply_mask creates unique masks in turn creates a unique Sudoku game. 
+* Numbers are masked from rearrange_cols_rows [][] array locations based on the
+* diffculty level. The difficulty levels are catagorized as easy, medium, hard, 
+* and very hard, where 40, 34, 28, 24 numbers are only shown on the Sudoku game
+* respectively. A Sudoku game have a total of 81 cells, and function apply_mask 
+* generates random numbers between 1 to 81, where each radomly generated numbers
+* are representing a location at the 2D array and the location this information 
+* is then used to map array locations at the rearrange_cols_rows [][] location
+* to mask numbers based on the difficulty level.
+* 
+* @param rearranged_sudoku [in], Array containing the rearranged Sudoku game.
+* @param cells_tobe_masked [in], Number of cells that needed to be masked.
+* @param masked_sudoku [out], Array containing the masked Sudoku game.
+*/
+void apply_mask(int rearrange_cols_rows[ROWS][COLS], int cells_tobe_masked, 
+                                            int masked_sudoku[ROWS][COLS]);
+
+
 _Bool apply_solver(int sudoku_puzzle [ROWS][COLS]);
+
 
 /** \brief Primary function to create the Sudoku Puzzle and Solution. 
  *  
