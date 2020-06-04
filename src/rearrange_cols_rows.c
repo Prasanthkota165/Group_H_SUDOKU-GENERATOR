@@ -101,7 +101,7 @@ void swap(int table[][9]){
  			}
   		}
  	break;	/* If the 3 numbers are not different,then generate 3 random numbers again */
-	} else if((interchange_1 == interchange_2) || \ 
+	} else if((interchange_1 == interchange_2) || \
 		  (interchange_2 == interchange_3) || \
 		  (interchange_1 == interchange_3)){
 		interchange_1= choose_number(1,9);
