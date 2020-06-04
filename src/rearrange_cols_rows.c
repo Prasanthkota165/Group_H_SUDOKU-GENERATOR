@@ -16,13 +16,9 @@
 #include<time.h>
 #include "../include/sudoku.h"
 
-/**
- * @brief This function is used to generate the randomly rearranged sudoku.
- * 
- * @param[in] sudoku_template[][9] --- This parameter takes the template generating 
- * 				       in the function generate_sudoku_template.c
- * @param[in] rearranged_sudoku[][9] --- This parameter is the updated randomized 
- * 					 sudoku template.
+/** 
+ * This function will rearrange the sudoku template and produce different
+ * combinations of it.
  */
 void rearrange_cols_rows(int sudoku_template[][9], int rearranged_sudoku[][9]){
   int i,j;
@@ -39,16 +35,16 @@ void rearrange_cols_rows(int sudoku_template[][9], int rearranged_sudoku[][9]){
 	}
   }
   swap(a); /* swapping the values in the sudoku_template */
-  change_columns(a,0,1,2); /* Interchanging the Columns */
+  change_columns(a,0,1,2); /* Interchanging the columns */
   change_columns(a,3,4,5);
   change_columns(a,6,7,8);
   change_rows(a,0,1,2); /* Interchanging the rows */
   change_rows(a,3,4,5);
   change_rows(a,6,7,8);
-  col_groups(a,b_1,b_2,b_3); /* Interchanging the columnn groups (9x3) */
-  row_groups(a,c_1,c_2,c_3); /* Interchanging the row groups (3x9) */
+  col_groups(a,b_1,b_2,b_3); /* Interchanging the column groups(9x3) */
+  row_groups(a,c_1,c_2,c_3); /* Interchanging the row groups(3x9) */
   for (i=0;i<9;i++){
- 	for (j=0;j<9;j++){ /* copy the a template into rearranged_sudoku */
+ 	for (j=0;j<9;j++){ /* copy the a[][9] template into rearranged_sudoku */
 		rearranged_sudoku[i][j] = a[i][j];
 	}
   }
@@ -56,12 +52,8 @@ void rearrange_cols_rows(int sudoku_template[][9], int rearranged_sudoku[][9]){
 }
 
 /**
- * @brief This function is used to generate random numbers between [1,9] 
- *
- * @param[in] rangeLow --- This parameter determines the lowest number in the range.
- * @param[in] rangeHigh --- This parameter determines the highest number in the range.
- * @return This function returns a number between [1,9]
- */ 
+ * Randomly choose a number between 1 and 9.  
+ */
 int choose_number(int rangeLow, int rangeHigh) {
 
   int i;
@@ -74,11 +66,7 @@ int choose_number(int rangeLow, int rangeHigh) {
 }
 
 /**
- * @brief This function is used to select different numbers in the 
- *        sudoku template and swap them accordingly.
- *
- * @param[in] table[][9] --- This parameter updates the sudoku template 
- *			     after successful swapping of the values.
+ * Three different numbers will be randomly selected from each row and swap between them.
  */ 
 void swap(int table[][9]){
  
@@ -124,18 +112,10 @@ void swap(int table[][9]){
 }
 
 /**
- * @brief This function is to change the randomly rearrange columns:
+ * Randomly interchange the columns:
  *		1, 2 and 3 within themselves;
  *		4, 5 and 6 within themselves; and
  *		7, 8 and 9 within themselves. 
- *
- * @param[in] col_matrix[][9] --- This parameter updates the sudoku template after the 
- *				  rearrangement of the columns combinations consecutively.
- * @param[in] p --- This parameter is used to take the values of the column number.
- * @param[in] q --- This paramter is used to take the values of the 
- *		    consecutive column number after the pth column.
- * @param[in] r --- This parameter is used to take the values of the 
- *		    consecutive column number after the qth column.
  */
 void change_columns(int col_matrix[][9], int p, int q, int r){
   int i,count;
@@ -149,18 +129,10 @@ void change_columns(int col_matrix[][9], int p, int q, int r){
 }
 
 /**
- * @brief This function is to change the randomly rearrange rows:
+ * Randolmy interchange the rows:
  *		1, 2 and 3 within themselves;
  *		4, 5 and 6 within themselves; and
  *		7, 8 and 9 within themselves.
- *
- * @param[in] row_matrix[][9] --- This parameter updates the sudoku template 
- *				  after the rearrangement of the rows combination consecutively.
- * @param[in] x --- This parameter is used to take the values of the row number.
- * @param[in] y --- This paramter is used to take the values of the 
- *		    consecutive row number after the xth row.
- * @param[in] z --- This parameter is used to take the values of the
- *		    consecutive row number after the yth row. 
  */
 void change_rows(int row_matrix[][9], int x, int y, int z){
   int i, count;
@@ -174,17 +146,7 @@ void change_rows(int row_matrix[][9], int x, int y, int z){
 }
 
 /**
- * @brief This function is used to randomly rearrange the sudoku template
- *         in 3 column groups of size 9x3.
- *
- * @param[in] column_group[][9] --- This parameter updates the sudoku template
- *				    after the rearrangement of 3 column groups (9x3 size).
- * @param[in] b_1[9][3] --- This parameter is used to copy the first 9x3 size 
- *			    of sudoku template and overwrite it's values.
- * @param[in] b_2[9][3] --- This parameter is used to copy the second 9x3 size 
- *		            of sudoku template and overwrite it's values.
- * @param[in] b_3[9][3] --- This parameter is used to copy the third 9x3 size
- *			    of sudoku template and overwrite it's values.
+ * Swapping between the 3 column groups of size 9x3 of the sudoku template.
  */
 void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][3]){
   int i,j;
@@ -223,18 +185,8 @@ void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][
 
 }
 
-/** 
- * @brief This function is used to randomly rearrange the sudoku template 
- *        in 3 row groups of size 3x9.
- *
- * @param[in] r_group[][9] --- This parameter updates the sudoku template 
- *			       after the rearrangement of 3 row groups (3x9 size).
- * @param[in] c_1[3][9] --- This parameter is used to copy the first 3x9 size 
- *			    of sudoku template and overwrite it's values.
- * @param[in] c_1[3][9] --- This parameter is used to copy the second 3x9 size
- *		            of sudoku template and overwrite it's values.
- * @param[in] c_1[3][9] --- This parameter is used to copy the third 3x9 size
- *			    of sudoku template and overwrite it's values.
+/**
+ * Swapping between the 3 row groups of size 3x9 of the sudoku template.
  */
 void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]){
   int i,j;
