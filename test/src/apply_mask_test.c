@@ -14,9 +14,9 @@
 */
 
 int main()
-{  int masked_sudoku [9][9], cells_tobe_masked [4] = {41, 47, 53, 57};
+{  int masked_sudoku [9][9], diff_level [4] = {0, 1, 2, 3};
    
-   int array_size = sizeof cells_tobe_masked / sizeof *cells_tobe_masked;
+   int array_size = sizeof diff_level / sizeof *diff_level;
    
    int rearranged_sudoku [9][9] = {{1, 2, 3, 4, 5, 6, 7, 8, 9},
                                    {4, 5, 6, 7, 8, 9, 1, 2, 3},
@@ -29,9 +29,9 @@ int main()
                                    {9, 7, 8, 3, 1, 2, 6, 4, 5}};
 
     for(int i = 0; i < array_size; i++){
-        apply_mask(rearranged_sudoku, cells_tobe_masked [i], masked_sudoku);
+        apply_mask(rearranged_sudoku, diff_level [i], masked_sudoku);
 
-        printf("\n--Here %d numbers masked--\n", cells_tobe_masked [i]);
+        printf("\n------Numbers Masked------\n");
         for(int k = 0; k < 9; k++){
             for(int m = 0; m < 9; m++){
                 printf(" %d ", masked_sudoku[k][m]);
