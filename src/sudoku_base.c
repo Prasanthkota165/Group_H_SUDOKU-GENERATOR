@@ -15,7 +15,7 @@ int main(void){
     int c;
   
     input_sudoku(&diff_level,&no_sudoku);
-    printf("num sudoku: %d,\n diff level: %d",no_sudoku,diff_level);
+
     scanf("%d",&c);
 
     //for(int i = 0; i < no_sudoku; i++){
