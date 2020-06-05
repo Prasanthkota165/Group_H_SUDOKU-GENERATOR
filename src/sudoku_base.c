@@ -15,7 +15,8 @@ int main(void){
     int c;
   
     input_sudoku(&diff_level,&no_sudoku);
-    printf("num sudoku: %d,\n diff level: %d",no_sudoku,diff_level);
+    //printf("num sudoku: %d \n",no_sudoku);
+    //printf("diff level: %d \n",diff_level);
     scanf("%d",&c);
 
     //for(int i = 0; i < no_sudoku; i++){
@@ -33,6 +34,7 @@ int main(void){
             printf("\n");
          }
         scanf("%d",&c);
+
         rearrange_cols_rows(sudoku_template, rearranged_sudoku);
 
         for(int k = 0; k < 9; k++){
@@ -42,7 +44,9 @@ int main(void){
             printf("\n");
         }
         scanf("%d",&c);
+
        //if (test_sudoku_rules(rearranged_sudoku)){
+      
         apply_mask(rearranged_sudoku, diff_level, masked_sudoku);
         for(int k = 0; k < 9; k++){
             for(int m = 0; m < 9; m++){
@@ -51,6 +55,7 @@ int main(void){
             printf("\n");
         }
         scanf("%d",&c);
+      
        //}
        //else{
         //  generate_sudoku_template(sudoku_template);
