@@ -74,7 +74,7 @@ void input_sudoku(int *diff_level,int *no_sudoku){
 	
    while(1){/*Checks for valid difficulty level and number of sudokus.*/
 	getIntegerFromStdin(&x);
-	if(x<=3&&x>=1) {/* Checks whether the difficulty level in in the specified range*/
+	if(x<=3&&x>=0) {/* Checks whether the difficulty level in in the specified range*/
                 *diff_level=x;
                 puts("..............................................................................\n");
                 puts("Enter the number of sudokus you would like to print between 1 to 40:");
