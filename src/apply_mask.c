@@ -117,5 +117,5 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
         }
     }
 
-    free(track_duplicate_random_num);
+    //free(track_duplicate_random_num);
 }
