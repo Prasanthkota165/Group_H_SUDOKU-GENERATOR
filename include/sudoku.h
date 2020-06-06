@@ -226,16 +226,16 @@ void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]);
  *        and will be wrongly accepted as input on the next iteration of the loop.
  *
  */
-static inline void ClearInputBuffer();
+static inline void clear_input_buffer();
 
 /** 
  * @brief This function initially clears the input buffer and checks for restricted input values and returns only if the entered value 
  *        is integer. 
  *
- * @param[in] *inputInteger --- This parameter takes the user input.
+ * @param[in] *input_integer --- This parameter takes the user input.
  * 
  */
-void getIntegerFromStdin(int *inputInteger);
+void get_integer_from_stdin(int *input_integer);
 
 /** 
  * @brief This functions asks the difficulty level and number of sudokus checks whether the meet the pre-defined conditions.
