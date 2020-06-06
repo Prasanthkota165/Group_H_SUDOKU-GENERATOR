@@ -1,4 +1,4 @@
-/doc/*
-build/*\.o
-output/*\.csv
-bin/*\.exe
+doc/
+*.o
+*.csv
+*.exe
