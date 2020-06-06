@@ -69,7 +69,7 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
     for(int j = 0; j < max_cell_masked; j++) 
         track_duplicate[j] = 0;
 
-    /* Cells are chosen radomly between 1 to 81 based on difficulty level, these values are then 
+    /* Cells are chosen radomly between 1 to 81, based on difficulty level and these values are then 
        used to mask Sudoku game cell locations */
     for(int k = 0; k < cells_tobe_masked; k++)
     {
