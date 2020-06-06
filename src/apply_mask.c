@@ -82,8 +82,8 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
             random_cell_locations[random_cell - 1] = random_cell;
         }
 
-        /* Checks if duplicate random numbers are generated, if yes re-enforces 
-           no duplicate random numbers from being used to map cell locations */
+        /* It checks if duplicate random numbers are generated, if yes it re-enforces 
+           the rule no duplicate random numbers from being used to map cell locations */
         for(int y = k  ; y >0 ; y--)
         {
             if(*(track_duplicate_random_num + k) == track_duplicate_random_num[y-1])
