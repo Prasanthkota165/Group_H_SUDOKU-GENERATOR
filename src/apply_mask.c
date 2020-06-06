@@ -17,7 +17,7 @@
 
 /**
 * @param rearranged_sudoku [in], Array containing the rearranged Sudoku game.
-* @param cells_to_remain [in], Number of cells that needed to be masked.
+* @param diff_level [in], Difficulty level dectates how many numbers should be shown on Sudoku game.
 * @param masked_sudoku [out], Array containing the masked Sudoku game.
 */
 void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_sudoku [ROWS][COLS])
@@ -35,23 +35,23 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
      switch(diff_level)
      {        
         case 0:  
-            cells_tobe_masked = 41;    /* 41 locations will be masked, dificulty level 0 */                              
+            cells_tobe_masked = 41;    /* 41 locations will be masked and 40 numbers will be shown on the Sudoku game */                              
             break;
 
         case 1:
-            cells_tobe_masked = 47;    /* 47 locations will be masked, dificulty level 1 */
+            cells_tobe_masked = 47;    /* 47 locations will be masked and 34 numbers will be shown on the Sudoku game */
             break;
 
         case 2:
-            cells_tobe_masked = 53;    /* 53 locations will be masked, dificulty level 2*/
+            cells_tobe_masked = 53;    /* 53 locations will be masked and 28 numbers will be shown on the Sudoku game */
             break;
 
         case 3:
-            cells_tobe_masked = 57;    /* 57 locations will be masked, dificulty level 3*/
+            cells_tobe_masked = 57;    /* 57 locations will be masked and 24 numbers will be shown on the Sudoku game */
             break;
 
         default:
-            printf("Wrong difficulty level value\n");    /* Dificulty level is not 0, 1, 2 or 3 */
+            printf("Wrong difficulty level value\n");    /* When dificulty level is not 0, 1, 2 or 3 */
     }
 
     /* Initialization */
