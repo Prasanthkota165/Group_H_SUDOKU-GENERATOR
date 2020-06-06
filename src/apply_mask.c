@@ -22,9 +22,9 @@
 */
 void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_sudoku [ROWS][COLS])
 {           
-     int l = 0, m = 0, random_cell;                   /* l and m ... index location of cells to be used for masking, random_cell variable holds random number generated between 1 to 81 */
+     int l = 0, m = 0, random_cell;                    /* l and m ... index location of cells to be used for masking, random_cell variable holds random number generated between 1 to 81 */
      int total_num_cells = 81, max_cell_masked = 57;   /* Total number of cells on the Sudoku game, maximum number masked */                                                       
-     int random_cell_locations [81];                  /* All the randomly selected cell locations, used for masking */
+     int random_cell_locations [81];                   /* All the randomly selected cell locations, used for masking */
      int cells_tobe_masked;
      int *ptr = random_cell_locations;
      int track_duplicate[57];
