@@ -9,6 +9,22 @@ void input_sudoku(int*, int*);
 
 void generate_sudoku_template(int sudoku_temp[ROWS][COLS]);
 
+/**
+ * The function rearrange_cols_rows takes in the sudoku template created in the
+ * generate_sudoku_template function and goes on step-by-step random procedure
+ * to generate different types of sudoku template. Firstly, it interchanges the 
+ * 3 different numbers selecting randomly in each row. Then, it rearranges the 
+ * columns,rows between them in the combination of three (Ex: 1,2,3 columns/rows 
+ * rearrange themselves, followed by 4,5,6 rearranging and then 7,8,9 columns/rows).
+ * After successful rearrangement, it also swaps the 3 column groups of 9x3 size
+ * between them and followed by the swapping of the 3 row groups of size 3x9.
+ * Finally, outputs the rearranged_sudoku of size 9x9.
+ *
+ * @param[in] sudoku_template[][9], This parameter takes the template generating 
+ * 				    in the function generate_sudoku_template.c
+ * @param[in] rearranged_sudoku[][9], This parameter is the updated randomized 
+ * 				      sudoku template.
+*/
 void rearrange_cols_rows(int sudoku_temp[ROWS][COLS], 
                             int rearranged_sudoku_temp[ROWS][COLS]);
 
@@ -89,16 +105,90 @@ void create_sudoku_file(int sudoku[ROWS][COLS], char* sudoku_type, int diff_lvl,
 #endif 
 
 
-/*The below functions are defined only to support the "rearrange_cols_rows" function */
+
+/* The below functions are defined only to support the "rearrange_cols_rows" function */
 
 #ifndef REARRANGE_COLS_ROWS_H
 #define REARRANGE_COLS_ROWS_H
 
-int choose_number(int , int );
+/**
+ * @brief This function is used to generate random numbers between [1,9] 
+ *
+ * @param[in] rangeLow --- This parameter determines the lowest number in the range.
+ * @param[in] rangeHigh --- This parameter determines the highest number in the range.
+ * @return This function returns a number between [1,9]
+ */ 
+int choose_number(int rangeLow, int rangeHigh);
+
+/**
+ * @brief This function is used to select different numbers in the 
+ *        sudoku template and swap them accordingly.
+ *
+ * @param[in] table[][9] --- This parameter updates the sudoku template 
+ *			     after successful swapping of the values.
+ */ 
 void swap(int table[][9]);
+
+/**
+ * @brief This function is to change the randomly rearrange columns:
+ *		1, 2 and 3 within themselves;
+ *		4, 5 and 6 within themselves; and
+ *		7, 8 and 9 within themselves. 
+ *
+ * @param[in] col_matrix[][9] --- This parameter updates the sudoku template after the 
+ *				  rearrangement of the columns combinations consecutively.
+ * @param[in] p --- This parameter is used to take the values of the column number.
+ * @param[in] q --- This paramter is used to take the values of the 
+ *		    consecutive column number after the pth column.
+ * @param[in] r --- This parameter is used to take the values of the 
+ *		    consecutive column number after the qth column.
+ */
 void change_columns(int col_matrix[][9], int p, int q, int r);
+
+/**
+ * @brief This function is to change the randomly rearrange rows:
+ *		1, 2 and 3 within themselves;
+ *		4, 5 and 6 within themselves; and
+ *		7, 8 and 9 within themselves.
+ *
+ * @param[in] row_matrix[][9] --- This parameter updates the sudoku template 
+ *				  after the rearrangement of the rows combination consecutively.
+ * @param[in] x --- This parameter is used to take the values of the row number.
+ * @param[in] y --- This paramter is used to take the values of the 
+ *		    consecutive row number after the xth row.
+ * @param[in] z --- This parameter is used to take the values of the
+ *		    consecutive row number after the yth row. 
+ */
 void change_rows(int row_matrix[][9], int x, int y, int z);
+
+/**
+ * @brief This function is used to randomly rearrange the sudoku template
+ *         in 3 column groups of size 9x3.
+ *
+ * @param[in] column_group[][9] --- This parameter updates the sudoku template
+ *				    after the rearrangement of 3 column groups (9x3 size).
+ * @param[in] b_1[9][3] --- This parameter is used to copy the first 9x3 size 
+ *			    of sudoku template and overwrite it's values.
+ * @param[in] b_2[9][3] --- This parameter is used to copy the second 9x3 size 
+ *		            of sudoku template and overwrite it's values.
+ * @param[in] b_3[9][3] --- This parameter is used to copy the third 9x3 size
+ *			    of sudoku template and overwrite it's values.
+ */
 void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][3]);
+
+/** 
+ * @brief This function is used to randomly rearrange the sudoku template 
+ *        in 3 row groups of size 3x9.
+ *
+ * @param[in] r_group[][9] --- This parameter updates the sudoku template 
+ *			       after the rearrangement of 3 row groups (3x9 size).
+ * @param[in] c_1[3][9] --- This parameter is used to copy the first 3x9 size 
+ *			    of sudoku template and overwrite it's values.
+ * @param[in] c_1[3][9] --- This parameter is used to copy the second 3x9 size
+ *		            of sudoku template and overwrite it's values.
+ * @param[in] c_1[3][9] --- This parameter is used to copy the third 3x9 size
+ *			    of sudoku template and overwrite it's values.
+ */
 void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]);
 
 #endif
