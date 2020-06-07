@@ -1,6 +1,19 @@
 #include <stdio.h>
 #include "../../src/generate_sudoku_template.c"
 
+/*
+* TITLE      : generate_sudoku_template_test.c 
+*
+* Purpose   : Generates a pre-defined sudoku templete
+*
+* Language  : C
+*
+* Author    : Rishith Rao, 
+* GitHub ID : rishithrao57 
+* Date      : 7 June 2020
+*
+**/
+
 int main(void) {
   int sudoku_temp[9][9];
   generate_sudoku_template(sudoku_temp);

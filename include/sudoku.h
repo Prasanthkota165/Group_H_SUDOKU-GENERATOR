@@ -4,9 +4,33 @@
 #define ROWS 9
 #define COLS 9
  
+/**
+ * This function askes for the difficulty level of the sudokus and the number of
+ * sudokus that the user wants to generate. The difficulty levels can be entered 
+ * as 0,1,2,3 for easy, medium, hard and very hard respectively. It checks the 
+ * user input for these values and if user enters any other values, say characters,
+ * strings, symbols etc., it simply voids them and continues to ask the user until 
+ * it gets the valid difficulty level. Later the function asks the user to input to 
+ * enter the number of sudokus that the user wants to generate and the limit that 
+ * this program can generate is set to 40. So it continues to ask the user for the 
+ * number of sudokus until the user enters valid number which is between 1 to 40 
+ * inclusive. Then this function returns these to values for furthur use in the software.  
+ *      
+ * @param[in] diff_level, This parameter takes the difficulty level from user.
+ *
+ * @param[in] no_sudoku, This parameter takes the number of sudokus that user want 
+ *                       to generate.
+ */
+void input_sudoku(int* diff_level, int* no_sudoku);
 
-void input_sudoku(int*, int*);
-
+/**
+ * This function generates a pre-defined sudoku template using a two dimentional 
+ * array which is of size 9X9 that is rearranged in a different function called 
+ * rearrange_cols_rows.c 
+ *  
+ * @param[in] sudoku_temp[ROWS][COLS], Two dimentional array of size 9X9 containing
+ *                                     the sudoku template. 
+ */
 void generate_sudoku_template(int sudoku_temp[ROWS][COLS]);
 
 /**
@@ -192,3 +216,36 @@ void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][
 void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]);
 
 #endif
+
+#ifndef INPUT_SUDOKU_H
+#define INPUT_SUDOKU_H
+/** 
+ * @brief This function removes surplus characters or symbols from the input buffer.
+ *        Otherwise, if restricted symbols or characters have been entered during the
+ *        call to fgets(), the surplus characters (after MAX_DIGITS chars) remain in the input buffer
+ *        and will be wrongly accepted as input on the next iteration of the loop.
+ *
+ */
+static inline void clear_input_buffer();
+
+/** 
+ * @brief This function initially clears the input buffer and checks for restricted input values and returns only if the entered value 
+ *        is integer. 
+ *
+ * @param[in] *input_integer --- This parameter takes the user input.
+ * 
+ */
+void get_integer_from_stdin(int *input_integer);
+
+/** 
+ * @brief This functions asks the difficulty level and number of sudokus checks whether the meet the pre-defined conditions.
+ *
+ * @param[in] diff_level --- This parameter stores the difficulty level entered by the user.
+ *
+ * @param[in] no_sudoku --- This parameter store the number of sudokus that the user wants to generate. 
+ */
+void input_sudoku(int *diff_level,int *no_sudoku);
+
+#endif
+
+
