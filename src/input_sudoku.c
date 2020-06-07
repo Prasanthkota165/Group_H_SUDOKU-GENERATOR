@@ -73,32 +73,34 @@ void input_sudoku(int *diff_level,int *no_sudoku){
    int y;
    puts("Enter difficulty level as(0,1,2 or 3):\nEasy:      0\nMedium:    1\nHard:      2\nVery Hard: 3");
 	
-   while(1){/*Checks for valid difficulty level and number of sudokus.*/
+   while(1) {/*Checks for valid difficulty level and number of sudokus.*/
 	get_integer_from_stdin(&x);
 	if(x<=3&&x>=0) {/* Checks whether the difficulty level in in the specified range*/
                 *diff_level=x;
                 puts("..............................................................................\n");
-                puts("Enter the number of sudokus you would like to print between 1 to 40:");
-                get_integer_from_stdin(&y);
-                if(y<=40&&y>=1){/* Checks whether the number of sudokus are in the specified range*/
-                            *no_sudoku=y;
-                            break;
-                }
-                else{
-                            puts("................Invalid number of sudokus.Please try again...............");
-                            puts("Enter the number of sudokus you would like to print between 1 to 40:");
-                            continue;
-                }
+                break;
+                
         }
         else {
                 puts("....................Invalid input...........................\n");
                 puts("Enter difficulty level as(0,1,2 or 3):\nEasy:      0\nMedium:    1\nHard:      2\nVery Hard: 3");
-                 continue;
         }
-
    }
-        printf("Difficulty level: %d\n",x);
-        printf("Number of sudokus: %d\n",y);	
+   while(1) {
+         puts("Enter the number of sudokus you would like to print between 1 to 40:");
+         get_integer_from_stdin(&y);
+         if(y<=40&&y>=1) {/* Checks whether the number of sudokus are in the specified range*/
+                   *no_sudoku=y;
+                    break;
+         }
+         else {
+                    puts("................Invalid number of sudokus.Please try again...............");
+              }
+   }
+
+   
+    printf("Difficulty level: %d\n",x);
+    printf("Number of sudokus: %d\n",y);	
 }
 
 
