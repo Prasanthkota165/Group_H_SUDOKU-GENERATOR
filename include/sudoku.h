@@ -73,9 +73,76 @@ _Bool test_sudoku_rules(int test_sudoku[ROWS][COLS]);
 void apply_mask(int rearrange_cols_rows[ROWS][COLS], int diff_level, 
                                             int masked_sudoku[ROWS][COLS]);
 
+/** @brief Primary function to solve the Sudoku Puzzle.
+ * 
+ * This function takes in a Sudoku puzzle and verifies if the Sudoku puzzle 
+ * is solvable. It begins by copying the Sudoku Puzzle into a temporary 2D 
+ * int array which can be called a temporary sudoku. The temporary sudoku 
+ * is then used as a parameter to the function apply_solver(). The return of 
+ * the function apply_solver() will either return TRUE if it is solvable. If 
+ * the temporary sudoku puzzle is not solvable, then the function will return 
+ * FALSE and print a message saying "No solution exists for this puzzle."
+ * 
+ * The reason for copying the Sudoku Puzzle is that the function apply_solver() 
+ * modifies the parameter as the sudoku gets solved. It is important that the 
+ * sudoku_puzzle does not get modified as it will be used further on in the 
+ * program to write its data in a file, including the empty spaces. As such, 
+ * a copy is needed to solve te Sudoku Puzzle. 
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku puzzle to be verified.
+ * 
+ * @return TRUE if it is solvable, FASLE if it is not.
+ */
+_Bool solver_sudoku(int sudoku_puzzle [ROWS][COLS]);
 
+/** @brief Recursive function to solve the Sudoku Puzzle.
+ * 
+ * This function takes a partially filled Sudoku Puzzle and attempts to assign 
+ * values to all EMPTY locations in such a way to meet the requirements for a 
+ * Sudoku Solution (no conflict across rows, columns, and boxes).
+ * 
+ * First, it searches for an EMPTY slot in the Sudoku Puzzle by using the 
+ * function find_next_empty(). If it can't find one, then the Sudoku Puzzle has 
+ * been resolved, and the function will return TRUE. If it finds an EMPTY slot, 
+ * then the function find_next_empty() will return FASLE and also return the row 
+ * and column of that empty EMPTY slot.
+ * 
+ * Afterwards, it will verify each whole number between 1 and 9 inclusively and 
+ * detremine if there is a conflict with either the row, column or boxe related 
+ * to that empty slot:
+ *  - If there is no conflict, then the function will call itself to continue 
+ *      searching for the next EMPTY slot. This recursivity will end once all 
+ *      slots are no longer EMPTY and no slots conflicting with one another. 
+ *
+ *  - If there is a conflict with one of the numbers, then it will move on to 
+ *      the next one until all numbers have been used. Once all numbers are 
+ *      confirmed to be in conflict, then the function will return FALSE and 
+ *      return back to the previous call of apply_solver(). 
+ * 
+ * @param[in/out] sudoku_puzzle[9][9] partial sudoku puzzle to be solved.
+ * 
+ * @return TRUE if the sudoku puzzle has been solved, FALSE if it can't be 
+ *          solved.    
+ */
 _Bool apply_solver(int sudoku_puzzle [ROWS][COLS]);
 
+/** \brief Function that finds the next empty slot in a Sudoku Puzzle.
+ * 
+ * This function searches the sudoku_puzzle parameter in order to find a slot 
+ * that is EMPTY. If found, the reference parameters row, col will be set with 
+ * the location of the EMPTY slot and true is returned. If no EMPTY slots 
+ * remain in the Sudoku Puzzle, then FALSE will be returned. 
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check for EMPTY slots.
+ * @param[out] slot[2] An array to store the location of the EMPTY slot.
+ * 
+ * @return TRUE if an EMPTY slot is found, FALSE if not.
+ */
+_Bool find_next_empty(int sudoku_puzzle[ROWS][COLS], int location[2]);
+_Bool no_conflict(int sudoku_puzzle[ROWS][COLS], int row, int col, int num);
+_Bool used_in_row( int sudoku_puzzle[ROWS][COLS], int row, int num);
+_Bool used_in_col(int sudoku_puzzle[ROWS][COLS], int col, int num);
+_Bool used_in_box(int sudoku_puzzle[ROWS][COLS], int row, int col, int num);  
 
 /** \brief Primary function to create the Sudoku Puzzle and Solution. 
  *  
