@@ -62,7 +62,7 @@ void output_sudoku(int sudoku_solution[9][9], int sudoku_puzzle[9][9],
  *  @param[in] sudoku_type The Sudoku type chosen by the user.
  *  @param[in] diff_lvl The difficulty level of the Sudoku.
  *  @param[in] output_count The current number of times a Sudoku pair has been 
- *              created. 
+ *                          created. 
  */
 void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl, 
                             int output_count){
@@ -70,6 +70,7 @@ void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl,
     /*Pointers*/
     char file_name[50];
     char counter[4]; /*String of the Output counter */
+    char sudoku_type_temp[7];
 	FILE *p_sudoku_file; 
     
     /*Variables*/
@@ -79,18 +80,22 @@ void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl,
     /*Initial Naming of the ouput file*/
     #if defined(_WIN32)||defined(WIN32) /*Assign Microsoft OS file name path*/   
     strcpy(file_name, "..\\output\\sudoku_");
-    strcat(file_name,sudoku_type);
     #else
     strcpy(file_name, "../output/sudoku_");
-    strcat(file_name,sudoku_type);
     #endif
-        
+    
+	strncpy(sudoku_type_temp, sudoku_type,6);/*Cuts the sudoku_type to a six 
+                                                long string if too long*/
+    strcat(file_name,sudoku_type_temp); /*Concatenates the sudoku type to the 
+                                            file name*/
+
     /*Concatenates the difficulty level to the file name*/
     switch(diff_lvl){
-        default:strcat(file_name, "_easy_");break; 
+        case(0):strcat(file_name, "_easy_");break; 
         case(1):strcat(file_name, "_normal_");break;
         case(2):strcat(file_name, "_hard_");break;
         case(3):strcat(file_name, "_very_hard_");break;
+        default:strcat(file_name, "_error_");break;
     }
 
     sprintf(counter,"%d",output_count); /*Converts the output counter from an 
@@ -101,8 +106,6 @@ void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl,
                                     file name*/
     //free(counter); /*Releases memory space of the counter*/
 
-    
-    
     p_sudoku_file = fopen(file_name, "w"); /*Creates or opens the file name 
                                                 in the output directory*/
    
@@ -132,8 +135,7 @@ void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl,
         printf("The file did not close properly!!\n");
     }
     printf("The file %s has been created.\n", file_name);
-   //free(p_file_name);
-   //free(counter);
+
     return;
 
 }
