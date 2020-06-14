@@ -22,7 +22,7 @@
  */
 
 _Bool test_sudoku_rules(int rearranged_sudoku[][9]){  
-  int x,y,z; 
+  _Bool x,y,z; 
   int a[9]; /* Initialize array to copy the values 1 to 9 */
   int i;
   for(i=1;i<=9;i++){
@@ -30,8 +30,8 @@ _Bool test_sudoku_rules(int rearranged_sudoku[][9]){
   }
   x= test_rows(rearranged_sudoku,a); /*Checks for any repeated values in the rows*/
   y= test_cols(rearranged_sudoku,a); /*Checks for any repeated values in the columns*/
-  //z= test_3X3(rearranged_sudoku,a);
-  if(x&&y){
+  z= test_3X3(rearranged_sudoku,a); /*Checks for any repeated values in the 3X3 matrices*/
+  if(x&&y||y&&z||z&&x){
   	return true;
   }
   else {
@@ -88,6 +88,42 @@ _Bool test_cols(int rearranged_sudoku[][9], int a[9]){
    } 
  return flag; /*positive values are treated as '1' in _Bool*/
 }
+
+/*for 3X3 blocks*/
+_Bool test_3X3(int rearranged_sudoku[][9], int a[9]) {  
+    int x=0,y=2,k=0,l=2,i,j,sum=0,check_3;
+    int flag=0;
+    int p;
+    while(x<=8) {
+        while(k<=8) {
+            for (int i=x;i<=y;i++) {
+                for(int j=k;j<=l;j++) {
+   		    check_3=rearranged_sudoku[i][j];/*Copy each element of 3X3 matrix to check*/
+   		    sum=sum+check_3; /* summing all the elements in the 3X3 matrix to get 45 */
+                    delete(check_3,a);
+                }
+            }
+            k=k+3;
+            l=l+3;
+            for(p=0;p<9;p++){
+	 	if(a[p]!=0 || sum!=45){ /* If the array is not empty or
+					   sum is not 45 then test failed*/
+			flag++;/*Increment flag with no. of times the sudoku rules failed*/
+		}
+            }  
+            sum=0;
+    	    for(p=1;p<=9;p++){
+		a[p-1] = p; /* Load the array again with the values from 1 to 9 */
+            }
+        }
+        k=0;
+        l=2;
+        x=x+3;
+        y=y+3;
+    }
+    return flag;/*positive values are treated as '1' in _Bool*/
+}
+
 
 /* Mask the unrepeated elements in row/column/3x3 block and leave the array with elements
  * that has to be appeared in the place of repeated values.

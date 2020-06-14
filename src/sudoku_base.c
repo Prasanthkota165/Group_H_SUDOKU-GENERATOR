@@ -42,7 +42,7 @@ int main(void){
         
         /*Tests the rearranged sudoku for sudoku rules*/
         tester=test_sudoku_rules(rearranged_sudoku);
-  
+     
         /* Masking the numbers on the rearranged sudoku template according 
         to the difficulty level provided */  
         apply_mask(rearranged_sudoku, diff_level, masked_sudoku);

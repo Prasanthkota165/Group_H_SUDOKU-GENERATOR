@@ -259,7 +259,7 @@ void get_integer_from_stdin(int *);
  * @param[in] rearranged_sudoku[][9] -- This parameter determines the generated sudoku.
  * @param[in] a[9] -- This parameter is to check the sudoku rules for each row.
  *
- * @return -- If the rows follow the sudoku rules then return true orelse false.
+ * @return -- If the rows follow the sudoku rules then return true or else false.
  */ 
 _Bool test_rows(int [][9], int [9]);
 
@@ -269,12 +269,19 @@ _Bool test_rows(int [][9], int [9]);
  * @param[in] rearranged_sudoku[][9] -- This parameter determines the generated sudoku.
  * @param[in] a[9] -- This parameter is to check the sudoku rules for each column.
  *
- * @return -- If the columns follow the sudoku rules then return true orelse false.
+ * @return -- If the columns follow the sudoku rules then return true or else false.
  */ 
 _Bool test_cols(int [][9], int [9]);
 
-/* 
- */
+/**
+ * @brief This function is used to check the sudoku rules for all the 3X3 matrices.
+ *
+ * @param[in] rearranged_sudoku[][9] -- This parameter determines the generated sudoku.
+ * @param[in] a[9] -- This parameter is to check the sudoku rules for each 3X3 matrix.
+ *
+ * @return -- If the columns follow the sudoku rules then return true or else false.
+ */ 
+_Bool test_3X3(int [][9],int[9]);
 
 /**
  * @brief This function will leave the array a[] with the elements which has to be
