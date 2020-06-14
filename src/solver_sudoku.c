@@ -29,14 +29,14 @@
  * Determines if the sudoku puzzle is solvable. 
  * 
  * @param[in] sudoku_puzzle[N][N] The Sudoku puzzle to be verified.
+ * @param[out] temp_sudoku[N][N] The Sudoku puzzle to be verified.
  * 
  * @return TRUE if it is solvable, FASLE if it is not.  
  */
-_Bool solver_sudoku(int sudoku_puzzle [N][N]){
+_Bool solver_sudoku(int sudoku_puzzle [N][N], int temp_sudoku[N][N]){
 
     /*Variables*/ 
     int col, row; 
-    int temp_sudoku[N][N];/*Temporary sudoku grid*/
     
     /*Copies the data from the sudoku_puzzle parameter into the temporary 
     sudoku.*/
@@ -125,26 +125,42 @@ _Bool find_next_empty(int sudoku_puzzle[N][N], int slot[2]){
     }
     return FALSE; 
 } 
-/* Returns a ___Boolean which indicates  
-whether it will be legal to assign 
-   num to the given row, col location. */
+/**
+ * Checks if there is a confict in either the row, column or box at a slots 
+ * location (row, col).
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check for a conflict.
+ * @param[in] row The row of the location to check for conflict.
+ * @param[in] col The column of the location to check for conflict.
+ * @param[in] num The number that needs to be verified for conflict.
+ * 
+ * @return Returns TRUE if the location is free to place the number, FALSE if 
+ *          it will create a conflict.
+ */
 _Bool no_conflict(int sudoku_puzzle[N][N], int row, int col, int num){ 
-    /* Check if 'num' is not already placed  
-       in current row, current column and  
-       current 3x3 box */
-
+    /*Checks if the number is already placed in the row of the location*/
     _Bool free_row = !used_in_row(sudoku_puzzle, row, num);
+    /*Checks if the number is already placed in the column of the location*/
     _Bool free_col = !used_in_col(sudoku_puzzle, col, num);
+    /*Checks if the number is already placed in the box of the location*/
     _Bool free_box = !used_in_box(sudoku_puzzle, row, col , num);
     
+    /*Returns the availability of the location in accordance with the nummber*/
     return free_row && free_col && free_box && (sudoku_puzzle[row][col] == EMPTY);
 } 
   
-/* Returns a ___Boolean which indicates  
-   whether an assigned entry 
-   in the specified row matches the  
-   given number. */
+/**
+ * Checks if the row already has the requested number.
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check in.
+ * @param[in] row The row to verify if the number is already there.
+ * @param[in] num The number that needs to be verified.
+ * 
+ * @return Returns TRUE if the row has the number already there, FALSE if 
+ *          not.
+ */
 _Bool used_in_row( int sudoku_puzzle[N][N], int row, int num){ 
+    /*Checks each column in the row*/
     for (int col = 0; col < N; col++){ 
         if (sudoku_puzzle[row][col] == num){ 
             return TRUE; 
@@ -153,11 +169,18 @@ _Bool used_in_row( int sudoku_puzzle[N][N], int row, int num){
     return FALSE; 
 } 
   
-/* Returns a ___Boolean which indicates  
-   whether an assigned entry 
-   in the specified column matches  
-   the given number. */
+/**
+ * Checks if the column already has the requested number.
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check in.
+ * @param[in] col The column to verify if the number is already there.
+ * @param[in] num The number that needs to be verified.
+ * 
+ * @return Returns TRUE if the column has the number already there, FALSE if 
+ *          not.
+ */
 _Bool used_in_col(int sudoku_puzzle[N][N], int col, int num){ 
+    /*Checks each row in the column*/
     for (int row = 0; row < N; row++){
         if (sudoku_puzzle[row][col] == num){
             return TRUE; 
@@ -166,16 +189,25 @@ _Bool used_in_col(int sudoku_puzzle[N][N], int col, int num){
     return FALSE; 
 } 
   
-/* Returns a ___Boolean which indicates  
-   whether an assigned entry 
-   within the specified 3x3 box  
-   matches the given number. */
+/**
+ * Checks if the 3x3 box of the current location already contains the requested 
+ * number.
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check in.
+ * @param[in] row The row of the current location.
+ * @param[in] col The column of the current location.
+ * @param[in] num The number that needs to be verified.
+ * 
+ * @return Returns TRUE if the box has the number already there, FALSE if 
+ *          not.
+ */
 _Bool used_in_box(int sudoku_puzzle[N][N], int row, int col, int num){ 
     
-    int start_row = (row/3)*3;
-    int start_col = (col/3)*3;
+    /*Variables*/
+    int start_row = (row/3)*3;/*Determines which row the box begins at*/ 
+    int start_col = (col/3)*3;/*Determines which row the box begins at*/
     
-    
+    /*Check every slot in the box*/
     for (int i = 0; i < 3; i++){ 
         for (int j = 0; j < 3; j++){ 
             if (sudoku_puzzle[i + start_row][j + start_col] == num){ 

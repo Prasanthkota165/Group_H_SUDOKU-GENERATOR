@@ -19,7 +19,8 @@ void printGrid(int grid[N][N]);
 int main() 
 { 
     // 0 means unassigned cells 
-    
+    int result[N][N];
+
     int grid[N][N] = { { 3, 0, 6, 5, 0, 8, 4, 0, 0 }, 
                        { 5, 2, 0, 0, 0, 0, 0, 0, 0 }, 
                        { 0, 8, 7, 0, 0, 0, 0, 3, 1 }, 
@@ -29,11 +30,12 @@ int main()
                        { 1, 3, 0, 0, 0, 0, 2, 5, 0 }, 
                        { 0, 0, 0, 0, 0, 0, 0, 7, 4 }, 
                        { 0, 0, 5, 2, 0, 6, 3, 0, 0 } };
-    if (solver_sudoku(grid)){ 
-        printGrid(grid); 
+    if (solver_sudoku(grid,result)){ 
+        printGrid(result);
+        printf("TRUE"); 
     }
     else{
-        printf("No solution exists"); 
+        printf("False"); 
     }
 	
     return 0; 

@@ -89,11 +89,11 @@ void apply_mask(int rearrange_cols_rows[ROWS][COLS], int diff_level,
  * program to write its data in a file, including the empty spaces. As such, 
  * a copy is needed to solve te Sudoku Puzzle. 
  * 
- * @param[in] sudoku_puzzle[9][9] The Sudoku puzzle to be verified.
- * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to be verified.
+ * @param[out] temp_sudoku[9][9] The Sudoku Solution when solved.
  * @return TRUE if it is solvable, FASLE if it is not.
  */
-_Bool solver_sudoku(int sudoku_puzzle [ROWS][COLS]);
+_Bool solver_sudoku(int sudoku_puzzle [ROWS][COLS], int temp_sudoku[ROWS][COLS]);
 
 /** @brief Recursive function to solve the Sudoku Puzzle.
  * 
@@ -110,14 +110,14 @@ _Bool solver_sudoku(int sudoku_puzzle [ROWS][COLS]);
  * Afterwards, it will verify each whole number between 1 and 9 inclusively and 
  * detremine if there is a conflict with either the row, column or boxe related 
  * to that empty slot:
- *  - If there is no conflict, then the function will call itself to continue 
- *      searching for the next EMPTY slot. This recursivity will end once all 
- *      slots are no longer EMPTY and no slots conflicting with one another. 
+ *      - If there is no conflict, then the function will call itself to continue 
+ *          searching for the next EMPTY slot. This recursivity will end once all 
+ *          slots are no longer EMPTY and no slots conflicting with one another. 
  *
- *  - If there is a conflict with one of the numbers, then it will move on to 
- *      the next one until all numbers have been used. Once all numbers are 
- *      confirmed to be in conflict, then the function will return FALSE and 
- *      return back to the previous call of apply_solver(). 
+ *      - If there is a conflict with one of the numbers, then it will move on to 
+ *          the next one until all numbers have been used. Once all numbers are 
+ *          confirmed to be in conflict, then the function will return FALSE and 
+ *          return back to the previous call of apply_solver(). 
  * 
  * @param[in/out] sudoku_puzzle[9][9] partial sudoku puzzle to be solved.
  * 
@@ -139,9 +139,77 @@ _Bool apply_solver(int sudoku_puzzle [ROWS][COLS]);
  * @return TRUE if an EMPTY slot is found, FALSE if not.
  */
 _Bool find_next_empty(int sudoku_puzzle[ROWS][COLS], int location[2]);
+
+/** @brief Verifies if there is a possible conflict if a number is assigned 
+ *          at that location. 
+ * 
+ * This function checks if the number is already placed in either the row, the 
+ * column, or the 3x3 box of the location. 
+ * 
+ * The function uses three seperate functions where each function verifies a 
+ * specific area of the SUdoku Puzzle (row, column or box). Each will return 
+ * a __Bool value which indicates if the area is free of the requested number. 
+ * 
+ * If at least one of the areas have an instance of the number already in 
+ * place, then the function no_conflict() will return FALSE. If none of the 
+ * areas have the requested number, then the function will return TRUE.
+ *  
+*  @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check for a conflict.
+ * @param[in] row The row of the location to check for conflict.
+ * @param[in] col The column of the location to check for conflict.
+ * @param[in] num The number that needs to be verified for conflict.
+ * 
+ * @return Returns TRUE if the location is free to place the number, FALSE if 
+ *          it will create a conflict.
+ */
 _Bool no_conflict(int sudoku_puzzle[ROWS][COLS], int row, int col, int num);
+
+/** @brief Verifies if the number is already in the row.
+ * 
+ * This functions checks if the requested number is already in the row by 
+ * simply verifying each individual column of the row.
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check in.
+ * @param[in] row The row to verify if the number is already there.
+ * @param[in] num The number that needs to be verified.
+ * 
+ * @return Returns TRUE if the row has the number already there, FALSE if 
+ *          not.
+ */ 
 _Bool used_in_row( int sudoku_puzzle[ROWS][COLS], int row, int num);
+
+/** @brief Verifies if the number is already in the column.
+ * 
+ * This functions checks if the requested number is already in the column by 
+ * simply verifying each individual row of the column.
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check in.
+ * @param[in] col The column to verify if the number is already there.
+ * @param[in] num The number that needs to be verified.
+ * 
+ * @return Returns TRUE if the colum has the number already there, FALSE if 
+ *          not.
+ */ 
 _Bool used_in_col(int sudoku_puzzle[ROWS][COLS], int col, int num);
+
+/** @brief Verifies if the number is already in the box.
+ * 
+ * This functions checks if the requested number is already in the 3x3 by 
+ * simply verifying each individual slot in the box.
+ * 
+ * To determine which box the function needs to verify, the current row and 
+ * column are needed to determine the starting point in the box. By dividing 
+ * and multiplying the row and column by 3, the function can determine the 
+ * starting point of the box verification.
+ * 
+ * @param[in] sudoku_puzzle[9][9] The Sudoku Puzzle to check in.
+ * @param[in] row The row of the current location.
+ * @param[in] col The column of the current location.
+ * @param[in] num The number that needs to be verified.
+ * 
+ * @return Returns TRUE if the box has the number already there, FALSE if 
+ *          not.
+ */
 _Bool used_in_box(int sudoku_puzzle[ROWS][COLS], int row, int col, int num);  
 
 /** \brief Primary function to create the Sudoku Puzzle and Solution. 
