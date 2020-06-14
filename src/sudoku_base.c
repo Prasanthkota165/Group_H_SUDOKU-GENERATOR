@@ -19,6 +19,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include<time.h>
 #include "../include/sudoku.h"
 
 int main(void){
@@ -28,6 +29,7 @@ int main(void){
     _Bool tester;
     int masked_sudoku[ROWS][COLS];
     int sudoku_solution [ROWS][COLS];
+    srand(time(0));
 
     /* Input the difficulty level and number of sudoku needed */
     input_sudoku(&diff_level,&no_sudoku);

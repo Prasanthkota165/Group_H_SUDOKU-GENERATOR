@@ -13,7 +13,6 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
 #include "../include/sudoku.h"
 
 /** 
@@ -74,7 +73,7 @@ void swap(int table[][9]){
   int interchange_2;
   int interchange_3;
   int interchange_4;	
-  srand(time(0));	
+ 	
   interchange_1= choose_number(1,9);
   interchange_2= choose_number(1,9);
   interchange_3= choose_number(1,9);
