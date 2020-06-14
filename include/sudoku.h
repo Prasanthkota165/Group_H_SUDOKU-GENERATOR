@@ -252,19 +252,39 @@ void get_integer_from_stdin(int *);
 
 #ifndef TEST_SUDOKU_H
 #define TEST_SUDOKU_H
-/** 
- * @brief This function inserts the elements into the list  
- *
- * @param[in] data -- This parameter takes the data that is defined in another function. 
- */
-void insertFirst(int);
 
-/** 
- * @brief This function checks all the 3X3 matrix for sudoku rules. 
+/**
+ * @brief This function is used to check the sudoku rules for all the rows.
  *
- * @param[in] rearranged_sudoku[][9] -- This parameter takes rearranged sudoku from the functon
- *                                      rearrange_cols_rows.c
+ * @param[in] rearranged_sudoku[][9] -- This parameter determines the generated sudoku.
+ * @param[in] a[9] -- This parameter is to check the sudoku rules for each row.
+ *
+ * @return -- If the rows follow the sudoku rules then return true orelse false.
+ */ 
+_Bool test_rows(int [][9], int [9]);
+
+/**
+ * @brief This function is used to check the sudoku rules for all the columns.
+ *
+ * @param[in] rearranged_sudoku[][9] -- This parameter determines the generated sudoku.
+ * @param[in] a[9] -- This parameter is to check the sudoku rules for each column.
+ *
+ * @return -- If the columns follow the sudoku rules then return true orelse false.
+ */ 
+_Bool test_cols(int [][9], int [9]);
+
+/* 
  */
-_Bool test_3X3(int [][9]);
+
+/**
+ * @brief This function will leave the array a[] with the elements which has to be
+ * 	  appeared in the row/column/3x3 block because those elements are overwritten
+ *        by the repeated values.
+ *
+ * @param[in] check -- This parameter is used to pass the values of the rearranged_sudoku.
+ * @param[in] a[9] -- This parameter is to check the sudoku rules for each row/column/3x3 block.
+ *
+ */ 
+void delete(int check, int a[9]);
 
 #endif

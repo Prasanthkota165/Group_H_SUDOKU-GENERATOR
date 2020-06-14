@@ -53,7 +53,7 @@ int main(void){
     }
     
     /*Final message of the program*/
-    printf("Sudoku generator has finished creating all %d sudokus.", no_sudoku);
+    printf("Sudoku generator has finished creating all %d sudokus.\n", no_sudoku);
     return 0;
 }
 

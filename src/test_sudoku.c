@@ -8,7 +8,7 @@
  * Author   : Rishith Rao - rishithrao@cmail.carleton.ca
  *            Prasanth Kota - prasanthkota@cmail.carleton.ca
  *
- * Date     : 13 June, 2020.
+ * Date     : 14 June, 2020.
  */
 
 #include <stdio.h>
@@ -17,118 +17,89 @@
 #include <stdbool.h>
 #include "../include/sudoku.h"
 
-struct node {
-    int data;
-    struct node *next;
-};
-
-struct node *head = NULL;
-struct node *current = NULL;
-
-/**
- * Deletes the first element of the array.
- */
-struct node* deleteFirst() {
-    struct node *tempLink = head;/*save reference to first link*/
-    head = head->next;/*mark next to first link as first*/
-    return tempLink;/*return the deleted link*/
-}
-
-/**
- * Checks whether the list is empty or not.
- */
-bool isEmpty() {
-    return head == NULL;
-}
-
-/**
- * Insert link at the first location.
- */
-void insertFirst(int data){
-    struct node *link = (struct node*) malloc(sizeof(struct node));/*create a link*/
-    link->data = data;
-    link->next = head;/*point it to old first node*/
-    head = link;/*point first to new first node*/
-}
-
-/**
- * Delete a link with given data
- */
-struct node* delete(int data) {
-    struct node* current = head;/*start from the first link*/
-    struct node* previous = NULL;
-    if(head == NULL){/*if list is empty*/
-        return NULL;
-    }
-    while(current->data != data){/*navigate through list*/
-        if(current->next == NULL) {/*if it is last node*/
-            return NULL;
-        }else {
-             previous = current;/*store reference to current link*/
-             current = current->next;/*move to next link*/
-         }
-    }
-    if(current == head){/*found a match, update the link*/
-        head = head->next;/*change first to point to next link*/
-    }else {
-        previous->next = current->next;/*bypass the current link*/
-     }    
-    return current;
-}
-
-/*
- *This checks the 3X3 blocks for repeated values.
- */
-_Bool test_3X3(int rearranged_sudoku[][9]) {
-    int z[9][9];  
-    int x=0,y=2,sum=0,k=0,l=2,a,sumplus=0;
-    int flag=0;
-    while(x<=8) {
-        while(k<=8) {
-            for (int i=x;i<=y;i++) {
-                for(int j=k;j<=l;j++) {
-   		    a=rearranged_sudoku[i][j];
-   		    sum=sum+a;
-                    delete(a);
-                }
-            }
-            k=k+3;
-            l=l+3;
-            sumplus=sum;
-            while(!isEmpty() || sumplus!=45) {/*checks whether the array is empty or not. If not it empties the array for furthur operation.*/
-                flag=true;  
-                sumplus=45;        
-                struct node *temp = deleteFirst();
-            }  
-            sum=0;
-    	    insertFirst(1);
-            insertFirst(2);
-            insertFirst(3);
-            insertFirst(4);
-            insertFirst(5);
-            insertFirst(6);
-            insertFirst(7);
-            insertFirst(8);
-            insertFirst(9);
-        }
-        k=0;
-        l=2;
-        x=x+3;
-        y=y+3;
-    }
-    return flag;
-}
-
 /**
  * This function checks the rows, columns and 3X3 matrix for sudoku rules.
  */
-_Bool test_sudoku_rules(int rearranged_sudoku[][9]) {  
-    test_3X3(rearranged_sudoku);
-    if(test_3X3(rearranged_sudoku)){
-        return true;
-    }else {
-         return false;
-     } 
+
+_Bool test_sudoku_rules(int rearranged_sudoku[][9]){  
+  int x,y,z; 
+  int a[9]; /* Initialize array to copy the values 1 to 9 */
+  int i;
+  for(i=1;i<=9;i++){
+	a[i-1] = i; /* Copying the values from 1 to 9 */
+  }
+  x= test_rows(rearranged_sudoku,a); /*Checks for any repeated values in the rows*/
+  y= test_cols(rearranged_sudoku,a); /*Checks for any repeated values in the columns*/
+  //z= test_3X3(rearranged_sudoku,a);
+  if(x&&y){
+  	return true;
+  }
+  else {
+	return false;
+  }
 }
+
+/* for rows */
+_Bool test_rows(int rearranged_sudoku[][9], int a[9]){
+   int i,j,sum=0,check_1;
+   int flag=0;      
+   int p;
+   for (i=0;i<9;i++) {
+	for (j=0;j<9;j++) { 
+		check_1=rearranged_sudoku[i][j];/*Copy each element of row to check*/
+		sum=sum+check_1; /* summing all the elements in the row to get 45 */
+		delete(check_1,a); 
+	}
+    	for(p=0;p<9;p++){
+	 	if(a[p]!=0 || sum!=45){ /* If the array is not empty or
+					   sum is not 45 then test failed*/
+			flag++;/*Increment flag with no. of times the sudoku rules failed*/
+		}
+  	 }
+   	sum=0;
+   	for(p=1;p<=9;p++){
+		a[p-1] = p;
+  	 }   
+   } 
+ return flag; /*positive values are treated as '1' in _Bool*/
+}
+
+/*for columns*/
+_Bool test_cols(int rearranged_sudoku[][9], int a[9]){
+   int i,j,sum=0,check_2;
+   int flag=0;      
+   int p;
+   for (i=0;i<9;i++) {
+	for (j=0;j<9;j++) {
+		check_2=rearranged_sudoku[j][i];/*Copy each element of column to check*/
+		sum=sum+check_2; /* summing all the elements in the column to get 45 */
+		delete(check_2,a);
+	}
+    	for(p=0;p<9;p++){
+	 	if(a[p]!=0 || sum!=45){ /* If the array is not empty or
+					   sum is not 45 then test failed*/
+			flag++;/*Increment flag with no. of times the sudoku rules failed*/
+		}
+  	 }
+   	sum=0;
+   	for(p=1;p<=9;p++){
+		a[p-1] = p; /* Load the array again with the values from 1 to 9 */
+  	 }   
+   } 
+ return flag; /*positive values are treated as '1' in _Bool*/
+}
+
+/* Mask the unrepeated elements in row/column/3x3 block and leave the array with elements
+ * that has to be appeared in the place of repeated values.
+ */
+void delete(int check, int a[9]){
+  int k;
+  for(k=0;k<9;k++){ 
+   	if(check==a[k]){  /*check the element is in the array*/
+    		 a[k] = 0; 
+  	} 
+  }
+}
+
 
 
