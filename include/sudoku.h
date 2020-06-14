@@ -51,8 +51,23 @@ void generate_sudoku_template(int [ROWS][COLS]);
 */
 void rearrange_cols_rows(int [ROWS][COLS], int [ROWS][COLS]);
 
-_Bool test_sudoku_rules(int test_sudoku[ROWS][COLS]);
-
+/**
+ * The function test_sudoku_rules checks the rearranged sudoku (which is generated in
+ * the function rearrange_cols_rows) for the sudoku rules. It examines the rows, coloums
+ * and 3X3 matrix for any repeated values. According to sudoku rules, a row, column and 
+ * 3X3 should contain all the elements from 1 to 9 and the sum of all the elements of any 
+ * row, column or 3x3 should be 45. This function checks all these conditions and returns 
+ * a bool value. When the bool value is returned as 0, it means that the rearranged sudoku
+ * met all the sudoku rules and proceeds for masking. If the bool value is 1, it means that
+ * there is an error while rearranging the sudoku and the program will not proceed furthur 
+ * and redirects the program to generate another sudoku.
+ *   
+ * @param[in] rearranged_sudoku[][9], This parameter takes the rearranged sudoku 
+ *                                    which is the output of the function 
+ *                                    rearrange_cols_rows.c
+ *                                    
+ */
+_Bool test_sudoku_rules(int [ROWS][COLS]);
 
 /**
 * Function apply_mask creates unique masks in turn creates a unique Sudoku game. 
@@ -233,8 +248,23 @@ static inline void clear_input_buffer();
  */
 void get_integer_from_stdin(int *);
 
-
-
 #endif
 
+#ifndef TEST_SUDOKU_H
+#define TEST_SUDOKU_H
+/** 
+ * @brief This function inserts the elements into the list  
+ *
+ * @param[in] data -- This parameter takes the data that is defined in another function. 
+ */
+void insertFirst(int);
 
+/** 
+ * @brief This function checks all the 3X3 matrix for sudoku rules. 
+ *
+ * @param[in] rearranged_sudoku[][9] -- This parameter takes rearranged sudoku from the functon
+ *                                      rearrange_cols_rows.c
+ */
+_Bool test_3X3(int [][9]);
+
+#endif

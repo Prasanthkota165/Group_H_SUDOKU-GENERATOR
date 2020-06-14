@@ -19,11 +19,14 @@ rearrange_cols_rows.o: src/rearrange_cols_rows.c
 	$(CC) -g $(INCLUDESUDOKU) -c ./src/rearrange_cols_rows.c -o ./build/rearrange_cols_rows.o
 apply_mask.o: src/apply_mask.c
 	$(CC) -g $(INCLUDESUDOKU) -c ./src/apply_mask.c -o ./build/apply_mask.o
+test_sudoku.o : src/test_sudoku.c
+	$(CC) -g $(INCLUDESUDOKU) -c ./src/test_sudoku.c -o ./build/test_sudoku.o
+	
 sudoku_base.o: src/sudoku_base.c
 	$(CC) -g $(INCLUDESUDOKU) -c ./src/sudoku_base.c -o ./build/sudoku_base.o
 
-sudoku: output_sudoku.o generate_sudoku_template.o input_sudoku.o rearrange_cols_rows.o apply_mask.o sudoku_base.o
-	$(CC) -g -o bin/SUDOKU.exe  build/output_sudoku.o build/generate_sudoku_template.o build/input_sudoku.o build/rearrange_cols_rows.o build/apply_mask.o build/sudoku_base.o
+sudoku: output_sudoku.o generate_sudoku_template.o input_sudoku.o rearrange_cols_rows.o apply_mask.o test_sudoku.o sudoku_base.o
+	$(CC) -g -o bin/SUDOKU.exe  build/output_sudoku.o build/generate_sudoku_template.o build/input_sudoku.o build/rearrange_cols_rows.o build/apply_mask.o build/test_sudoku.o build/sudoku_base.o 
 
 #TARGET TO COMPILE TESTINGS
 output_sudoku_test.o: test/src/output_sudoku_test.c
