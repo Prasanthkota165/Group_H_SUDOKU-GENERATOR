@@ -20,20 +20,20 @@ Assuming that any IDE to run C programs install in your PC/Laptop
 3.  To run the project, give the command "make sudoku" in the terminal.
 
 4.  An input message will appear requesting:
-    a)The number of Sudoku puzzles (values from 1 to 40) and;
-    b)The Sudoku puzzle's difficulty level (values 0, 1, 2, or 3)
+    1. The number of Sudoku puzzles (values from 1 to 40) and;
+    2. The Sudoku puzzle's difficulty level (values 0, 1, 2, or 3)
 
 5.  You can request a maximum of 40 Sudokus per software run.
 
 6.  Their are 4 difficulty levels where:
-    a) Easy: input '0'
-    b) Medium: input '1'
-    c) Hard: input '2'
-    d) Very Hard: input '3'
+    1. Easy: input '0'
+    2. Medium: input '1'
+    3. Hard: input '2'
+    4. Very Hard: input '3'
 
 7.  The output of the program will generate pairs of .CSV files equal to the number of requested puzzles:
-    a) Sudoku puzzle
-    b) Sudoku answer
+    1. Sudoku puzzle
+    2. Sudoku answer
 
     For example, if the input request is ten hard Sudoku puzzles, the program will generate
     ten Sudoku puzzles and their ten respective Sudoku solutions.
