@@ -51,15 +51,15 @@ void rearrange_cols_rows(int sudoku_template[][9], int rearranged_sudoku[][9]){
 }
 
 /**
- * Randomly choose a number between 1 and 9.  
+ * Randomly choose a number between any range of rangelow and rangehigh.  
  */
-int choose_number(int rangeLow, int rangeHigh) {
+int choose_number(int rangelow, int rangehigh) {
 
   int i;
   int count=1;
   int num;
   for (i = 0; i < count; i++) { 
-        num = (rand() % (rangeHigh - rangeLow + 1)) + rangeLow;  
+        num = (rand() % (rangehigh - rangelow + 1)) + rangelow;  
     } 
   return num;
 }
