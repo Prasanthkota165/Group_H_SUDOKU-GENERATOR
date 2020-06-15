@@ -65,11 +65,11 @@ int choose_number(int rangelow, int rangehigh) {
 }
 
 /**
- * Three different numbers will be randomly selected from each row and swap between them.
+ * Four different numbers will be randomly selected from each row and swap between them.
  */ 
 void swap(int table[][9]){
  
-  int interchange_1; /* Defines 3 numbers to swap between them. */
+  int interchange_1; /* Defines 4 numbers to swap between them. */
   int interchange_2;
   int interchange_3;
   int interchange_4;	
@@ -79,7 +79,7 @@ void swap(int table[][9]){
   interchange_3= choose_number(1,9);
   interchange_4= choose_number(1,9);
   while(1){
-	/* This condition is to make sure all the 3 numbers are different */
+	/* This condition is to make sure all the 4 numbers are different */
 	
   	if((interchange_1 != interchange_2) && \
 	  (interchange_1 != interchange_3) && \
@@ -108,7 +108,7 @@ void swap(int table[][9]){
 				
  			}
   		}
- 	break;	/* If the 3 numbers are not different,then generate 3 random numbers again */
+ 	break;/* If the 3 numbers are not different,then generate 3 random numbers again */
 	} else if((interchange_1 == interchange_2) || \
 		  (interchange_1 == interchange_3) || \
 		  (interchange_1 == interchange_4) || \
@@ -131,11 +131,11 @@ void swap(int table[][9]){
  */
 void change_columns(int col_matrix[][9], int p, int q, int r){
   int i,count_1,count_2,count_3;;
-  int num_1,num_2,num_3; /*choose the rows to get swapped with random generator*/
+  int num_1,num_2,num_3; /*choose the columns to get swapped with random generator*/
   num_1= choose_number(p,r);
   num_2= choose_number(p,r);
   num_3= choose_number(p,r);
-  while(1){
+  while(1){ /* All the three columns selected should be different */ 
   	if((num_1!=num_2) && (num_2!=num_3) && (num_3!=num_1)){
   		for(i=0;i<9;i++){
 			count_1= col_matrix[i][num_1];
@@ -163,11 +163,11 @@ void change_columns(int col_matrix[][9], int p, int q, int r){
  */
 void change_rows(int row_matrix[][9], int x, int y, int z){
   int i, count_1,count_2,count_3;
-  int ele_1,ele_2,ele_3;
+  int ele_1,ele_2,ele_3;/*choose the rows to get swapped with random generator*/
   ele_1= choose_number(x,z);
   ele_2= choose_number(x,z);
   ele_3= choose_number(x,z);
-  while(1){
+  while(1){ /* All the three rows selected should be different */ 
   	if((ele_1!=ele_2) && (ele_2!=ele_3) && (ele_3!=ele_1)){
   		for(i=0;i<9;i++){
   			count_1= row_matrix[ele_1][i];
@@ -183,7 +183,7 @@ void change_rows(int row_matrix[][9], int x, int y, int z){
   		  ele_2= choose_number(x,z);
     		  ele_3= choose_number(x,z);
 	}
-}
+  }
 }
 /**
  * Swapping between the 3 column groups of size 9x3 of the sudoku template.
@@ -191,7 +191,7 @@ void change_rows(int row_matrix[][9], int x, int y, int z){
 void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][3]){
   int i,j;
   int k,l;
-  int ch_1,ch_2,ch_3; /*choose the column groups to swap randomly*/
+  int ch_1,ch_2,ch_3; /* choose the column groups to swap randomly */
   int order;
   ch_1=choose_number(1,3);
   ch_2=choose_number(1,3);
@@ -213,11 +213,12 @@ void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][
 	} 
   } 
 
-  while(1){
+  while(1){/* All the column groups should be different */
  	if((ch_1!=ch_2) && (ch_2!=ch_3) && (ch_3!=ch_1)){
   		for(i=0;i<9;i++){
-			order = ch_1;
-			for(j=0;j<3;j++){
+			order = ch_1;/* copy first column group as ch_1 */
+			for(j=0;j<3;j++){/* copy into the column_group(9x9)
+					 to interchange column groups(9x3) */
 				if (order == 1){
  					column_group[i][j]=b_1[i][j];
 				} else if (order == 2){
@@ -227,7 +228,7 @@ void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][
 				}
 			}  
 			k=0;
-			order = ch_2;
+			order = ch_2;/* copy second column group as ch_2 */
 			for(j=3;j<6;j++){
  				if (order == 1){
  					column_group[i][j]=b_1[i][k] ;
@@ -239,7 +240,7 @@ void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][
 				k++;
 			} 
 			l=0;
-			order = ch_3;
+			order = ch_3;/* copy third column group as ch_3 */
 
 			for(j=6;j<9;j++){
  				if (order == 1){
@@ -268,14 +269,14 @@ void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][
 void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]){
   int i,j;
   int k,l;
-  int rw_1,rw_2,rw_3; /*choose the row groups to swap randomly*/
+  int rw_1,rw_2,rw_3; /* choose the row groups to swap randomly */
   int order;
   rw_1=choose_number(1,3);
   rw_2=choose_number(1,3);
   rw_3=choose_number(1,3);
 
   for(i=0;i<9;i++){
-	for(j=0;j<3;j++){ /* copy into the column groups(c_1,c_2,c_3)(3x9) */
+	for(j=0;j<3;j++){ /* copy into the row groups(c_1,c_2,c_3)(3x9)*/
  		c_1[j][i]=r_group[j][i];
 	}  
 	k=0;
@@ -290,11 +291,12 @@ void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]){
 	} 
   } 
  
-  while(1){
+  while(1){/* All the row groups should be different */
  	if((rw_1!=rw_2) && (rw_2!=rw_3) && (rw_3!=rw_1)){
   		for(i=0;i<9;i++){
-			order = rw_1;
-			for(j=0;j<3;j++){ /* copy into the column_group(9x9) to interchange column group(9x3) */
+			order = rw_1; /* copy first row group as rw_1 */
+			for(j=0;j<3;j++){ /* copy into the r_group(9x9)
+					 to interchange row groups(3x9) */
 				if (order == 1){
  					r_group[j][i]=c_1[j][i];
 				} else if (order == 2){
@@ -305,7 +307,7 @@ void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]){
 			}  
 
 			k=0;
-			order = rw_2;
+			order = rw_2;/* copy 2nd row group as rw_2 */
 			for(j=3;j<6;j++){
  				if (order == 1){
  					r_group[j][i]=c_1[k][i];
@@ -317,7 +319,7 @@ void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]){
 				k++;
 			} 
 			l=0;
-			order = rw_3;
+			order = rw_3;/* copy 3rd row group as rw_3 */
 			for(j=6;j<9;j++){
  				if (order == 1){
  					r_group[j][i]=c_1[l][i];

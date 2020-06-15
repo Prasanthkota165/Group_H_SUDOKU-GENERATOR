@@ -37,7 +37,7 @@ void generate_sudoku_template(int [ROWS][COLS]);
  * The function rearrange_cols_rows takes in the sudoku template created in the
  * generate_sudoku_template function and goes on step-by-step random procedure
  * to generate different types of sudoku template. Firstly, it interchanges the 
- * 3 different numbers selecting randomly in each row. Then, it rearranges the 
+ * 4 different numbers selecting randomly in each row. Then, it rearranges the 
  * columns,rows between them in the combination of three (Ex: 1,2,3 columns/rows 
  * rearrange themselves, followed by 4,5,6 rearranging and then 7,8,9 columns/rows).
  * After successful rearrangement, it also swaps the 3 column groups of 9x3 size
@@ -147,11 +147,11 @@ void create_sudoku_file(int [ROWS][COLS], char* , int, int);
 #define REARRANGE_COLS_ROWS_H
 
 /**
- * @brief This function is used to generate random numbers between [1,9] 
+ * @brief This function is used to generate random numbers between rangelow and rangehigh. 
  *
- * @param[in] rangeLow -- This parameter determines the lowest number in the range.
- * @param[in] rangeHigh -- This parameter determines the highest number in the range.
- * @return This function returns a number between [1,9]
+ * @param[in] rangelow -- This parameter determines the lowest number in the range.
+ * @param[in] rangehigh -- This parameter determines the highest number in the range.
+ * @return This function returns a number between rangelow and rangehigh.
  */ 
 int choose_number(int, int);
 
@@ -292,6 +292,6 @@ _Bool test_3X3(int [][9],int[9]);
  * @param[in] a[9] -- This parameter is to check the sudoku rules for each row/column/3x3 block.
  *
  */ 
-void delete(int check, int a[9]);
+void delete_1(int , int [9]);
 
 #endif

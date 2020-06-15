@@ -48,7 +48,7 @@ _Bool test_rows(int rearranged_sudoku[][9], int a[9]){
 	for (j=0;j<9;j++) { 
 		check_1=rearranged_sudoku[i][j];/*Copy each element of row to check*/
 		sum=sum+check_1; /* summing all the elements in the row to get 45 */
-		delete(check_1,a); 
+		delete_1(check_1,a); 
 	}
     	for(p=0;p<9;p++){
 	 	if(a[p]!=0 || sum!=45){ /* If the array is not empty or
@@ -73,7 +73,7 @@ _Bool test_cols(int rearranged_sudoku[][9], int a[9]){
 	for (j=0;j<9;j++) {
 		check_2=rearranged_sudoku[j][i];/*Copy each element of column to check*/
 		sum=sum+check_2; /* summing all the elements in the column to get 45 */
-		delete(check_2,a);
+		delete_1(check_2,a);
 	}
     	for(p=0;p<9;p++){
 	 	if(a[p]!=0 || sum!=45){ /* If the array is not empty or
@@ -100,7 +100,7 @@ _Bool test_3X3(int rearranged_sudoku[][9], int a[9]) {
                 for(int j=k;j<=l;j++) {
    		    check_3=rearranged_sudoku[i][j];/*Copy each element of 3X3 matrix to check*/
    		    sum=sum+check_3; /* summing all the elements in the 3X3 matrix to get 45 */
-                    delete(check_3,a);
+                    delete_1(check_3,a);
                 }
             }
             k=k+3;
@@ -128,7 +128,7 @@ _Bool test_3X3(int rearranged_sudoku[][9], int a[9]) {
 /* Mask the unrepeated elements in row/column/3x3 block and leave the array with elements
  * that has to be appeared in the place of repeated values.
  */
-void delete(int check, int a[9]){
+void delete_1(int check, int a[9]){
   int k;
   for(k=0;k<9;k++){ 
    	if(check==a[k]){  /*check the element is in the array*/
