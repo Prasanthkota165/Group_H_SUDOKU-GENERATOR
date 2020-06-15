@@ -17,6 +17,7 @@
 * Function apply_mask creates unique masks in turn creates a unique Sudoku game.
 * Numbers are masked from the rearranged 2D array locations based on diffculty level.
 * Language: C
+* Organization: Carleton University
 * Author: Gabriel Seyoum, Group H member
 * Date: May 31, 2020
 */
