@@ -30,6 +30,7 @@ int main(void){
     int masked_sudoku[ROWS][COLS];
     int sudoku_solution [ROWS][COLS];
     srand(time(0));
+    char ch;
 
     /* Input the difficulty level and number of sudoku needed */
     input_sudoku(&diff_level,&no_sudoku);
@@ -57,7 +58,9 @@ int main(void){
     }
     
     /*Final message of the program*/
-    printf("Sudoku generator has finished creating all %d sudokus.\n", no_sudoku);
+    printf("Sudoku generator has finished creating %d sudoku(s).\n", no_sudoku);
+    printf("Press any key to exit\n");
+    getchar();
     return 0;
 }
 
