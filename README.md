@@ -7,10 +7,8 @@ Hard 24 numbers.
 
 Files are organized as follow: /bin , /build , /data , /include , /lib , /output , /src , /test/src, /test/data , makefile , README
 
-                 *** Welcome to the Readme file ***
-
-This file tells you how to generate Sudoku Patterns from the repository
-=======================================================================
+                                 *** Welcome to the Readme file ***
+              This file tells you how to generate Sudoku Patterns from the repository
 
 Assuming that any IDE to run C programs install in your PC/Laptop
 
