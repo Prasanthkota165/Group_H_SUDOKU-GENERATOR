@@ -19,6 +19,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include<time.h>
 #include "../include/sudoku.h"
 
 int main(void){
@@ -28,23 +29,35 @@ int main(void){
     _Bool tester;
     int masked_sudoku[ROWS][COLS];
     int sudoku_solution [ROWS][COLS];
+    srand(time(0));
 
-   /* Input the difficulty level and number of sudoku needed */
+    /* Input the difficulty level and number of sudoku needed */
     input_sudoku(&diff_level,&no_sudoku);
+    
+    for (int i = 0; i < no_sudoku; i++){
+        
+        do{
+            /* This function will generate the sudoku template */
+            generate_sudoku_template(sudoku_template);
 
-   /* This function will generate the sudoku template */
-    generate_sudoku_template(sudoku_template);
+            /* Rearranging the sudoku template to generate different combinations 
+            of sudoku */ 
+            rearrange_cols_rows(sudoku_template, rearranged_sudoku);
+        
+        /*Tests the rearranged sudoku for sudoku rules*/
+        }while(test_sudoku_rules(rearranged_sudoku));
+     
+        /* Masking the numbers on the rearranged sudoku template according 
+        to the difficulty level provided */  
+        apply_mask(rearranged_sudoku, diff_level, masked_sudoku);
 
-   /* Rearranging the sudoku template to generate different combinations of sudoku */ 
-    rearrange_cols_rows(sudoku_template, rearranged_sudoku);
-
-   /* Masking the numbers on the rearranged sudoku template according 
-      to the difficulty level provided */  
-    apply_mask(rearranged_sudoku, diff_level, masked_sudoku);
-
-   /* Finally, create the two .csv files (puzzle and solution) into the output folder */
-    output_sudoku(rearranged_sudoku, masked_sudoku, diff_level);
-
+        /* Finally, create the two .csv files (puzzle and solution) into the 
+        output folder */
+        output_sudoku(rearranged_sudoku, masked_sudoku, diff_level);
+    }
+    
+    /*Final message of the program*/
+    printf("Sudoku generator has finished creating all %d sudokus.\n", no_sudoku);
     return 0;
 }
 
