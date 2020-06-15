@@ -1,5 +1,5 @@
 Organization Carleton University, Ottawa, ON, Canada Authors: Mathieu
-Falardeau Gabriel Seyoum Prasanth Kota Rishith Rao
+Falardeau, Gabriel Seyoum, Prasanth Kota, Rishith Rao
 
 Sudoku Generator software creates Sodoku puzzles, various puzzles are
 generated based on the difficulty levels, where the Easy game only
