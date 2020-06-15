@@ -73,7 +73,7 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
        and these values are then used to mask Sudoku game cell locations */
     for(int k = 0; k < cells_tobe_masked; k++)
     {
-        random_cell = (rand() % (81 - 1 + 1)) + 1;
+        random_cell = (rand() % 81) + 1;
 
         *(track_duplicate_random_num + k) = random_cell;
 

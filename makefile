@@ -30,7 +30,7 @@ sudoku: output_sudoku.o generate_sudoku_template.o input_sudoku.o rearrange_cols
 
 #TARGET TO COMPILE TESTINGS
 output_sudoku_test.o: test/src/output_sudoku_test.c
-	$(CC) -g $(INCLUDESUDOKU) -c test/src/output_sudoku_test.c -o ./build/output_sudoku_test.o
+	$(CC) -g $(INCLUDESUDOKU) -c test/src/output_sudoku_test.c -o .test/build/output_sudoku_test.o
 
 
 
@@ -38,7 +38,7 @@ output_sudoku_test.o: test/src/output_sudoku_test.c
 #		$(CC) -g -o bin/SUBNET_TEST build/main_subnet_test.o build/message.o
 
 testoutput : output_sudoku_test.o output_sudoku.o
-		$(CC) -g -o bin/SUDOKU_OUTPUT.exe ./build/output_sudoku_test.o ./build/output_sudoku.o
+		$(CC) -g -o bin/SUDOKU_OUTPUT.exe ./test/build/output_sudoku_test.o ./build/output_sudoku.o
 			
 #TARGET TO COMPILE EVERYTHING (ABP SIMULATOR + TESTS TOGETHER)
 #all: snakes tests

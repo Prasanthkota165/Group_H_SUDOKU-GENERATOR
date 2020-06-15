@@ -35,15 +35,17 @@ int main(void){
     input_sudoku(&diff_level,&no_sudoku);
     
     for (int i = 0; i < no_sudoku; i++){
-        /* This function will generate the sudoku template */
-        generate_sudoku_template(sudoku_template);
+        
+        do{
+            /* This function will generate the sudoku template */
+            generate_sudoku_template(sudoku_template);
 
-        /* Rearranging the sudoku template to generate different combinations 
-        of sudoku */ 
-        rearrange_cols_rows(sudoku_template, rearranged_sudoku);
+            /* Rearranging the sudoku template to generate different combinations 
+            of sudoku */ 
+            rearrange_cols_rows(sudoku_template, rearranged_sudoku);
         
         /*Tests the rearranged sudoku for sudoku rules*/
-        tester=test_sudoku_rules(rearranged_sudoku);
+        }while(test_sudoku_rules(rearranged_sudoku));
      
         /* Masking the numbers on the rearranged sudoku template according 
         to the difficulty level provided */  
