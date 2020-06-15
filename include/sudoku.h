@@ -21,7 +21,7 @@
  * @param[in] no_sudoku, This parameter takes the number of sudokus that user want 
  *                       to generate.
  */
-void input_sudoku(int* diff_level, int* no_sudoku);
+void input_sudoku(int* , int* );
 
 /**
  * This function generates a pre-defined sudoku template using a two dimentional 
@@ -31,13 +31,13 @@ void input_sudoku(int* diff_level, int* no_sudoku);
  * @param[in] sudoku_temp[ROWS][COLS], Two dimentional array of size 9X9 containing
  *                                     the sudoku template. 
  */
-void generate_sudoku_template(int sudoku_temp[ROWS][COLS]);
+void generate_sudoku_template(int [ROWS][COLS]);
 
 /**
  * The function rearrange_cols_rows takes in the sudoku template created in the
  * generate_sudoku_template function and goes on step-by-step random procedure
  * to generate different types of sudoku template. Firstly, it interchanges the 
- * 3 different numbers selecting randomly in each row. Then, it rearranges the 
+ * 4 different numbers selecting randomly in each row. Then, it rearranges the 
  * columns,rows between them in the combination of three (Ex: 1,2,3 columns/rows 
  * rearrange themselves, followed by 4,5,6 rearranging and then 7,8,9 columns/rows).
  * After successful rearrangement, it also swaps the 3 column groups of 9x3 size
@@ -49,11 +49,25 @@ void generate_sudoku_template(int sudoku_temp[ROWS][COLS]);
  * @param[in] rearranged_sudoku[][9], This parameter is the updated randomized 
  * 				      sudoku template.
 */
-void rearrange_cols_rows(int sudoku_temp[ROWS][COLS], 
-                            int rearranged_sudoku_temp[ROWS][COLS]);
+void rearrange_cols_rows(int [ROWS][COLS], int [ROWS][COLS]);
 
-_Bool test_sudoku_rules(int test_sudoku[ROWS][COLS]);
-
+/**
+ * The function test_sudoku_rules checks the rearranged sudoku (which is generated in
+ * the function rearrange_cols_rows) for the sudoku rules. It examines the rows, coloums
+ * and 3X3 matrix for any repeated values. According to sudoku rules, a row, column and 
+ * 3X3 should contain all the elements from 1 to 9 and the sum of all the elements of any 
+ * row, column or 3x3 should be 45. This function checks all these conditions and returns 
+ * a bool value. When the bool value is returned as 0, it means that the rearranged sudoku
+ * met all the sudoku rules and proceeds for masking. If the bool value is 1, it means that
+ * there is an error while rearranging the sudoku and the program will not proceed furthur 
+ * and redirects the program to generate another sudoku.
+ *   
+ * @param[in] rearranged_sudoku[][9], This parameter takes the rearranged sudoku 
+ *                                    which is the output of the function 
+ *                                    rearrange_cols_rows.c
+ *                                    
+ */
+_Bool test_sudoku_rules(int [ROWS][COLS]);
 
 /**
 * Function apply_mask creates unique masks in turn creates a unique Sudoku game. 
@@ -70,8 +84,7 @@ _Bool test_sudoku_rules(int test_sudoku[ROWS][COLS]);
 * @param diff_level [in], Difficulty level dectates how many numbers should be shown on Sudoku game.
 * @param masked_sudoku [out], Array containing the masked Sudoku game.
 */
-void apply_mask(int rearrange_cols_rows[ROWS][COLS], int diff_level, 
-                                            int masked_sudoku[ROWS][COLS]);
+void apply_mask(int [ROWS][COLS], int, int [ROWS][COLS]);
 
 /** @brief Primary function to solve the Sudoku Puzzle.
  * 
@@ -212,6 +225,9 @@ _Bool used_in_col(int sudoku_puzzle[ROWS][COLS], int col, int num);
  */
 _Bool used_in_box(int sudoku_puzzle[ROWS][COLS], int row, int col, int num);  
 
+_Bool apply_solver(int [ROWS][COLS]);
+
+
 /** \brief Primary function to create the Sudoku Puzzle and Solution. 
  *  
  *  This function takes-in two sudoku grid (Sudoku Puzzle and Sudoku Solution) 
@@ -227,8 +243,7 @@ _Bool used_in_box(int sudoku_puzzle[ROWS][COLS], int row, int col, int num);
  *  @param[in] sudoku_puzzle The Sudoku Puzzle that will be created.
  *  @param[in] diff_lvl The difficulty level of the Sudoku Puzzle. 
  */
-void output_sudoku(int sudoku_solution [ROWS][COLS], 
-                    int sudoku_puzzle [ROWS][COLS], int diff_lvl);
+void output_sudoku(int [ROWS][COLS], int [ROWS][COLS], int);
 
 
 /** \brief Sub function to create a Sudoku file. 
@@ -238,16 +253,16 @@ void output_sudoku(int sudoku_solution [ROWS][COLS],
  *  single CSV file in the ../output directory. The function will use three 
  *  parameters to name the file:  
  * 
- *      -The Sudoku type (Puzzle or Solution);
- *      -The difficulty level (easy, normal, hard, very hard);
- *      -The current iteration of the Sudoku. 
+ *      - The Sudoku type (Puzzle or Solution);
+ *      - The difficulty level (easy, normal, hard, very hard);
+ *      - The current iteration of the Sudoku. 
  *  
  *  Once the file name is made, the file itself is created and each element 
  *  of the array is written on the file as a character. If the element is:
  * 
- *      -an int between 1 and 9, then the corresponding character between 
+ *      - an int between 1 and 9, then the corresponding character between 
  *          1 and 9 will be written; and
- *      -int 0, then ' ' will be written.
+ *      - int 0, then ' ' will be written.
  * 
  * Once it has gone through the entire array, the function will then close file 
  * stream and end the function.   
@@ -258,8 +273,7 @@ void output_sudoku(int sudoku_solution [ROWS][COLS],
  *  @param[in] output_count The current number of times a Sudoku pair has been 
  *              created. 
  */
-void create_sudoku_file(int sudoku[ROWS][COLS], char* sudoku_type, int diff_lvl, 
-                        int output_count);
+void create_sudoku_file(int [ROWS][COLS], char* , int, int);
 
 #endif 
 
@@ -271,22 +285,22 @@ void create_sudoku_file(int sudoku[ROWS][COLS], char* sudoku_type, int diff_lvl,
 #define REARRANGE_COLS_ROWS_H
 
 /**
- * @brief This function is used to generate random numbers between [1,9] 
+ * @brief This function is used to generate random numbers between rangelow and rangehigh. 
  *
- * @param[in] rangeLow --- This parameter determines the lowest number in the range.
- * @param[in] rangeHigh --- This parameter determines the highest number in the range.
- * @return This function returns a number between [1,9]
+ * @param[in] rangelow -- This parameter determines the lowest number in the range.
+ * @param[in] rangehigh -- This parameter determines the highest number in the range.
+ * @return This function returns a number between rangelow and rangehigh.
  */ 
-int choose_number(int rangeLow, int rangeHigh);
+int choose_number(int, int);
 
 /**
  * @brief This function is used to select different numbers in the 
  *        sudoku template and swap them accordingly.
  *
- * @param[in] table[][9] --- This parameter updates the sudoku template 
+ * @param[in] table[][9] -- This parameter updates the sudoku template 
  *			     after successful swapping of the values.
  */ 
-void swap(int table[][9]);
+void swap(int [][9]);
 
 /**
  * @brief This function is to change the randomly rearrange columns:
@@ -294,15 +308,15 @@ void swap(int table[][9]);
  *		4, 5 and 6 within themselves; and
  *		7, 8 and 9 within themselves. 
  *
- * @param[in] col_matrix[][9] --- This parameter updates the sudoku template after the 
+ * @param[in] col_matrix[][9] -- This parameter updates the sudoku template after the 
  *				  rearrangement of the columns combinations consecutively.
- * @param[in] p --- This parameter is used to take the values of the column number.
- * @param[in] q --- This paramter is used to take the values of the 
+ * @param[in] p -- This parameter is used to take the values of the column number.
+ * @param[in] q -- This paramter is used to take the values of the 
  *		    consecutive column number after the pth column.
- * @param[in] r --- This parameter is used to take the values of the 
+ * @param[in] r -- This parameter is used to take the values of the 
  *		    consecutive column number after the qth column.
  */
-void change_columns(int col_matrix[][9], int p, int q, int r);
+void change_columns(int [][9], int , int , int );
 
 /**
  * @brief This function is to change the randomly rearrange rows:
@@ -310,45 +324,45 @@ void change_columns(int col_matrix[][9], int p, int q, int r);
  *		4, 5 and 6 within themselves; and
  *		7, 8 and 9 within themselves.
  *
- * @param[in] row_matrix[][9] --- This parameter updates the sudoku template 
+ * @param[in] row_matrix[][9] -- This parameter updates the sudoku template 
  *				  after the rearrangement of the rows combination consecutively.
- * @param[in] x --- This parameter is used to take the values of the row number.
- * @param[in] y --- This paramter is used to take the values of the 
+ * @param[in] x -- This parameter is used to take the values of the row number.
+ * @param[in] y -- This paramter is used to take the values of the 
  *		    consecutive row number after the xth row.
- * @param[in] z --- This parameter is used to take the values of the
+ * @param[in] z -- This parameter is used to take the values of the
  *		    consecutive row number after the yth row. 
  */
-void change_rows(int row_matrix[][9], int x, int y, int z);
+void change_rows(int [][9], int, int, int);
 
 /**
  * @brief This function is used to randomly rearrange the sudoku template
  *         in 3 column groups of size 9x3.
  *
- * @param[in] column_group[][9] --- This parameter updates the sudoku template
+ * @param[in] column_group[][9] -- This parameter updates the sudoku template
  *				    after the rearrangement of 3 column groups (9x3 size).
- * @param[in] b_1[9][3] --- This parameter is used to copy the first 9x3 size 
+ * @param[in] b_1[9][3] -- This parameter is used to copy the first 9x3 size 
  *			    of sudoku template and overwrite it's values.
- * @param[in] b_2[9][3] --- This parameter is used to copy the second 9x3 size 
+ * @param[in] b_2[9][3] -- This parameter is used to copy the second 9x3 size 
  *		            of sudoku template and overwrite it's values.
- * @param[in] b_3[9][3] --- This parameter is used to copy the third 9x3 size
+ * @param[in] b_3[9][3] -- This parameter is used to copy the third 9x3 size
  *			    of sudoku template and overwrite it's values.
  */
-void col_groups(int column_group[][9], int b_1[9][3], int b_2[9][3], int b_3[9][3]);
+void col_groups(int [][9], int[9][3], int[9][3], int[9][3]);
 
 /** 
  * @brief This function is used to randomly rearrange the sudoku template 
  *        in 3 row groups of size 3x9.
  *
- * @param[in] r_group[][9] --- This parameter updates the sudoku template 
+ * @param[in] r_group[][9] -- This parameter updates the sudoku template 
  *			       after the rearrangement of 3 row groups (3x9 size).
- * @param[in] c_1[3][9] --- This parameter is used to copy the first 3x9 size 
+ * @param[in] c_1[3][9] -- This parameter is used to copy the first 3x9 size 
  *			    of sudoku template and overwrite it's values.
- * @param[in] c_1[3][9] --- This parameter is used to copy the second 3x9 size
+ * @param[in] c_1[3][9] -- This parameter is used to copy the second 3x9 size
  *		            of sudoku template and overwrite it's values.
- * @param[in] c_1[3][9] --- This parameter is used to copy the third 3x9 size
+ * @param[in] c_1[3][9] -- This parameter is used to copy the third 3x9 size
  *			    of sudoku template and overwrite it's values.
  */
-void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]);
+void row_groups(int [][9], int [3][9], int [3][9], int [3][9]);
 
 #endif
 
@@ -361,26 +375,61 @@ void row_groups(int r_group[][9], int c_1[3][9], int c_2[3][9], int c_3[3][9]);
  *        and will be wrongly accepted as input on the next iteration of the loop.
  *
  */
-static inline void ClearInputBuffer();
+static inline void clear_input_buffer();
 
 /** 
  * @brief This function initially clears the input buffer and checks for restricted input values and returns only if the entered value 
  *        is integer. 
  *
- * @param[in] *inputInteger --- This parameter takes the user input.
+ * @param[in] *input_integer -- This parameter takes the user input.
  * 
  */
-void getIntegerFromStdin(int *inputInteger);
-
-/** 
- * @brief This functions asks the difficulty level and number of sudokus checks whether the meet the pre-defined conditions.
- *
- * @param[in] diff_level --- This parameter stores the difficulty level entered by the user.
- *
- * @param[in] no_sudoku --- This parameter store the number of sudokus that the user wants to generate. 
- */
-void input_sudoku(int *diff_level,int *no_sudoku);
+void get_integer_from_stdin(int *);
 
 #endif
 
+#ifndef TEST_SUDOKU_H
+#define TEST_SUDOKU_H
 
+/**
+ * @brief This function is used to check the sudoku rules for all the rows.
+ *
+ * @param[in] rearranged_sudoku[][9] -- This parameter determines the generated sudoku.
+ * @param[in] a[9] -- This parameter is to check the sudoku rules for each row.
+ *
+ * @return -- If the rows follow the sudoku rules then return true or else false.
+ */ 
+_Bool test_rows(int [][9], int [9]);
+
+/**
+ * @brief This function is used to check the sudoku rules for all the columns.
+ *
+ * @param[in] rearranged_sudoku[][9] -- This parameter determines the generated sudoku.
+ * @param[in] a[9] -- This parameter is to check the sudoku rules for each column.
+ *
+ * @return -- If the columns follow the sudoku rules then return true or else false.
+ */ 
+_Bool test_cols(int [][9], int [9]);
+
+/**
+ * @brief This function is used to check the sudoku rules for all the 3X3 matrices.
+ *
+ * @param[in] rearranged_sudoku[][9] -- This parameter determines the generated sudoku.
+ * @param[in] a[9] -- This parameter is to check the sudoku rules for each 3X3 matrix.
+ *
+ * @return -- If the columns follow the sudoku rules then return true or else false.
+ */ 
+_Bool test_3X3(int [][9],int[9]);
+
+/**
+ * @brief This function will leave the array a[] with the elements which has to be
+ * 	  appeared in the row/column/3x3 block because those elements are overwritten
+ *        by the repeated values.
+ *
+ * @param[in] check -- This parameter is used to pass the values of the rearranged_sudoku.
+ * @param[in] a[9] -- This parameter is to check the sudoku rules for each row/column/3x3 block.
+ *
+ */ 
+void delete_1(int , int [9]);
+
+#endif
