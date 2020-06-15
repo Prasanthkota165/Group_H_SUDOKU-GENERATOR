@@ -17,7 +17,7 @@
  */
 
 
-void main() {
+int main(void) {
     _Bool a;
     int sudoku_temp[9][9] = {{1,2,3,4,5,6,7,8,9},
 		     {4,5,6,7,8,9,1,2,3},
@@ -33,8 +33,10 @@ void main() {
     a=test_sudoku_rules(rearranged_sudoku);
     printf("Bool : %d\n",a);
     if (a==0) {
-        printf("..........No Errors..........");
+        printf("..........No Errors..........\n");
     }else {
-        printf("...........There is an error..............");
+        printf("...........There is an error.............\n");
      }
 }
+
+

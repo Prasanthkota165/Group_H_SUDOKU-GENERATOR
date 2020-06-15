@@ -12,12 +12,13 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 
 #include "../../src/rearrange_cols_rows.c"
 #include "../../include/sudoku.h"
 
 int main(void){
-  int sudoku_temp[9][9] = {{1,2,3,4,5,6,7,8,9},
+  int sudoku_template[9][9] = {{1,2,3,4,5,6,7,8,9},
 		     {4,5,6,7,8,9,1,2,3},
 		     {7,8,9,1,2,3,4,5,6},
 		     {2,3,1,5,6,4,8,9,7},
@@ -26,19 +27,20 @@ int main(void){
 		     {3,1,2,6,4,5,9,7,8},
 		     {6,4,5,9,7,8,3,1,2},
 		     {9,7,8,3,1,2,6,4,5}};
-  int rearranged_sudoku_temp[9][9];
-  rearrange_cols_rows(sudoku_temp, rearranged_sudoku_temp);
+  srand(time(0));
+  int rearranged_sudoku[9][9];
+  rearrange_cols_rows(sudoku_template, rearranged_sudoku);
   int i,j;
   for (i=0;i<9;i++){
  	for (j=0;j<9;j++){
-		printf("%d ",sudoku_temp[i][j]);
+		printf("%d ",sudoku_template[i][j]);
 	}
 	printf("\n");
   }
   printf("\nRearranged Sudoku template: \n");
   for (i=0;i<9;i++){
  	for (j=0;j<9;j++){
-		printf("%d ",rearranged_sudoku_temp[i][j]);
+		printf("%d ",rearranged_sudoku[i][j]);
 	}
 	printf("\n");
   }
