@@ -35,7 +35,7 @@
 * @param[out] _Bool is used to check if there are duplicate values in either row, column or
 *             the 3x3 solver output, if there are duplicates it returns false otherwise true.
 */
- _Bool sortArray_and_test(int tester[ROWS]){
+ _Bool sort_array_and_test(int tester[ROWS]){
 
      int temp = 0;
      for(int k = 0; k < ROWS; k++){
@@ -85,7 +85,7 @@
              section++;
 
             /* The following message is written to log file and will show which section of the 3x3 Sudoku game violated the Sudoku rule */
-            if(sortArray_and_test(tester)){
+            if(sort_array_and_test(tester)){
                  fprintf(fp, "The [3 x 3] section %d %s", section, "of the solver output has ***passed*** the Sudoku rule test\n");
             }
             else{
@@ -109,7 +109,7 @@
              tester[j] = solver[i][j];
          }
 
-         if(sortArray_and_test(tester)){
+         if(sort_array_and_test(tester)){
                 fprintf(fp, "Row %d %s", i+1, "solver output has ***passed*** the Sudoku rule test\n");
          }
          else{
@@ -134,7 +134,7 @@
              }
          }
          count++;
-         if(sortArray_and_test(tester)){
+         if(sort_array_and_test(tester)){
              fprintf(fp, "Column %d %s", count, "solver output has ***passed*** the Sudoku rule test\n");
          }
          else{
