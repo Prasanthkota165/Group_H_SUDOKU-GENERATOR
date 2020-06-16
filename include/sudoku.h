@@ -377,15 +377,6 @@ void row_groups(int [][9], int [3][9], int [3][9], int [3][9]);
  */
 static inline void clear_input_buffer();
 
-/** 
- * @brief This function initially clears the input buffer and checks for restricted input values and returns only if the entered value 
- *        is integer. 
- *
- * @param[in] *input_integer -- This parameter takes the user input.
- * 
- */
-void get_integer_from_stdin(int *);
-
 #endif
 
 #ifndef TEST_SUDOKU_H
