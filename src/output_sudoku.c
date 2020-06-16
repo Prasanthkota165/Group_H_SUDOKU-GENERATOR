@@ -97,7 +97,9 @@ void create_sudoku_file(int sudoku[][9], char* sudoku_type, int diff_lvl,
         case(3):strcat(file_name, "_very_hard_");break;
         default:strcat(file_name, "_error_");break;
     }
-
+    if(output_count < -99 || output_count > 999){
+        output_count = 0;
+    }
     sprintf(counter,"%d",output_count); /*Converts the output counter from an 
                                             int to a string*/ 
     strcat(file_name, counter); /*Concatenates output counter to the 

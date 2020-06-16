@@ -29,6 +29,7 @@ int main(void){
     _Bool tester;
     int masked_sudoku[ROWS][COLS];
     int sudoku_solution [ROWS][COLS];
+    int sudoku_temp [ROWS][COLS];
     srand(time(0));
     char ch;
 
@@ -48,9 +49,13 @@ int main(void){
         /*Tests the rearranged sudoku for sudoku rules*/
         }while(test_sudoku_rules(rearranged_sudoku));
      
-        /* Masking the numbers on the rearranged sudoku template according 
-        to the difficulty level provided */  
-        apply_mask(rearranged_sudoku, diff_level, masked_sudoku);
+        do{
+            /* Masking the numbers on the rearranged sudoku template according 
+            to the difficulty level provided */  
+            apply_mask(rearranged_sudoku, diff_level, masked_sudoku);
+
+                /*Verifies if the SUdoku puzzle is solvable*/
+        }while(!solver_sudoku(masked_sudoku,sudoku_temp));
 
         /* Finally, create the two .csv files (puzzle and solution) into the 
         output folder */
