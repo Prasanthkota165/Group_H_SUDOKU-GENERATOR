@@ -8,10 +8,6 @@
     #include "../include/sudoku.h"
 #endif
 
-#if defined(_WIN32)||defined (WIN32) 
-    #include "..\\include\\sudoku.h"
-#endif
-
 #define ROWS 9
 #define COLS 9
 
