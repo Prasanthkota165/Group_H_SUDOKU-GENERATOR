@@ -1,8 +1,7 @@
 /**
 * @file solver_sudoku.c 
 *
-* Purpose   : Contains the functions to to determine if a Sudoku puzzle 
-*               is solvable.
+* Purpose   : Contains the functions to determine if a Sudoku puzzle is solvable.
 *
 * Language  : C
 *
