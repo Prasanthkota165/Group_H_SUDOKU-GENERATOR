@@ -178,7 +178,7 @@
     }
 
 
-    fp = fopen ("sudoku_solver_test_log_file.txt", "w+");
+    fp = fopen ("../log/sudoku_solver_test_log_file.txt", "w+");
     if (fp == NULL)
     {
         printf("Could not open the file");
