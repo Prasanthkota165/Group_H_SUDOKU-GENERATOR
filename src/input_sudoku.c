@@ -12,97 +12,58 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <errno.h>
-
-#define max_digits 4
 
 /**
  * This function removes surplus characters or symbols from the input buffer.       
  */
 static inline void clear_input_buffer(){
-
-	char c = 0; 
-	while ((c = getchar()) != '\n' && c != EOF); /*Loop over input buffer and consume chars until buffer is empty*/
+    char c = 0; 
+    while ((c = getchar()) != '\n' && c != EOF); /*Loop over input buffer and consume chars until buffer is empty*/
 }
-
 /**
- * This function initially clears the input buffer and checks for restricted 
- * input values and returns only if the entered value is integer. 
- */
-void get_integer_from_stdin(int *input_integer){
-
-	char *input_buffer = malloc(sizeof(char) * max_digits);
-	memset(input_buffer, 0, max_digits); /*Clears the input buffer initially.*/
-	char *input = NULL;
-	while (input == NULL){/*Here fgets returns inputBuffer on success.This becomes important when freeing - free either `input` or`inputBuffer` to avoid an attempted double-free error.*/
-                input = fgets(input_buffer, max_digits, stdin); 
-		if (input_buffer[strlen(input_buffer) - 1] != '\n') { /* prevents the program to generate seperate error messages for a string of characters. */
-			printf("..............Invalid input.Please try again.......................\n");
-			clear_input_buffer();
-			input = NULL;
-			continue;
-		}
-        errno = 0; /*Check that the input can be intepreted as an integer*/
-        char *endptr = NULL;
-        *input_integer = strtol(input, &endptr, 10); /*Convert to integer using `strtol()`*/
-                if (input == endptr) { /* If an integer was not found, endptr remains set to input*/
-			input[strcspn(input, "\n")] = 0; /*strcspn - this function gets the length of a prefix substring.*/
-			printf("..............Invalid input.Please try again.......................\n");
-			input = NULL;
-		}
-		if (errno != 0) {
-			printf("..............Invalid input.Please try again........................\n");
-			input = NULL;
-		}
-             
-                
-	}
-	free(input_buffer);
-}
-
- 
-/**
- * This functions asks the difficulty level and number of sudokus checks whether 
- * the meet the pre-defined conditions.
+ * This functions asks the difficulty level and number of sudokus from the user and checks whether 
+ * they meet the pre-defined conditions and range. It also tracks the incorrect attempts made
+ * by the user and exits the program if the maximum allowed attempts are reached. 
  */
 void input_sudoku(int *diff_level,int *no_sudoku){ 
-
-   printf("....................Welcome to Sudoku Generator......................\n\n");     
-   int x;
-   int y;
-   puts("Enter difficulty level as(0,1,2 or 3):\nEasy:      0\nMedium:    1\nHard:      2\nVery Hard: 3");
-	
-   while(1) {/*Checks for valid difficulty level and number of sudokus.*/
-	get_integer_from_stdin(&x);
-	if(x<=3&&x>=0) {/* Checks whether the difficulty level in in the specified range*/
-                *diff_level=x;
-                puts("..............................................................................\n");
-                break;
-                
-        }
-        else {
-                puts("....................Invalid input...........................\n");
-                puts("Enter difficulty level as(0,1,2 or 3):\nEasy:      0\nMedium:    1\nHard:      2\nVery Hard: 3");
-        }
-   }
-   while(1) {
-         puts("Enter the number of sudokus you would like to print between 1 to 40:");
-         get_integer_from_stdin(&y);
-         if(y<=40&&y>=1) {/* Checks whether the number of sudokus are in the specified range*/
-                   *no_sudoku=y;
-                    break;
+    printf("....................Welcome to Sudoku Generator......................\n\n");     
+    int x;
+    int y;
+    int i=5;
+    int j=5;
+    while(i!=0) {/*Asks the user for difficulty level.*/
+        printf("Enter difficulty level as(0,1,2 or 3):\nEasy:      0\nMedium:    1\nHard:      2\nVery Hard: 3\n->");
+	scanf("%d",&x);
+        if(x<=3&&x>=0) {/* Checks whether the difficulty level is in the specified range*/
+            *diff_level=x;
+            printf("..............................................................................\n");
+            break;
+        }else {/*If difficulty level is not in the specified range*/
+             clear_input_buffer();/*Clear the elements in the input buffer.*/  
+             printf("....................Invalid input. %d attempts remaining........................\n",i-1);
          }
-         else {
-                    puts("................Invalid number of sudokus.Please try again...............");
-              }
-   }
-
-   
+        i--; 
+    }
+    if (i==0) { /* If the user exceeds the inputs limit, this loop will execute to terminate the program*/
+         printf("\n....................YOU HAVE REACHED MAXIMUM ATTEMPTS...............\n");               
+         exit(0);
+    }
+    while(j!=0) {/*Asks the user for number of sudokus.*/
+        printf("Enter the number of sudokus you would like to print between 1 to 40:\n->");
+        scanf("%d",&y);
+        if(y<=40&&y>=1) {/* Checks whether the number of sudokus are in the specified range*/
+            *no_sudoku=y;
+            break;
+        }else {/*If number of sudokus are not in the specified range*/
+              clear_input_buffer();/*Clear the elements in the input buffer.*/ 
+              printf("................Invalid input. %d attempts remaining...............\n",j-1);
+         }
+        j--;
+    }
+    if (j==0) {/* If the user exceeds the inputs limit, this loop will execute to terminate the program*/
+       printf("\n....................YOU HAVE REACHED MAXIMUM ATTEMPTS...............\n");
+       exit(0);
+    }
     printf("Difficulty level: %d\n",x);
     printf("Number of sudokus: %d\n",y);	
 }
-
-
-
-
