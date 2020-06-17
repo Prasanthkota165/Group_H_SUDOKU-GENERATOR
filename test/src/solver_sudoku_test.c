@@ -19,9 +19,10 @@
 #ifndef __MY_HEADER__
 #define __MY_HEADER__
    #include "../../include/sudoku.h"
-   #if defined(_WIN32)||defined (WIN32)
-       #include "..\\..\\include\\sudoku.h"
-   #endif
+#endif
+
+#if defined(_WIN32)||defined (WIN32)
+    #include "..\\..\\include\\sudoku.h"
 #endif
 
 #include "../../src/solver_sudoku.c" 

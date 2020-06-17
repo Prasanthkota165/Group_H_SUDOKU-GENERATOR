@@ -2,6 +2,15 @@
 #include <math.h>
 #include <stdlib.h>
 
+#ifndef __MY_HEADER__
+#define __MY_HEADER__
+   #include "../../include/sudoku.h"
+#endif
+
+#if defined(_WIN32)||defined (WIN32)
+    #include "..\\..\\include\\sudoku.h"
+#endif
+
 #include "../../src/apply_mask.c"
 
 /**

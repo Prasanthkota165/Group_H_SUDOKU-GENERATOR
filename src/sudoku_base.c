@@ -29,7 +29,7 @@ int main(void){
     _Bool tester;
     int masked_sudoku[ROWS][COLS];
     int sudoku_solution [ROWS][COLS];
-    int sudoku_temp [ROWS][COLS];
+    int solver_output [ROWS][COLS];
     srand(time(0));
     char ch;
 
@@ -55,7 +55,7 @@ int main(void){
             apply_mask(rearranged_sudoku, diff_level, masked_sudoku);
 
                 /*Verifies if the SUdoku puzzle is solvable*/
-        }while(!solver_sudoku(masked_sudoku,sudoku_temp));
+        }while(!solver_sudoku(masked_sudoku, solver_output));
 
         /* Finally, create the two .csv files (puzzle and solution) into the 
         output folder */
@@ -64,7 +64,7 @@ int main(void){
     
     /*Final message of the program*/
     printf("Sudoku generator has finished creating %d sudoku(s).\n", no_sudoku);
-    printf("Press any key to exit\n");
+    printf("Press enter to exit\n");
     getchar();
     return 0;
 }

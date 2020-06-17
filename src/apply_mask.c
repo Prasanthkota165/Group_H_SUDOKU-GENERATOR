@@ -8,10 +8,16 @@
     #include "../include/sudoku.h"
 #endif
 
+#if defined(_WIN32)||defined (WIN32)
+    #include "..\\include\\sudoku.h"
+#endif
+
 #define ROWS 9
 #define COLS 9
 
 /**
+* @file apply_mask.c 
+*
 * Function apply_mask
 * -------------------
 * Function apply_mask creates unique masks in turn creates a unique Sudoku game.
