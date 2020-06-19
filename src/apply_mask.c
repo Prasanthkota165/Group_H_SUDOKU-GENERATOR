@@ -45,12 +45,12 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
      /* PRECONDITION: The rearranged_sudoku array data type need to be an integer */
      for(int i = 0; i < ROWS; i++){
          for(int j = 0; j < COLS; j++){
-             /* This section will execute when the rearranged_sudoku array values are not from 1 to 9 */
-             /* This section covers when the rearranged_sudoku array size is not 9x9 */
-             /* This section also covers when the rearranged_sudoku array data type is char, float or double instead of integer*/
+             /* This section will execute when the rearranged_sudoku array actual parameter
+              * values are not from 1 to 9,  size is not 9x9 or data type is not integer.
+              */
              if (!((rearranged_sudoku [i][j] >= 1) && (rearranged_sudoku [i][j] <= 9))){
                 /* When all the above  cases arise the following message will display and the function will terminate */
-                printf("Wrong input value(s) present in the rearranged_sudoku array \n");
+                printf("The rearranged_sudoku array value(s), data type, or array size is incorrect\n");
                 _Exit(EXIT_FAILURE);
              }
          }
@@ -75,10 +75,10 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
             cells_tobe_masked = 57;    /* 57 locations will be masked and 24 numbers will be shown on the Sudoku game */
             break;
 
-        default:   /* Any diff_level input that does not translate into 0, 1, 2, or 3 will fall under this default case */
-            
+        default:   /* Any diff_level actual parameter value that does not translate into 0, 1, 2, or 3 will fall under this default case */
+
             /* When the diff_level is not 0, 1, 2 or 3, the following message will display and the function will terminate */
-            printf("Wrong difficulty level value\n");
+            printf("The difficulty level entered is not 0, 1, 2, or 3\n");
             _Exit(EXIT_FAILURE);
     }
 
