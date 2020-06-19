@@ -224,6 +224,13 @@ _Bool create_sudoku_file_test_output_count_5(void);
  * Function to compare a sudoku array with the content of a CSV file containing 
  * a Sudoku.
  * 
+ * Using the parameters of the function, the create_sudoku_file() function is 
+ * called. Afterwards, the function opens the file and compares each single 
+ * character in the .CSV file and compares it with the int number at the same 
+ * location on the array parameter. 
+ * 
+ * If one of the characters does not match the array, then the function returns 
+ * FALSE. 
  * 
  * @param location File location to compare with the array.
  * @param type Type of the sudoku.
@@ -231,13 +238,21 @@ _Bool create_sudoku_file_test_output_count_5(void);
  * @param count Count ot the number of Sudoku created.
  * @param sudoku Sudoku array to compare with the file.
  * 
- * @return FALSE if the Sudokus are different. TRUE if they are they have the same values.
+ * @return FALSE if the Sudokus are different. TRUE if they are they have the 
+ * same values.
  */
 _Bool verify_sudoku_file(int [][9], char *, int, int, char*);
 
 /**
  * 
- * Function to compare a file name with the input parameters * 
+ * Function to compare a file name with the input parameters.
+ * 
+ * After generating the sudoku file by calling the create_sudoku_file(), the 
+ * function checks if the file exist with the correct name by attemtimg to 
+ * open the file with fopen() function. 
+ * 
+ * If the file does not exist, then fopen() function will return NULL, and as 
+ * such return FALSE for the function.   
  * 
  * @param location File location to compare with the array.
  * @param type Type of the sudoku.
@@ -245,7 +260,8 @@ _Bool verify_sudoku_file(int [][9], char *, int, int, char*);
  * @param count Count ot the number of Sudoku created.
  * @param sudoku Sudoku array to compare with the file.
  * 
- * @return FALSE if the Sudokus are different. TRUE if they are they have the same values.
+ * @return FALSE if the Sudokus are different. TRUE if they are they have the 
+ * same values.
  */
 _Bool verify_sudoku_file_name(int [][9], char *, int, int, char*);
 

@@ -684,7 +684,12 @@ _Bool verify_sudoku_file(int sudoku[][9], char *type, int diff_lvl, int count,
     
     return 1;
 }
-
+/**
+ * General function to verify the validity of the file location.
+ * 
+ * @return FALSE if the test has failed. True if the test passed.
+ *  
+ */
 _Bool verify_sudoku_file_name(int sudoku[9][9], char* type, int diff_lvl, 
                                 int count, char* location){
     FILE *file;
