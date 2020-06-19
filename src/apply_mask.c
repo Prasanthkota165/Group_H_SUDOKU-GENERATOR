@@ -56,7 +56,7 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
          }
      }
 
-     /* PRECONDITION: The diff_level need to contain integer value 0, 1, 2 or 3 only */
+     /* PRECONDITION: diff_level need to be an integer data type and contain a value 0, 1, 2 or 3 only */
      switch(diff_level){
         /* The number of cells to be masked is determined based on the difficulty level */
         case 0:
