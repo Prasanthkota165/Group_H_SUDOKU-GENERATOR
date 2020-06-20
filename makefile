@@ -38,17 +38,27 @@ sudoku: output_sudoku.o generate_sudoku_template.o input_sudoku.o rearrange_cols
 output_sudoku_test.o: test/src/output_sudoku_test.c
 	$(CC) -g $(INCLUDESUDOKU) -c ./test/src/output_sudoku_test.c -o ./test/build/output_sudoku_test.o
 
+apply_mask_test.o: test/src/apply_mask_test.c
+	$(CC) -g $(INCLUDESUDOKU) -c ./test/src/apply_mask_test.c -o ./test/build/apply_mask_test.o
 
-
+solver_sudoku_test.o: test/src/solver_sudoku_test.c
+	$(CC) -g $(INCLUDESUDOKU) -c ./test/src/solver_sudoku_test.c -o ./test/build/solver_sudoku_test.o
 
 
 testoutput : output_sudoku_test.o output_sudoku.o
 		$(CC) -g -o ./test/bin/TEST_SUDOKU_OUTPUT.exe ./test/build/output_sudoku_test.o ./build/output_sudoku.o
 
+testoutput : apply_mask_test.o apply_mask.o
+		$(CC) -g -o ./test/bin/TEST_APPLY_MASK.exe ./test/build/apply_mask_test.o ./build/apply_mask.o
+
+testoutput : solver_sudoku_test.o solver_sudoku.o
+		$(CC) -g -o ./test/bin/TEST_SOLVER_SUDOKU.exe ./test/build/solver_sudoku_test.o ./build/solver_sudoku.o
+
+
 alltest: testoutput 
 
 runtest: 
-		cd ./test/bin; ./TEST_SUDOKU_OUTPUT.exe	
+		cd ./test/bin; ./TEST_SUDOKU_OUTPUT.exe	./TEST_APPLY_MASK.exe ./TEST_SOLVER_SUDOKU.exe
 
 runtest: testoutput runtestoutput
 
