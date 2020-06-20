@@ -1,0 +1,35 @@
+Testing all nine 3x3 sections of the Sudoku solver output to see if it complies with the Sodoku rules
+-----------------------------------------------------------------------------------------------------
+The [3 x 3] section 1 of the solver output has ***passed*** the Sudoku rule test
+The [3 x 3] section 2 of the solver output has ***passed*** the Sudoku rule test
+The [3 x 3] section 3 of the solver output has ***passed*** the Sudoku rule test
+The [3 x 3] section 4 of the solver output has ***passed*** the Sudoku rule test
+The [3 x 3] section 5 of the solver output has ***passed*** the Sudoku rule test
+The [3 x 3] section 6 of the solver output has ***passed*** the Sudoku rule test
+The [3 x 3] section 7 of the solver output has ***passed*** the Sudoku rule test
+The [3 x 3] section 8 of the solver output has ***passed*** the Sudoku rule test
+The [3 x 3] section 9 of the solver output has ***passed*** the Sudoku rule test
+
+Testing all the rows of the Sudoku solver output 
+------------------------------------------------
+Row 1 solver output has ***passed*** the Sudoku rule test
+Row 2 solver output has ***passed*** the Sudoku rule test
+Row 3 solver output has ***passed*** the Sudoku rule test
+Row 4 solver output has ***passed*** the Sudoku rule test
+Row 5 solver output has ***passed*** the Sudoku rule test
+Row 6 solver output has ***passed*** the Sudoku rule test
+Row 7 solver output has ***passed*** the Sudoku rule test
+Row 8 solver output has ***passed*** the Sudoku rule test
+Row 9 solver output has ***passed*** the Sudoku rule test
+
+Testing all the columns of the Sudoku solver output 
+---------------------------------------------------
+Column 1 solver output has ***passed*** the Sudoku rule test
+Column 2 solver output has ***passed*** the Sudoku rule test
+Column 3 solver output has ***passed*** the Sudoku rule test
+Column 4 solver output has ***passed*** the Sudoku rule test
+Column 5 solver output has ***passed*** the Sudoku rule test
+Column 6 solver output has ***passed*** the Sudoku rule test
+Column 7 solver output has ***passed*** the Sudoku rule test
+Column 8 solver output has ***passed*** the Sudoku rule test
+Column 9 solver output has ***passed*** the Sudoku rule test
