@@ -25,7 +25,6 @@
     #include "..\\..\\include\\sudoku.h"
 #endif
 
-#include "../../src/solver_sudoku.c" 
  
 #define ROWS 9
 #define COLS 9
