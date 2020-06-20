@@ -14,9 +14,14 @@
 * Date      : 30 May 2020
 *
 **/
+#if defined(_WIN32)||defined (WIN32) /*Create output folder if Microsoft OS*/                           
+    # include "..\\..\\include\\sudoku.h"
+    # include "..\\include\\output_sudoku_test.h"
+#else 
+    #include "../../include/sudoku.h"
+    #include "../include/output_sudoku_test.h"
+#endif
 
-#include "..\\..\\include\\sudoku.h"
-#include "..\\include\\output_sudoku_test.h"
 
 #include <stdio.h>
 #include <stdlib.h>
