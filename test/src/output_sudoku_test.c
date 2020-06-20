@@ -707,13 +707,13 @@ _Bool verify_sudoku_file_name(int sudoku[9][9], char* type, int diff_lvl,
     
     /*Verifies the result of the test*/
     if(file==NULL){
-        printf(location);
+        puts(location);
         return 0;
     } 
     else{
         fclose(file);
         return 1;
-        }
+    }
 }
 
 /**

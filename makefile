@@ -77,32 +77,32 @@ testsudokutest :  test_sudoku_test.o test_sudoku.o
 alltest : testapplymask testsudokutemplate testinput testoutput testsolver testrearrange testsudokutest
 
 #TARGET TO RUN ALL TESTINGS TOGETHER
-runtestapplymask : TEST_APPLY_MASK.exe
+runtestapplymask : 
 		$(TESTBIN) ./TEST_APPLY_MASK.exe
-runtestsudokutemplate : TEST_SUDOKU_TEMPLATE.exe
+runtestsudokutemplate : 
 		$(TESTBIN) ./TEST_SUDOKU_TEMPLATE.exe
-runtestinput : TEST_SUDOKU_INPUT.exe
+runtestinput : 
 		$(TESTBIN) ./TEST_SUDOKU_INPUT.exe
-runtestoutput : TEST_SUDOKU_OUTPUT.exe
+runtestoutput : 
 		$(TESTBIN) ./TEST_SUDOKU_OUTPUT.exe
-runtestsolver : TEST_SUDOKU_SOLVER.exe
+runtestsolver : 
 		$(TESTBIN) ./TEST_SUDOKU_SOLVER.exe
-runtestrearrange : TEST_REARRANGE_COL_ROW.exe
+runtestrearrange : 
 		$(TESTBIN) ./TEST_REARRANGE_COL_ROW.exe
-runtestsudokutest : TEST_SUDOKU_TEST.exe
+runtestsudokutest : 
 		$(TESTBIN) ./TEST_SUDOKU_TEST.exe
 
 runtest : runtestapplymask runtestsudokutemplate runtestinput runtestoutput runtestsolver runtestrearrange runtestsudokutest
 
 #TARGET TO COMPILE AND RUN ALL TESTINGS
-runalltest:  alltest runalltest
+runalltest:  alltest runtest
 
 
 #TARGET TO COMPILE EVERYTHING (SUDOKU GENERATOR + TESTS TOGETHER)
 all : sudoku alltest
 
 #TARGET TO RUN EVERYTHING (SUDOKU GENERATOR + TESTS TOGETHER)
-run : runsudoku runalltest
+run : runsudoku runtest
 
 #TARGET TO COMPILE AND RUN EVERYTHING (SUDOKU GENERATOR + TESTS TOGETHER)
 runall : run all
