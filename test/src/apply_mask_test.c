@@ -116,19 +116,6 @@ int main(){
     apply_mask(rearranged_sudoku1, 7 , masked_sudoku);    /* The diff_level value not being 0, 1, 2, or 3 */
     apply_mask(rearranged_sudoku1, 'A' , masked_sudoku);  /* Incorrect diff_level data type */
 
-    /* The case where the rearranged_sudoku array data type is not integer */
-    float rearranged_sudoku4 [9][9] = {{1, 2, 3, 4, 5, 6, 7, 8, 9},
-                                       {4, 5, 6, 7, 8, 9, 1, 2, 3},
-                                       {7, 8, 9, 1, 2, 3, 4, 5, 6},
-                                       {2, 3, 1, 5, 6, 4, 8, 9, 7},
-                                       {5, 6, 4, 8, 9, 7, 2, 3, 1},
-                                       {8, 9, 7, 2, 3, 1, 5, 6, 4},
-                                       {3, 1, 2, 6, 4, 5, 9, 7, 8},
-                                       {6, 4, 5, 9, 7, 8, 3, 1, 2},
-                                       {9, 7, 8, 3, 1, 2, 6, 4, 5}};
-
-    apply_mask(rearranged_sudoku4, 0 , masked_sudoku);
-
     fclose(fp);
     return 0;
 }
