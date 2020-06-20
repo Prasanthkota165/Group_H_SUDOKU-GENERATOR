@@ -32,10 +32,10 @@
 *             the 3x3 solver output, if there are duplicates it returns false otherwise true.
 */
  _Bool sort_array_and_test(int tester[ROWS]){
-
+     
      int temp = 0;
      for(int k = 0; k < ROWS; k++){
-           for(int l = 0; l < COLS - k; l++){
+           for(int l = 0; l < COLS - (k+1); l++){
                if (tester[l] > tester[l + 1]){
                    temp = tester[l];
                    tester[l] = tester[l + 1];
@@ -46,11 +46,12 @@
 
     /* The Sudoku rule states the 3x3 need to contain numbers from 1 to 9 without duplicate*/
     for(int m = 0; m < ROWS; m++){
-
-            if(tester [m] != (m+1)){
+        if(tester [m] != (m+1)){
                 return 0;
-            }
+        }
+
     }
+    
     return 1;
  }
 
@@ -81,6 +82,8 @@
              section++;
 
             /* The following message is written to log file and will show which section of the 3x3 Sudoku game violated the Sudoku rule */
+
+
             if(sort_array_and_test(tester)){
                  fprintf(fp, "The [3 x 3] section %d %s", section, "of the solver output has ***passed*** the Sudoku rule test\n");
             }
