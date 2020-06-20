@@ -8,8 +8,6 @@
     #include "../../include/sudoku.h"
 #endif
 
-#include "../../src/apply_mask.c"
-
 #define ROWS 9
 #define COLS 9
 
