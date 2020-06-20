@@ -265,4 +265,20 @@ _Bool verify_sudoku_file(int [][9], char *, int, int, char*);
  */
 _Bool verify_sudoku_file_name(int [][9], char *, int, int, char*);
 
+/**
+ * The function verifies if the internal count increments everytime the funtion 
+ * output_sudoku() is called. 
+ * 
+ * The function will call output_sudoku() twice and then will compare the names 
+ * of the file with expected file names. Each file name will be identical 
+ * except for thr count value in the name.
+ * 
+ * Expected result: The count value in the file name will increment on the 
+ * second file created.
+ * 
+ * @return FALSE if the count is the same. TRUE if they are different.
+ * 
+ */ 
+_Bool output_sudoku_test_count(void);
+
 #endif

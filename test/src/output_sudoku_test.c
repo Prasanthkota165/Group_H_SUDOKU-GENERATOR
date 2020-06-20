@@ -25,7 +25,7 @@
 
 int main(void){
     
-    int pass = 20; 
+    int pass = 21; 
     char* log_location = "../log/output_sudoku_result.log";
     FILE *log = fopen(log_location, "w");
     
@@ -69,13 +69,13 @@ int main(void){
 
     if(!create_sudoku_file_test_sudoku_type_1()){
         fputs("-Sudoku output test create_sudoku_file_test_sudoku_type_1() has \n" 
-        "    failed. The six char sudoku_type string was not properly written.\n",log);
+        "    failed. The five char sudoku_type string was not properly written.\n",log);
         pass--;
     }
     
     if(!create_sudoku_file_test_sudoku_type_2()){
         fputs("-Sudoku output test create_sudoku_file_test_sudoku_type_2() has \n" 
-        "    failed. The five char sudoku_type string was not properly written.\n",log);
+        "    failed. The six char sudoku_type string was not properly written.\n",log);
         pass--;
     }
     
@@ -150,11 +150,18 @@ int main(void){
         "    failed. The output count \"-999\" was not properly written.\n",log);
         pass--;
     };
+
+    if(!output_sudoku_test_count()){
+        fputs("-Sudoku output test output_sudoku_test_count_() has \n" 
+        "    failed. The count was not properly tracked.\n",log);
+        pass--;
+    };
+    
     /*Number of tests that have passed.*/
-    fprintf(log,"Successful sudoku_output Tests: %d/20\n",pass);
+    fprintf(log,"Successful sudoku_output Tests: %d/21\n",pass);
     
     /*If all tests have passed.*/
-    if(pass == 20){
+    if(pass == 21){
         fprintf(log,"All tests have passed!!\n");
     }
 
@@ -323,9 +330,9 @@ _Bool create_sudoku_file_test_sudoku_type_1(void){
                         {8,0,1,2,0,4,5,6,7},
                         {9,1,0,3,0,5,0,7,8}};
 
-    char* location = "../output/sudoku_test1_normal_1.csv";
+    char* place = "../output/sudoku_test0_normal_2.csv";
     /*Using function to be tested*/
-    return verify_sudoku_file_name(sudoku, "test1", 1, 1, location);
+    return verify_sudoku_file_name(sudoku, "test0", 1, 2, place);
 }
 
 /**
@@ -346,10 +353,10 @@ _Bool create_sudoku_file_test_sudoku_type_2(void){
                         {8,0,1,2,0,4,5,6,7},
                         {9,1,0,3,0,5,0,7,8}};
 
-    char* location = "../output/sudoku_test1_normal_1.csv";
+    char* location = "../output/sudoku_test12_normal_1.csv";
     
     /*Using function to be tested*/
-    return verify_sudoku_file_name(sudoku,"test1",1,1, location);
+    return verify_sudoku_file_name(sudoku,"test12",1,1, location);
 }
 
 /**
@@ -370,10 +377,10 @@ _Bool create_sudoku_file_test_sudoku_type_3(void){
                         {8,0,1,2,0,4,5,6,7},
                         {9,1,0,3,0,5,0,7,8}};
 
-    char* location = "../output/sudoku_test12_normal_1.csv";
+    char* location = "../output/sudoku_test12_normal_2.csv";
     
     /*Using function to be tested*/
-    return verify_sudoku_file_name(sudoku,"test123",1,1, location);
+    return verify_sudoku_file_name(sudoku,"test123",1,2, location);
 }
 
 /**
@@ -707,5 +714,49 @@ _Bool verify_sudoku_file_name(int sudoku[9][9], char* type, int diff_lvl,
         fclose(file);
         return 1;
         }
-
 }
+
+/**
+ * Internal Static Count 
+ * 
+ * @return FALSE if the test has failed. True if the test passed.
+ *  
+ */
+_Bool output_sudoku_test_count(void){
+    
+    FILE *file1;
+    FILE *file2;
+    int result;
+    int sudoku[9][9] = {{0,3,3,4,5,6,7,8,9},
+                        {2,3,0,5,6,7,8,9,1},
+                        {3,4,5,6,0,8,9,1,2},
+                        {4,5,6,7,8,9,1,0,3},
+                        {5,0,7,0,9,1,2,3,4},
+                        {6,7,8,9,1,0,3,0,5},
+                        {7,8,0,1,2,3,4,5,6},
+                        {8,0,1,2,0,4,5,6,7},
+                        {9,1,0,3,0,5,0,7,8}};
+
+    char* location1 = "../output/sudoku_puzzle_easy_1.csv";
+    char* location2= "../output/sudoku_puzzle_easy_2.csv";
+
+    /*Using function to be tested*/
+    output_sudoku(sudoku, sudoku, 0);
+    output_sudoku(sudoku, sudoku, 0);
+
+    file1 = fopen(location1,"r");
+    file2 = fopen(location2,"r");
+
+    /*Verifies the result of the test*/
+    if(file1 == NULL || file2 == NULL){
+        result = 0;
+    }else{
+        result = 1;
+    }
+        
+    fclose(file1);
+    fclose(file2);
+    return result;
+}
+
+
