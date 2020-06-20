@@ -64,7 +64,7 @@
 * This function extracts the 3x3 values from the solver output
 * @param[in] solver[ROWS][COLS] contains the solver 2D array output values.
 * @param[in] FILE *fp is the file pointer to write the test results to a log file located at /test/log.
-* @param[out] tester[ROWS] contains either the row, or columns or the 3x3 solver output values.
+* @param[out] tester[ROWS] contains the 3x3 solver output values.
 */
  void extract_3x3(int solver[ROWS][COLS], FILE *fp, int tester[ROWS]){
 
@@ -101,7 +101,7 @@
 * Testing the rows of the 9x9 solver output to see if it comply with the Sodoku rules
 * @param[in] solver[ROWS][COLS] contains the solver output values.
 * @param[in] FILE *fp is the file pointer to write the test results to a log file located at /test/log.
-* @param[out] tester[ROWS] contains either the row, or columns or the 3x3 solver output data.
+* @param[out] tester[ROWS] contains the rows data of solver output.
 */
  void extract_rows(int solver [ROWS][COLS], FILE *fp, int tester[ROWS]){
 
@@ -124,7 +124,7 @@
 * Testing the columns of the 9x9 solver output to see if it comply with the Sodoku rules
 * @param[in] solver[ROWS][COLS] contains the solver output values.
 * @param[in] FILE *fp is the file pointer to write the test results to a log file located at /test/log.
-* @param[out] tester[ROWS] contains either the row, or columns or the 3x3 solver output data.
+* @param[out] tester[ROWS] contains the columns data of solver output.
 */
  void extract_columns(int solver [ROWS][COLS], FILE *fp, int tester [ROWS]){
      int count = 0;
