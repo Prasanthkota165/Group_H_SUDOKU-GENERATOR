@@ -41,7 +41,7 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
      FILE *fp;
 
 
-     fp = fopen ("apply_mask_test_log.txt", "a");
+     fp = fopen ("../test/log/apply_mask_test_log.txt", "a");
      if (fp == NULL)
      {
         printf("Could not open the file");
