@@ -29,60 +29,63 @@ int main(void){
     srand(time(0));
 
     if(swap_values(sudoku)){ /* Testing for 4 randomly swapped numbers in the input parameter*/
-    	fputs("1. All the 4 numbers in each row are swapped randomly in the input parameter sudoku_template.\n"
-	      "rearrange_cols_rows function has ****PASSED**** the swapping test.\n",log);
+    	fputs("Test 1, All the 4 numbers in each row are swapped randomly in the input parameter sudoku_template.\n"
+	      "--> rearrange_cols_rows function has ****PASSED**** the swapping test.\n",log);
     } else {
-    	fputs("1. Two or More numbers in a row are identical in the sudoku_template.\n"
-	      "rearrange_cols_rows function has ***FAILED*** the swapping test.\n",log);
+    	fputs("Test 1, Two or More numbers in a row are identical in the sudoku_template.\n"
+	      "--> rearrange_cols_rows function has ***FAILED*** the swapping test.\n",log);
     }
     fputs("-----------------------------------------------\n",log);
 
     if(beyond_boundary_1(sudoku)){ /* Testing the input parameter for 9x9 boundary */
-    	fputs("2. Input parameter of the function is beyond the 9X9 boundaries.\n"
-	"rearrange_cols_rows function has ***FAILED*** the input boundary test.\n",log);
+    	fputs("Test 2, Input parameter of the function is beyond the 9X9 boundaries.\n"
+	"--> rearrange_cols_rows function has ***FAILED*** the input boundary test.\n",log);
     }else {
- 	fputs("2. Input parameter of the function is within the 9X9 boundaries.\n"
-	"rearrange_cols_rows function has ***PASSED*** the input boundary test.\n",log);
+ 	fputs("Test 2, Input parameter of the function is within the 9X9 boundaries.\n"
+	"--> rearrange_cols_rows function has ***PASSED*** the input boundary test.\n",log);
     }
     fputs("-----------------------------------------------\n",log);
 
     if( beyond_boundary_2(rearranged_sudoku)){/* Testing the output parameter for 9x9 boundary */
-    	fputs("3. output parameter of the function is beyond the 9X9 boundaries.\n"
-	"rearrange_cols_rows function has ***FAILED** the output boundary test.\n",log);
+    	fputs("Test 3, Output parameter of the function is beyond the 9X9 boundaries.\n"
+	"--> rearrange_cols_rows function has ***FAILED** the output boundary test.\n",log);
     }else {
- 	fputs("3. Input parameter of the function is within the 9X9 boundaries.\n"
-	"rearrange_cols_rows function has ***PASSED*** the output boundary test.\n",log);
+ 	fputs("Test 3, Output parameter of the function is within the 9X9 boundaries.\n"
+	"--> rearrange_cols_rows function has ***PASSED*** the output boundary test.\n",log);
     }
     fputs("-----------------------------------------------\n",log);
 
     if(beyond_range_1(sudoku)){ /*Testing for values range in the input parameter */
-	fputs("4. The input parameter sudoku_template has the values out of range [1,9] in any row,column,3x3 block \n"
-	"rearrange_cols_rows function input has ***FAILED*** the range test.\n",log);
+	fputs("Test 4, Input parameter sudoku_template has the values out of range [1,9] in any row,column,3x3 block \n"
+	"--> rearrange_cols_rows function input has ***FAILED*** the range test.\n",log);
     	
     } else {
-	fputs("4. The input parameter sudoku_template has the values in the range [1,9] in rows,columns,3x3 block. \n"
-	"rearrange_cols_rows function input has ***PASSED*** the range test.\n",log);
+	fputs("Test 4, Input parameter sudoku_template has the values in the range [1,9] in rows,columns,3x3 block. \n"
+	"--> rearrange_cols_rows function input has ***PASSED*** the range test.\n",log);
 	
     }
     fputs("-----------------------------------------------\n",log);
 
     if(beyond_range_2(rearranged_sudoku)){ /*Testing for values range in the output parameter */
-	fputs("5. The input parameter sudoku_template has the values out of range [1,9] in any row,column,3x3 block. \n"
-	"rearrange_cols_rows function has ***FAILED*** the range test.\n",log);
+	fputs("Test 5, Output parameter sudoku_template has the values out of range [1,9] in any row,column,3x3 block. \n"
+	"--> rearrange_cols_rows function has ***FAILED*** the range test.\n",log);
     } else {
-	fputs("5. The output parameter sudoku_template has the values in the range [1,9] in rows,columns,3x3 block. \n"
+	fputs("Test 5, Output parameter sudoku_template has the values in the range [1,9] in rows,columns,3x3 block. \n"
 	"rearrange_cols_rows function output has ***PASSED*** the range test.\n",log);
     }
     fputs("-----------------------------------------------\n",log);
 
     if(identical_sudokus(sudoku, rearranged_sudoku)){ /* Testing for identical i/p and o/p parameters */
-    	fputs("6. Input and output parameters of the function are identical.\n" 
-	"rearrange_rols_cols function has ***FAILED***  the identical test.\n",log);
+    	fputs("Test 6, Input and output parameters of the function are identical.\n" 
+	"--> rearrange_rols_cols function has ***FAILED***  the identical test.\n",log);
     }  else {
-	fputs("6. Input and output parameters of the function are not identical.\n"
-	"rearrange_cols_rows function has ***PASSED*** the identical test.\n",log);
+	fputs("Test 6, Input and output parameters of the function are not identical.\n"
+	"--> rearrange_cols_rows function has ***PASSED*** the identical test.\n",log);
     }
     fputs("-----------------------------------------------\n",log);
+    printf("\n***rearrange_cols_rows function test: test results are "
+		"written to a log file (test/log/rearrange_rows_cols.log)***\n");
+    printf("\n");
     fclose(log);
     return 0;
 }
