@@ -1,5 +1,5 @@
 Organization: Carleton University, Ottawa, ON, Canada \
-Authors: 
+Authors: \
     Mathieu Falardeau \
     Gabriel Seyoum \
     Prasanth Kota \
@@ -25,7 +25,7 @@ Assuming that any IDE to run C programs install in your PC/Laptop
 
 4.  An input message will appear requesting: \
     a)The number of Sudoku puzzles (values from 1 to 40) \
-    b)The Sudoku puzzle's difficulty level (values 0, 1, 2, or 3) \
+    b)The Sudoku puzzle's difficulty level (values 0, 1, 2, or 3) 
 
 5.  You can request a maximum of 40 Sudokus per software run.
 
