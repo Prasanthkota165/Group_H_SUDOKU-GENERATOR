@@ -1,4 +1,19 @@
          OUTPUT SUDOKU TESTING RESULT
        -------------------------------------
-Successful sudoku_output Tests: 21/21
+Twenty-one different cases are tested. The tests are grouped into
+five sections:
+    1 - Sudoku content:             6 tests
+    2 - Sudoku type parameter:      3 tests
+    3 - Difficulty level parameter: 6 tests
+    4 - Output count parameter:     5 tests
+    5 - Internal static count:      1 test 
+  --------------------------------------------
+    Successful sudoku_output Tests: 21/21
+  --------------------------------------------
+    1 - Sudoku content:             6/6
+    2 - Sudoku type parameter:      3/3
+    3 - Difficulty level parameter: 6/6
+    4 - Output count parameter:     5/5
+    5 - Internal static count:      1/1
+  --------------------------------------------
 All tests have passed!!

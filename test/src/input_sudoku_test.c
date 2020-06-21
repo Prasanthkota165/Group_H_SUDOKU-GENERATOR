@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "../../src/input_sudoku.c"
+#include "../../include/sudoku.h"
+//#include "../../src/input_sudoku.c"
 
 /*
 * TITLE      : input_sudoku_test.c 

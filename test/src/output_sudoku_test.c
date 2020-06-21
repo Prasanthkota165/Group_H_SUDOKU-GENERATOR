@@ -162,8 +162,10 @@ int main(void){
         "    failed. The output count \"-999\" was not properly written.\n",log);
         d--;
     }
+    
    printf("***output_sudoku function test: test results are written to a "
 	   "log file (test/log/output_sudoku_result.log)***\n");
+
    if(!output_sudoku_test_count()){
         fputs("-Sudoku output test output_sudoku_test_count_() has \n" 
         "    failed. The count was not properly tracked.\n",log);

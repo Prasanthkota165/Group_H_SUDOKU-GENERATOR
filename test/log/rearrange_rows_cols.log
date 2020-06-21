@@ -18,9 +18,9 @@ rearrange_cols_rows function output has ***PASSED*** the range test.
 Test 6, Input and output parameters of the function are not identical.
 --> rearrange_cols_rows function has ***PASSED*** the identical test.
 -----------------------------------------------
-->Reference to Test 6, Identical sudokus
+->Reference to Test 1 
 ------------
-  Input parameter rearranged_sudoku: 
+  Input parameter sudoku_template: 
   1   2   3   4   5   6   7   8   9 
   4   5   6   7   8   9   1   2   3 
   7   8   9   1   2   3   4   5   6 
@@ -30,33 +30,26 @@ Test 6, Input and output parameters of the function are not identical.
   3   1   2   6   4   5   9   7   8 
   6   4   5   9   7   8   3   1   2 
   9   7   8   3   1   2   6   4   5 
-
-  Output parameter rearranged_sudoku: 
-  9   1   7   8   6   5   3   2   4 
-  2   3   4   7   1   9   6   5   8 
-  5   6   8   4   3   2   1   9   7 
-  4   2   3   1   9   7   5   8   6 
-  8   5   6   3   2   4   9   7   1 
-  7   9   1   6   5   8   2   4   3 
-  6   8   5   2   4   3   7   1   9 
-  3   4   2   9   7   1   8   6   5 
-  1   7   9   5   8   6   4   3   2 
-
-  Check the numbers with the input parameter.
+  Output paramter rearranged_sudoku: 
+  1   4   3   5   9   6   7   8   2 -- 4 numbers swapped 
+  5   9   6   7   8   2   1   4   3 -- 4 numbers swapped 
+  7   8   2   1   4   3   5   9   6 -- 4 numbers swapped 
+  4   3   1   9   6   5   8   2   7 -- 4 numbers swapped 
+  9   6   5   8   2   7   4   3   1 -- 4 numbers swapped 
+  8   2   7   4   3   1   9   6   5 -- 4 numbers swapped 
+  3   1   4   6   5   9   2   7   8 -- 4 numbers swapped 
+  6   5   9   2   7   8   3   1   4 -- 4 numbers swapped 
+  2   7   8   3   1   4   6   5   9 -- 4 numbers swapped 
 --------------------------
-->Reference to Test 5 
+->Reference to Test 2, within 9x9 boundary 
 ------------
-  Check the values of rearranged_sudoku in the range [1,9]
-
-  9   1   7   8   6   5   3   2   4 
-  2   3   4   7   1   9   6   5   8 
-  5   6   8   4   3   2   1   9   7 
-  4   2   3   1   9   7   5   8   6 
-  8   5   6   3   2   4   9   7   1 
-  7   9   1   6   5   8   2   4   3 
-  6   8   5   2   4   3   7   1   9 
-  3   4   2   9   7   1   8   6   5 
-  1   7   9   5   8   6   4   3   2 
+The row boundary of the input parameter sudoku_template is: 9
+The column boundary of the input parameter sudoku_template is: 9
+--------------------------
+->Reference to Test 3, Within 9X9 boundary 
+------------
+The row boundary of the input parameter rearranged_sudoku is: 9
+The column boundary of the input parameter rearranged_sudoku is: 9
 --------------------------
 ->Reference to Test 4 
 ------------
@@ -72,19 +65,23 @@ Test 6, Input and output parameters of the function are not identical.
   6   4   5   9   7   8   3   1   2 
   9   7   8   3   1   2   6   4   5 
 --------------------------
-->Reference to Test 3, Within 9X9 boundary 
+->Reference to Test 5 
 ------------
-The row boundary of the input parameter rearranged_sudoku is: 9
-The column boundary of the input parameter rearranged_sudoku is: 9
+  Check the values of rearranged_sudoku in the range [1,9]
+
+  3   4   6   5   1   9   8   2   7 
+  8   7   2   3   4   6   5   9   1 
+  5   1   9   8   7   2   3   6   4 
+  6   3   4   9   5   1   2   7   8 
+  2   8   7   6   3   4   9   1   5 
+  9   5   1   2   8   7   6   4   3 
+  7   2   8   4   6   3   1   5   9 
+  4   6   3   1   9   5   7   8   2 
+  1   9   5   7   2   8   4   3   6 
 --------------------------
-->Reference to Test 2, within 9x9 boundary 
+->Reference to Test 6, Identical sudokus
 ------------
-The row boundary of the input parameter sudoku_template is: 9
-The column boundary of the input parameter sudoku_template is: 9
---------------------------
-->Reference to Test 1 
-------------
-  Input parameter sudoku_template: 
+  Input parameter rearranged_sudoku: 
   1   2   3   4   5   6   7   8   9 
   4   5   6   7   8   9   1   2   3 
   7   8   9   1   2   3   4   5   6 
@@ -94,14 +91,17 @@ The column boundary of the input parameter sudoku_template is: 9
   3   1   2   6   4   5   9   7   8 
   6   4   5   9   7   8   3   1   2 
   9   7   8   3   1   2   6   4   5 
-  Output paramter rearranged_sudoku: 
-  1   2   3   8   5   7   4   6   9 -- 4 numbers swapped 
-  8   5   7   4   6   9   1   2   3 -- 4 numbers swapped 
-  4   6   9   1   2   3   8   5   7 -- 4 numbers swapped 
-  2   3   1   5   7   8   6   9   4 -- 4 numbers swapped 
-  5   7   8   6   9   4   2   3   1 -- 4 numbers swapped 
-  6   9   4   2   3   1   5   7   8 -- 4 numbers swapped 
-  3   1   2   7   8   5   9   4   6 -- 4 numbers swapped 
-  7   8   5   9   4   6   3   1   2 -- 4 numbers swapped 
-  9   4   6   3   1   2   7   8   5 -- 4 numbers swapped 
+
+  Output parameter rearranged_sudoku: 
+  3   4   6   5   1   9   8   2   7 
+  8   7   2   3   4   6   5   9   1 
+  5   1   9   8   7   2   3   6   4 
+  6   3   4   9   5   1   2   7   8 
+  2   8   7   6   3   4   9   1   5 
+  9   5   1   2   8   7   6   4   3 
+  7   2   8   4   6   3   1   5   9 
+  4   6   3   1   9   5   7   8   2 
+  1   9   5   7   2   8   4   3   6 
+
+  Check the numbers with the input parameter.
 --------------------------

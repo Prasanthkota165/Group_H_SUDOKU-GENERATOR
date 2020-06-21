@@ -1,0 +1,33 @@
+       TEST SUDOKU TESTING RESULT
+--------------------------------------------
+         REARRANGED SUDOKU:
+  5   4   1   2   3   9   6   7   8 
+  8   7   6   4   1   5   3   2   9 
+  9   2   3   7   6   8   1   4   5 
+  3   9   2   8   7   6   4   5   1 
+  1   5   4   9   2   3   7   8   6 
+  6   8   7   5   4   1   2   9   3 
+  2   3   9   6   8   7   5   1   4 
+  4   1   5   3   9   2   8   6   7 
+  7   6   8   1   5   4   9   3   2 
+Test 1:All rows,columns and 3X3 contains 1 to 9 numbers and
+sum equals 45. Sudoku met all the rules.
+Test 2:All the rows contains 1 to 9 numbers and sum equals 45.
+Sudoku met all the rules for rows
+Test 3:All the columns contains 1 to 9 numbers and sum equals 45.
+Sudoku met all the rules for columns.
+Test 4:All the 3X3 matrices contains 1 to 9 numbers and sum equals 45.
+Sudoku Met all the rules for 3X3 matrix.
+-----------------------------------------------
+             Test 1 'PASSED'            
+..........No Errors over all..........
+
+             Test 2 'PASSED'            
+..........No Errors over all..........
+
+             Test 3 'PASSED'            
+..........No Errors in columns..........
+
+             Test 4 'PASSED'            
+..........No Errors in 3X3 matrix..........
+
