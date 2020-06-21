@@ -116,6 +116,7 @@ int main(){
     fprintf(fp, "%s", "*****************The outcome of the test*****************\n");
     fprintf(fp, "%s", "Once invalid input is encountered, the following Error Message will display to the screen and the program terminates.\n");
     fprintf(fp, "%s", "The rearranged_sudoku array value(s), data type, or array size is incorrect.\n");
+    fprintf(fp, "%s", "The difficulty level entered was not 0, 1, 2, or 3\n");
 
     fclose(fp);
     return 0;
