@@ -71,8 +71,8 @@ testsolver : solver_sudoku_test.o solver_sudoku.o
 		$(CC) -g -o ./test/bin/TEST_SUDOKU_SOLVER.exe ./test/build/solver_sudoku_test.o ./build/solver_sudoku.o
 testrearrange : test_rearrange_cols_rows.o rearrange_cols_rows.o generate_sudoku_template.o
 		$(CC) -g -o ./test/bin/TEST_REARRANGE_COL_ROW.exe ./test/build/test_rearrange_cols_rows.o ./build/rearrange_cols_rows.o ./build/generate_sudoku_template.o
-testsudokutest :  test_sudoku_test.o test_sudoku.o
-		$(CC) -g -o ./test/bin/TEST_SUDOKU_TEST.exe ./test/build/test_sudoku_test.o.o ./build/test_sudoku_test.o
+testsudokutest :  test_sudoku_test.o test_sudoku.o generate_sudoku_template.o
+		$(CC) -g -o ./test/bin/TEST_SUDOKU_TEST.exe ./test/build/test_sudoku_test.o ./build/test_sudoku.o
 
 alltest : testapplymask testsudokutemplate testinput testoutput testsolver testrearrange testsudokutest
 
