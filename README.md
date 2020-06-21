@@ -1,11 +1,14 @@
-Organization: Carleton University, Ottawa, ON, Canada;
-Authors: Mathieu Falardeau, Gabriel Seyoum, Prasanth Kota, and Rishith Rao
+Organization: Carleton University, Ottawa, ON, Canada \
+Authors: Mathieu Falardeau \ 
+         Gabriel Seyoum \ 
+         Prasanth Kota \ 
+         Rishith Rao \
 
 Sudoku Generator software creates Sodoku puzzles of various difficulty levels, where an Easy game
 is only showing 40 numbers out of 81, whereas the Medium only showing 34, the Hard 28 and the Very
 Hard 24 numbers.
 
-Files are organized as follow: /bin , /build , /data , /include , /lib , /output , /src , /test/src, /test/data , makefile , README
+Files are organized as follow: /bin , /build , /data , /include , /lib , /output , /src , /test/src, /test/log , makefile , README
 
                                  *** Welcome to the Readme file ***
               This file tells you how to generate Sudoku Patterns from the repository
