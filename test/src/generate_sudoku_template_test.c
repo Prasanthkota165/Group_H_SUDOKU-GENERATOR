@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "../../src/generate_sudoku_template.c"
+#include "../../include/sudoku.h"
+//#include "../../src/generate_sudoku_template.c"
 
 /*
 * TITLE      : generate_sudoku_template_test.c 

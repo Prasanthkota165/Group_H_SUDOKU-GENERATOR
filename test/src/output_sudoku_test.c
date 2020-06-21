@@ -137,38 +137,40 @@ int main(void){
         fputs("-Sudoku output test create_sudoku_file_test_output_count_1() has \n" 
         "    failed. The output count \"0\" was not properly written.\n",log);
         d--;
-    };
+    }
 
     if(!create_sudoku_file_test_output_count_2()){
         fputs("-Sudoku output test create_sudoku_file_test_output_count_2() has \n" 
         "    failed. The output count \"999\" was not properly written.\n",log);
         d--;
-    };
+    }
 
     if(!create_sudoku_file_test_output_count_3()){
         fputs("-Sudoku output test create_sudoku_file_test_output_count_3() has \n" 
         "    failed. The output count \"-99\" was not properly written.\n",log);
         d--;
-    };
+    }
 
     if(!create_sudoku_file_test_output_count_4()){
         fputs("-Sudoku output test create_sudoku_file_test_output_count_4() has \n" 
         "    failed. The output count \"1000\" was not properly written.\n",log);
         d--;
-    };
+    }
 
     if(!create_sudoku_file_test_output_count_5()){
         fputs("-Sudoku output test create_sudoku_file_test_output_count_5() has \n" 
         "    failed. The output count \"-999\" was not properly written.\n",log);
         d--;
-    };
+    }
+    
+   printf("***output_sudoku function test: test results are written to a "
+	   "log file (test/log/output_sudoku_result.log)***\n");
 
-    if(!output_sudoku_test_count()){
+   if(!output_sudoku_test_count()){
         fputs("-Sudoku output test output_sudoku_test_count_() has \n" 
         "    failed. The count was not properly tracked.\n",log);
         e--;
-    };
-    
+    }
     pass = a + b + c + d + e;
 
     /*Number of tests that have passed.*/
