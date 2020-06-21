@@ -1,4 +1,4 @@
 doc/
 #*.o
-#*.csv
+*.csv
 #*.exe
