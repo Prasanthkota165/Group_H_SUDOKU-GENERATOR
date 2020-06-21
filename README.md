@@ -1,8 +1,8 @@
 Organization: Carleton University, Ottawa, ON, Canada \
-Authors: Mathieu Falardeau \ 
-         Gabriel Seyoum \ 
-         Prasanth Kota \ 
-         Rishith Rao \
+Authors: Mathieu Falardeau \\ 
+         Gabriel Seyoum \\ 
+         Prasanth Kota \\ 
+         Rishith Rao \\
 
 Sudoku Generator software creates Sodoku puzzles of various difficulty levels, where an Easy game
 is only showing 40 numbers out of 81, whereas the Medium only showing 34, the Hard 28 and the Very
