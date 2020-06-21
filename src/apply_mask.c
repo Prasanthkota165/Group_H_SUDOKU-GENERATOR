@@ -51,7 +51,7 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level, int masked_s
              if (!((rearranged_sudoku [i][j] >= 1) && (rearranged_sudoku [i][j] <= 9))){
                  /* When all the above  cases arise the following message will display and the function will terminate */
                  printf("The rearranged_sudoku array value(s), data type, or array size is incorrect\n");
-                 exit(EXIT_FAILURE);
+                 return;
              }
          }
      }

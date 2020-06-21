@@ -8,6 +8,8 @@
     #include "../../include/sudoku.h"
 #endif
 
+//#include "../../src/apply_mask.c"
+
 #define ROWS 9
 #define COLS 9
 
@@ -109,12 +111,9 @@ int main(){
                                      {9, 77, 8, 3, 1, 2, 6, 4, 5}};    /* The case where the rearranged_sudoku array value(s) not being from 1 to 9 */
 
     fprintf(fp, "%s", "\n");
+    fprintf(fp, "%s", "The following Error Message is desplayed on the screen, once invalid input is encountered by the apply_mask.c function\n");
     fprintf(fp, "%s", "Error Message: The rearranged_sudoku array value(s), data type, or array size is incorrect.\n");
     /* apply_mask(rearranged_sudoku3, 2, masked_sudoku); */
-
-    fprintf(fp, "%s", "The diff_level value not being 0, 1, 2, or 3\n");
-    /* apply_mask(rearranged_sudoku1, 7 , masked_sudoku); */   /* The diff_level value not being 0, 1, 2, or 3 */
-    /* apply_mask(rearranged_sudoku1, 'A' , masked_sudoku); */  /* Incorrect diff_level data type */
 
     fclose(fp);
     return 0;

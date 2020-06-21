@@ -12,7 +12,6 @@
 *
 */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,10 +20,7 @@
    #include "../../include/sudoku.h"
 #endif
 
-#if defined(_WIN32)||defined (WIN32)
-    #include "..\\..\\include\\sudoku.h"
-#endif
-
+//#include "../../src/solver_sudoku.c"
  
 #define ROWS 9
 #define COLS 9
