@@ -103,7 +103,7 @@ void apply_mask(int rearranged_sudoku [ROWS][COLS], int diff_level,
             /* When the diff_level is not 0, 1, 2 or 3, the following message 
                 will display and the function will terminate */
             printf("The difficulty level entered is not 0, 1, 2, or 3\n");
-            _Exit(EXIT_FAILURE);
+            return;
     }
 
     /* Initialization */
