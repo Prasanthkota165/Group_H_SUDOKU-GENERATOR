@@ -227,8 +227,8 @@ _Bool beyond_boundary_2(int rearranged_sudoku[][9],FILE *log){
 		    }
 	    }
     }
-    fprintf(log,"The row boundary of the input parameter rearranged_sudoku is: %d\n",l);
-    fprintf(log,"The column boundary of the input parameter rearranged_sudoku is: %d\n",k);
+    fprintf(log,"The row boundary of the output parameter rearranged_sudoku is: %d\n",l);
+    fprintf(log,"The column boundary of the output parameter rearranged_sudoku is: %d\n",k);
     fputs("---\n",log);
     /* if nothing, then tests are passed*/ 
     if((check_3!=0) || (check_4!=0)){
