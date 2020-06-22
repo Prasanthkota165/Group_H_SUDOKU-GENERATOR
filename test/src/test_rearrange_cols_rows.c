@@ -36,8 +36,8 @@ int main(void){
                 "the input parameter sudoku_template.\n"
 	      "--> rearrange_cols_rows function has ****PASSED**** the swapping test.\n",log);
     } else {
-    	fputs("Test 1, Two or More numbers in a row are identical in the 
-                sudoku_template.\n"
+    	fputs("Test 1, Two or More numbers in a row are identical in the" 
+                "sudoku_template.\n"
 	      "--> rearrange_cols_rows function has ***FAILED*** the swapping test.\n",log);
     }
     fputs("-----------------------------------------------\n",log);

@@ -1,0 +1,135 @@
+\hypertarget{test__sudoku_8c}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/src/test\+\_\+sudoku.c File Reference}
+\label{test__sudoku_8c}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/test\_sudoku.c@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/test\_sudoku.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/sudoku.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku_8c_ab43918a0fb24956cf8453947a5e246b0}{test\+\_\+sudoku\+\_\+rules}} (int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku_8c_a6386f44b6d099ccd3989d7cab7679717}{test\+\_\+rows}} (int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int a\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to check the sudoku rules for all the rows. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku_8c_a7a769bacc4dc6d9178c1e9b0428a9a0b}{test\+\_\+cols}} (int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int a\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to check the sudoku rules for all the columns. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku_8c_a5030839f0512b980bd5cf80d569cbdb8}{test\+\_\+3\+X3}} (int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int a\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to check the sudoku rules for all the 3X3 matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__sudoku_8c_af01e24492f391144c5d6e926c89d12c1}{delete\+\_\+1}} (int check, int a\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function will leave the array a\mbox{[}\mbox{]} with the elements which has to be appeared in the row/column/3x3 block because those elements are overwritten by the repeated values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Purpose \+: This function tests whether the regenerated sudoku meets all the sudoku rules or not .
+
+Language \+: C
+
+Author \+: Rishith Rao -\/ \href{mailto:rishithrao@cmail.carleton.ca}{\texttt{ rishithrao@cmail.\+carleton.\+ca}} Prasanth Kota -\/ \href{mailto:prasanthkota@cmail.carleton.ca}{\texttt{ prasanthkota@cmail.\+carleton.\+ca}}
+
+Date \+: 14 June, 2020. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__sudoku_8c_af01e24492f391144c5d6e926c89d12c1}\label{test__sudoku_8c_af01e24492f391144c5d6e926c89d12c1}} 
+\index{test\_sudoku.c@{test\_sudoku.c}!delete\_1@{delete\_1}}
+\index{delete\_1@{delete\_1}!test\_sudoku.c@{test\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{delete\_1()}{delete\_1()}}
+{\footnotesize\ttfamily void delete\+\_\+1 (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function will leave the array a\mbox{[}\mbox{]} with the elements which has to be appeared in the row/column/3x3 block because those elements are overwritten by the repeated values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em check} & -- This parameter is used to pass the values of the rearranged\+\_\+sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\mbox{[}9\mbox{]}} & -- This parameter is to check the sudoku rules for each row/column/3x3 block. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 142 of file test\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{test__sudoku_8c_a5030839f0512b980bd5cf80d569cbdb8}\label{test__sudoku_8c_a5030839f0512b980bd5cf80d569cbdb8}} 
+\index{test\_sudoku.c@{test\_sudoku.c}!test\_3X3@{test\_3X3}}
+\index{test\_3X3@{test\_3X3}!test\_sudoku.c@{test\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{test\_3X3()}{test\_3X3()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+3\+X3 (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to check the sudoku rules for all the 3X3 matrices. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter determines the generated sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\mbox{[}9\mbox{]}} & -- This parameter is to check the sudoku rules for each 3X3 matrix.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-- If the columns follow the sudoku rules then return true or else false. 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file test\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{test__sudoku_8c_a7a769bacc4dc6d9178c1e9b0428a9a0b}\label{test__sudoku_8c_a7a769bacc4dc6d9178c1e9b0428a9a0b}} 
+\index{test\_sudoku.c@{test\_sudoku.c}!test\_cols@{test\_cols}}
+\index{test\_cols@{test\_cols}!test\_sudoku.c@{test\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{test\_cols()}{test\_cols()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+cols (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to check the sudoku rules for all the columns. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter determines the generated sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\mbox{[}9\mbox{]}} & -- This parameter is to check the sudoku rules for each column.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-- If the columns follow the sudoku rules then return true or else false. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file test\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{test__sudoku_8c_a6386f44b6d099ccd3989d7cab7679717}\label{test__sudoku_8c_a6386f44b6d099ccd3989d7cab7679717}} 
+\index{test\_sudoku.c@{test\_sudoku.c}!test\_rows@{test\_rows}}
+\index{test\_rows@{test\_rows}!test\_sudoku.c@{test\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{test\_rows()}{test\_rows()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to check the sudoku rules for all the rows. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter determines the generated sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\mbox{[}9\mbox{]}} & -- This parameter is to check the sudoku rules for each row.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-- If the rows follow the sudoku rules then return true or else false. 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file test\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{test__sudoku_8c_ab43918a0fb24956cf8453947a5e246b0}\label{test__sudoku_8c_ab43918a0fb24956cf8453947a5e246b0}} 
+\index{test\_sudoku.c@{test\_sudoku.c}!test\_sudoku\_rules@{test\_sudoku\_rules}}
+\index{test\_sudoku\_rules@{test\_sudoku\_rules}!test\_sudoku.c@{test\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{test\_sudoku\_rules()}{test\_sudoku\_rules()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+sudoku\+\_\+rules (\begin{DoxyParamCaption}\item[{int}]{rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function checks the rows, columns and 3X3 matrix for sudoku rules. 
+
+Definition at line 25 of file test\+\_\+sudoku.\+c.
+

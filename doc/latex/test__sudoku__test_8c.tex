@@ -1,0 +1,86 @@
+\hypertarget{test__sudoku__test_8c}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/test/src/test\+\_\+sudoku\+\_\+test.c File Reference}
+\label{test__sudoku__test_8c}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/src/test\_sudoku\_test.c@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/src/test\_sudoku\_test.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../../include/sudoku.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/test\+\_\+sudoku\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../src/rearrange\+\_\+cols\+\_\+rows.\+c\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../src/generate\+\_\+sudoku\+\_\+template.\+c\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test__sudoku__test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku__test_8c_aa2cf2e2c654b1e733da36198f9d77c14}{testing\+\_\+3\+X3}} (int sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku__test_8c_a390a0b1fd6c4c607cd92f58b1e1cc939}{testing\+\_\+cols}} (int sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku__test_8c_aab307f2d6cb6e6d2aa1044ee370b95f6}{testing\+\_\+rows}} (int sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku__test_8c_ac36dfcaf9c9405332cb9f629af0a7390}{main\+\_\+test}} (int sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Purpose \+: This function tests whether the regenerated sudoku meets all the sudoku rules or not .
+
+Language \+: C
+
+Author \+: Rishith Rao -\/ \href{mailto:rishithrao@cmail.carleton.ca}{\texttt{ rishithrao@cmail.\+carleton.\+ca}} Prasanth Kota -\/ \href{mailto:prasanthkota@cmail.carleton.ca}{\texttt{ prasanthkota@cmail.\+carleton.\+ca}}
+
+Date \+: 20 June, 2020. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__sudoku__test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test__sudoku__test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{test\_sudoku\_test.c@{test\_sudoku\_test.c}!main@{main}}
+\index{main@{main}!test\_sudoku\_test.c@{test\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file test\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{test__sudoku__test_8c_ac36dfcaf9c9405332cb9f629af0a7390}\label{test__sudoku__test_8c_ac36dfcaf9c9405332cb9f629af0a7390}} 
+\index{test\_sudoku\_test.c@{test\_sudoku\_test.c}!main\_test@{main\_test}}
+\index{main\_test@{main\_test}!test\_sudoku\_test.c@{test\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{main\_test()}{main\_test()}}
+{\footnotesize\ttfamily \+\_\+\+Bool main\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function tests for any errors in rows,columns and 3X3 matrix and returns a bool value. 
+
+Definition at line 152 of file test\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{test__sudoku__test_8c_aa2cf2e2c654b1e733da36198f9d77c14}\label{test__sudoku__test_8c_aa2cf2e2c654b1e733da36198f9d77c14}} 
+\index{test\_sudoku\_test.c@{test\_sudoku\_test.c}!testing\_3X3@{testing\_3X3}}
+\index{testing\_3X3@{testing\_3X3}!test\_sudoku\_test.c@{test\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{testing\_3X3()}{testing\_3X3()}}
+{\footnotesize\ttfamily \+\_\+\+Bool testing\+\_\+3\+X3 (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function tests for any errors in 3X3 and returns a bool value. 
+
+Definition at line 80 of file test\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{test__sudoku__test_8c_a390a0b1fd6c4c607cd92f58b1e1cc939}\label{test__sudoku__test_8c_a390a0b1fd6c4c607cd92f58b1e1cc939}} 
+\index{test\_sudoku\_test.c@{test\_sudoku\_test.c}!testing\_cols@{testing\_cols}}
+\index{testing\_cols@{testing\_cols}!test\_sudoku\_test.c@{test\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{testing\_cols()}{testing\_cols()}}
+{\footnotesize\ttfamily \+\_\+\+Bool testing\+\_\+cols (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function tests for any errors in columns and returns a bool value. 
+
+Definition at line 104 of file test\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{test__sudoku__test_8c_aab307f2d6cb6e6d2aa1044ee370b95f6}\label{test__sudoku__test_8c_aab307f2d6cb6e6d2aa1044ee370b95f6}} 
+\index{test\_sudoku\_test.c@{test\_sudoku\_test.c}!testing\_rows@{testing\_rows}}
+\index{testing\_rows@{testing\_rows}!test\_sudoku\_test.c@{test\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{testing\_rows()}{testing\_rows()}}
+{\footnotesize\ttfamily \+\_\+\+Bool testing\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function tests for any errors in columns and returns a bool value. 
+
+Definition at line 128 of file test\+\_\+sudoku\+\_\+test.\+c.
+

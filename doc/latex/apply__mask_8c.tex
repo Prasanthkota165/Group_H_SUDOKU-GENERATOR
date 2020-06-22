@@ -1,0 +1,80 @@
+\hypertarget{apply__mask_8c}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/src/apply\+\_\+mask.c File Reference}
+\label{apply__mask_8c}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/apply\_mask.c@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/apply\_mask.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/sudoku.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{apply__mask_8c_a3e93ae6f52b45e563eec8690f3ea6993}{\+\_\+\+\_\+\+M\+Y\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+\_\+}}
+\item 
+\#define \mbox{\hyperlink{apply__mask_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}~9
+\item 
+\#define \mbox{\hyperlink{apply__mask_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}~9
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{apply__mask_8c_a7939200c16a1f5e9b0780b9519c3ed73}{apply\+\_\+mask}} (int rearranged\+\_\+sudoku\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int diff\+\_\+level, int masked\+\_\+sudoku\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{apply__mask_8c_autotoc_md0}{}\doxysubsubsection{Function apply\+\_\+mask}\label{apply__mask_8c_autotoc_md0}
+Function apply\+\_\+mask creates unique masks in turn creates a unique Sudoku game. Numbers are masked from the rearranged 2D array locations based on diffculty level. Language\+: C Author\+: Gabriel Seyoum, Group H member Date\+: May 31, 2020 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{apply__mask_8c_a3e93ae6f52b45e563eec8690f3ea6993}\label{apply__mask_8c_a3e93ae6f52b45e563eec8690f3ea6993}} 
+\index{apply\_mask.c@{apply\_mask.c}!\_\_MY\_HEADER\_\_@{\_\_MY\_HEADER\_\_}}
+\index{\_\_MY\_HEADER\_\_@{\_\_MY\_HEADER\_\_}!apply\_mask.c@{apply\_mask.c}}
+\doxysubsubsection{\texorpdfstring{\_\_MY\_HEADER\_\_}{\_\_MY\_HEADER\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+M\+Y\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+\_\+}
+
+
+
+Definition at line 8 of file apply\+\_\+mask.\+c.
+
+\mbox{\Hypertarget{apply__mask_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}\label{apply__mask_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}} 
+\index{apply\_mask.c@{apply\_mask.c}!COLS@{COLS}}
+\index{COLS@{COLS}!apply\_mask.c@{apply\_mask.c}}
+\doxysubsubsection{\texorpdfstring{COLS}{COLS}}
+{\footnotesize\ttfamily \#define C\+O\+LS~9}
+
+
+
+Definition at line 13 of file apply\+\_\+mask.\+c.
+
+\mbox{\Hypertarget{apply__mask_8c_a3cfd3aa62338d12609f6d65bce97e9cd}\label{apply__mask_8c_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\index{apply\_mask.c@{apply\_mask.c}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!apply\_mask.c@{apply\_mask.c}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily \#define R\+O\+WS~9}
+
+
+
+Definition at line 12 of file apply\+\_\+mask.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{apply__mask_8c_a7939200c16a1f5e9b0780b9519c3ed73}\label{apply__mask_8c_a7939200c16a1f5e9b0780b9519c3ed73}} 
+\index{apply\_mask.c@{apply\_mask.c}!apply\_mask@{apply\_mask}}
+\index{apply\_mask@{apply\_mask}!apply\_mask.c@{apply\_mask.c}}
+\doxysubsubsection{\texorpdfstring{apply\_mask()}{apply\_mask()}}
+{\footnotesize\ttfamily void apply\+\_\+mask (\begin{DoxyParamCaption}\item[{int}]{rearranged\+\_\+sudoku\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{diff\+\_\+level,  }\item[{int}]{masked\+\_\+sudoku\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rearranged\+\_\+sudoku} & \mbox{[}in\mbox{]}, Array containing the rearranged Sudoku game. \\
+\hline
+{\em diff\+\_\+level} & \mbox{[}in\mbox{]}, Difficulty level dectates how many numbers should be shown on Sudoku game. \\
+\hline
+{\em masked\+\_\+sudoku} & \mbox{[}out\mbox{]}, Array containing the masked Sudoku game. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file apply\+\_\+mask.\+c.
+

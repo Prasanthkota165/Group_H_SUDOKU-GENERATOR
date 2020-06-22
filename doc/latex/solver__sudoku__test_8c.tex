@@ -1,0 +1,155 @@
+\hypertarget{solver__sudoku__test_8c}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/test/src/solver\+\_\+sudoku\+\_\+test.c File Reference}
+\label{solver__sudoku__test_8c}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/src/solver\_sudoku\_test.c@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/src/solver\_sudoku\_test.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../../include/sudoku.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{solver__sudoku__test_8c_a3e93ae6f52b45e563eec8690f3ea6993}{\+\_\+\+\_\+\+M\+Y\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+\_\+}}
+\item 
+\#define \mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}~9
+\item 
+\#define \mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}~9
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{solver__sudoku__test_8c_a3d19396b222b03363796106603e09689}{sort\+\_\+array\+\_\+and\+\_\+test}} (int tester\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]})
+\item 
+void \mbox{\hyperlink{solver__sudoku__test_8c_a1f7007be9d351829e5d21047bb7fafb3}{extract\+\_\+3x3}} (int solver\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, F\+I\+LE $\ast$fp, int tester\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]})
+\item 
+void \mbox{\hyperlink{solver__sudoku__test_8c_a253666cb873fc5e9fb3391eb8ae0bd15}{extract\+\_\+rows}} (int solver\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, F\+I\+LE $\ast$fp, int tester\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]})
+\item 
+void \mbox{\hyperlink{solver__sudoku__test_8c_a69f84b0367588248b6285238d47fb4ab}{extract\+\_\+columns}} (int solver\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, F\+I\+LE $\ast$fp, int tester\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]})
+\item 
+int \mbox{\hyperlink{solver__sudoku__test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Purpose \+: Contains the functions that tests the Sudoku solver
+
+Language \+: C
+
+Author \+: Mathieu Falardeau 101173923 Gabriel Seyoum 100333091 Git\+Hub ID \+: Mathieufalardeau3, gabriels2018 Date \+: 06 June 2020 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{solver__sudoku__test_8c_a3e93ae6f52b45e563eec8690f3ea6993}\label{solver__sudoku__test_8c_a3e93ae6f52b45e563eec8690f3ea6993}} 
+\index{solver\_sudoku\_test.c@{solver\_sudoku\_test.c}!\_\_MY\_HEADER\_\_@{\_\_MY\_HEADER\_\_}}
+\index{\_\_MY\_HEADER\_\_@{\_\_MY\_HEADER\_\_}!solver\_sudoku\_test.c@{solver\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{\_\_MY\_HEADER\_\_}{\_\_MY\_HEADER\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+M\+Y\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+\_\+}
+
+
+
+Definition at line 20 of file solver\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}\label{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}} 
+\index{solver\_sudoku\_test.c@{solver\_sudoku\_test.c}!COLS@{COLS}}
+\index{COLS@{COLS}!solver\_sudoku\_test.c@{solver\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{COLS}{COLS}}
+{\footnotesize\ttfamily \#define C\+O\+LS~9}
+
+
+
+Definition at line 27 of file solver\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}\label{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\index{solver\_sudoku\_test.c@{solver\_sudoku\_test.c}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!solver\_sudoku\_test.c@{solver\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily \#define R\+O\+WS~9}
+
+
+
+Definition at line 26 of file solver\+\_\+sudoku\+\_\+test.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{solver__sudoku__test_8c_a1f7007be9d351829e5d21047bb7fafb3}\label{solver__sudoku__test_8c_a1f7007be9d351829e5d21047bb7fafb3}} 
+\index{solver\_sudoku\_test.c@{solver\_sudoku\_test.c}!extract\_3x3@{extract\_3x3}}
+\index{extract\_3x3@{extract\_3x3}!solver\_sudoku\_test.c@{solver\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{extract\_3x3()}{extract\_3x3()}}
+{\footnotesize\ttfamily void extract\+\_\+3x3 (\begin{DoxyParamCaption}\item[{int}]{solver\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{tester\mbox{[}\+R\+O\+W\+S\mbox{]} }\end{DoxyParamCaption})}
+
+This function extracts the 3x3 values from the solver output 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em solver\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]}} & It contains the solver 2D array output values. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fp} & It is the file pointer to write the test results to a log file located at /test/log. \\
+\hline
+\mbox{\texttt{ out}}  & {\em tester\mbox{[}\+R\+O\+W\+S\mbox{]}} & It contains the 3x3 solver output values. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file solver\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{solver__sudoku__test_8c_a69f84b0367588248b6285238d47fb4ab}\label{solver__sudoku__test_8c_a69f84b0367588248b6285238d47fb4ab}} 
+\index{solver\_sudoku\_test.c@{solver\_sudoku\_test.c}!extract\_columns@{extract\_columns}}
+\index{extract\_columns@{extract\_columns}!solver\_sudoku\_test.c@{solver\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{extract\_columns()}{extract\_columns()}}
+{\footnotesize\ttfamily void extract\+\_\+columns (\begin{DoxyParamCaption}\item[{int}]{solver\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{tester\mbox{[}\+R\+O\+W\+S\mbox{]} }\end{DoxyParamCaption})}
+
+Testing the columns of the 9x9 solver output to see if it comply with the Sudoku rules 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em solver\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]}} & It contains the solver output values. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fp} & It is the file pointer to write the test results to a log file located at /test/log. \\
+\hline
+\mbox{\texttt{ out}}  & {\em tester\mbox{[}\+R\+O\+W\+S\mbox{]}} & It contains the columns data of solver output. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 131 of file solver\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{solver__sudoku__test_8c_a253666cb873fc5e9fb3391eb8ae0bd15}\label{solver__sudoku__test_8c_a253666cb873fc5e9fb3391eb8ae0bd15}} 
+\index{solver\_sudoku\_test.c@{solver\_sudoku\_test.c}!extract\_rows@{extract\_rows}}
+\index{extract\_rows@{extract\_rows}!solver\_sudoku\_test.c@{solver\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{extract\_rows()}{extract\_rows()}}
+{\footnotesize\ttfamily void extract\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{solver\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{tester\mbox{[}\+R\+O\+W\+S\mbox{]} }\end{DoxyParamCaption})}
+
+Testing the rows of the 9x9 solver output to see if it comply with the Sudoku rules 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em solver\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]}} & It contains the solver output values. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fp} & It is the file pointer to write the test results to a log file located at /test/log. \\
+\hline
+\mbox{\texttt{ out}}  & {\em tester\mbox{[}\+R\+O\+W\+S\mbox{]}} & It contains the rows data of solver output. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file solver\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{solver__sudoku__test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{solver__sudoku__test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{solver\_sudoku\_test.c@{solver\_sudoku\_test.c}!main@{main}}
+\index{main@{main}!solver\_sudoku\_test.c@{solver\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 152 of file solver\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{solver__sudoku__test_8c_a3d19396b222b03363796106603e09689}\label{solver__sudoku__test_8c_a3d19396b222b03363796106603e09689}} 
+\index{solver\_sudoku\_test.c@{solver\_sudoku\_test.c}!sort\_array\_and\_test@{sort\_array\_and\_test}}
+\index{sort\_array\_and\_test@{sort\_array\_and\_test}!solver\_sudoku\_test.c@{solver\_sudoku\_test.c}}
+\doxysubsubsection{\texorpdfstring{sort\_array\_and\_test()}{sort\_array\_and\_test()}}
+{\footnotesize\ttfamily \+\_\+\+Bool sort\+\_\+array\+\_\+and\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{tester\mbox{[}\+R\+O\+W\+S\mbox{]} }\end{DoxyParamCaption})}
+
+This function sorts the 3x3 values and test them if they pass the Sudoku rules 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tester\mbox{[}\+R\+O\+W\+S\mbox{]}} & contains either the row, columns or the 3x3 solver output values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is used to check if there are duplicate values in either row, column or the 3x3 solver output, if there are duplicates it returns false otherwise true. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file solver\+\_\+sudoku\+\_\+test.\+c.
+

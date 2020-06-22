@@ -1,5 +1,5 @@
 Testing all nine 3x3 sections of the Sudoku solver output to see if it complies with the Sodoku rules
------------------------------------------------------------------------------------------------------
+----------------------------------------------------
 The [3 x 3] section 1 of the solver output has ***passed*** the Sudoku rule test
 The [3 x 3] section 2 of the solver output has ***passed*** the Sudoku rule test
 The [3 x 3] section 3 of the solver output has ***passed*** the Sudoku rule test

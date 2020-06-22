@@ -1,0 +1,142 @@
+\hypertarget{rearrange__rows__cols__test_8h}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/test/include/rearrange\+\_\+rows\+\_\+cols\+\_\+test.h File Reference}
+\label{rearrange__rows__cols__test_8h}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/include/rearrange\_rows\_cols\_test.h@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/include/rearrange\_rows\_cols\_test.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{rearrange__rows__cols__test_8h_a6398861cb8c3675eae97a2c041f4047f}{swap\+\_\+values}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{rearrange__rows__cols__test_8h_a3c68ea465cc7fd33fcb0b4f693fac6f4}{beyond\+\_\+boundary\+\_\+1}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{rearrange__rows__cols__test_8h_ad09c2651738322e86fb095992ef8f467}{beyond\+\_\+boundary\+\_\+2}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{rearrange__rows__cols__test_8h_a70cdeaebf7fed51dbdee8f851023ec06}{beyond\+\_\+range\+\_\+1}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{rearrange__rows__cols__test_8h_a6f78fa1e2939b2048890a2e27e30c01c}{beyond\+\_\+range\+\_\+2}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{rearrange__rows__cols__test_8h_ae7aa5a66c5566aec25638c6dd9216589}{identical\+\_\+sudokus}} (int sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rearrange__rows__cols__test_8h_a3c68ea465cc7fd33fcb0b4f693fac6f4}\label{rearrange__rows__cols__test_8h_a3c68ea465cc7fd33fcb0b4f693fac6f4}} 
+\index{rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}!beyond\_boundary\_1@{beyond\_boundary\_1}}
+\index{beyond\_boundary\_1@{beyond\_boundary\_1}!rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}}
+\doxysubsubsection{\texorpdfstring{beyond\_boundary\_1()}{beyond\_boundary\_1()}}
+{\footnotesize\ttfamily \+\_\+\+Bool beyond\+\_\+boundary\+\_\+1 (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function to check the 9x9 boundaries of the input parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & input parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if the test says within the boundaries. True if the test failed.
+\end{DoxyReturn}
+This function is to check whether the input parameter is within the 9x9 boundaries 
+
+Definition at line 156 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__rows__cols__test_8h_ad09c2651738322e86fb095992ef8f467}\label{rearrange__rows__cols__test_8h_ad09c2651738322e86fb095992ef8f467}} 
+\index{rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}!beyond\_boundary\_2@{beyond\_boundary\_2}}
+\index{beyond\_boundary\_2@{beyond\_boundary\_2}!rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}}
+\doxysubsubsection{\texorpdfstring{beyond\_boundary\_2()}{beyond\_boundary\_2()}}
+{\footnotesize\ttfamily \+\_\+\+Bool beyond\+\_\+boundary\+\_\+2 (\begin{DoxyParamCaption}\item[{int}]{rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function to check the 9x9 boundaries of the output parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku} & \mbox{[}\mbox{]}\mbox{[}9\mbox{]} output parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if the test says within the boundaries. True if the test failed.
+\end{DoxyReturn}
+This function is to check whether the output parameter is within the 9x9 boundaries 
+
+Definition at line 204 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__rows__cols__test_8h_a70cdeaebf7fed51dbdee8f851023ec06}\label{rearrange__rows__cols__test_8h_a70cdeaebf7fed51dbdee8f851023ec06}} 
+\index{rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}!beyond\_range\_1@{beyond\_range\_1}}
+\index{beyond\_range\_1@{beyond\_range\_1}!rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}}
+\doxysubsubsection{\texorpdfstring{beyond\_range\_1()}{beyond\_range\_1()}}
+{\footnotesize\ttfamily \+\_\+\+Bool beyond\+\_\+range\+\_\+1 (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function to check input parameter values are within \mbox{[}1,9\mbox{]}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & input parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if the test says values are within the range \mbox{[}1,9\mbox{]}. True if the test failed.
+\end{DoxyReturn}
+This function is to check the values of the i/p parameter should not be beyond the range \mbox{[}1,9\mbox{]} 
+
+Definition at line 251 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__rows__cols__test_8h_a6f78fa1e2939b2048890a2e27e30c01c}\label{rearrange__rows__cols__test_8h_a6f78fa1e2939b2048890a2e27e30c01c}} 
+\index{rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}!beyond\_range\_2@{beyond\_range\_2}}
+\index{beyond\_range\_2@{beyond\_range\_2}!rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}}
+\doxysubsubsection{\texorpdfstring{beyond\_range\_2()}{beyond\_range\_2()}}
+{\footnotesize\ttfamily \+\_\+\+Bool beyond\+\_\+range\+\_\+2 (\begin{DoxyParamCaption}\item[{int}]{rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function to check output parameter values are within \mbox{[}1,9\mbox{]}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku} & \mbox{[}\mbox{]}\mbox{[}9\mbox{]} output parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if the test says values are within the range \mbox{[}1,9\mbox{]}. True if the test failed.
+\end{DoxyReturn}
+This function is to check the values of the o/p parameter should not be beyond the range \mbox{[}1,9\mbox{]} 
+
+Definition at line 311 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__rows__cols__test_8h_ae7aa5a66c5566aec25638c6dd9216589}\label{rearrange__rows__cols__test_8h_ae7aa5a66c5566aec25638c6dd9216589}} 
+\index{rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}!identical\_sudokus@{identical\_sudokus}}
+\index{identical\_sudokus@{identical\_sudokus}!rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}}
+\doxysubsubsection{\texorpdfstring{identical\_sudokus()}{identical\_sudokus()}}
+{\footnotesize\ttfamily \+\_\+\+Bool identical\+\_\+sudokus (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function to check the identical behaviour of the rearrange\+\_\+rows\+\_\+cols\+\_\+function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & input parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku} & \mbox{[}\mbox{]}\mbox{[}9\mbox{]} output parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if the test says not indentical. True if the test failed.
+\end{DoxyReturn}
+This function is to check the i/p and o/p parameters are identical or not 
+
+Definition at line 375 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{rearrange__rows__cols__test_8h_a6398861cb8c3675eae97a2c041f4047f}\label{rearrange__rows__cols__test_8h_a6398861cb8c3675eae97a2c041f4047f}} 
+\index{rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}!swap\_values@{swap\_values}}
+\index{swap\_values@{swap\_values}!rearrange\_rows\_cols\_test.h@{rearrange\_rows\_cols\_test.h}}
+\doxysubsubsection{\texorpdfstring{swap\_values()}{swap\_values()}}
+{\footnotesize\ttfamily \+\_\+\+Bool swap\+\_\+values (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function to check the 4 numbers are swapped in the input parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & input parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if the test has failed. True if the test passed.
+\end{DoxyReturn}
+This function is to check whether the rearrange\+\_\+rows\+\_\+cols is actually swapping randomly selected numbers in the input parameter. 
+
+Definition at line 110 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+

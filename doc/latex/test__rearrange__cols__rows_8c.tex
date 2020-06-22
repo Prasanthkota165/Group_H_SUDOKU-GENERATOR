@@ -1,0 +1,108 @@
+\hypertarget{test__rearrange__cols__rows_8c}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/test/src/test\+\_\+rearrange\+\_\+cols\+\_\+rows.c File Reference}
+\label{test__rearrange__cols__rows_8c}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/src/test\_rearrange\_cols\_rows.c@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/src/test\_rearrange\_cols\_rows.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/rearrange\+\_\+rows\+\_\+cols\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../include/sudoku.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test__rearrange__cols__rows_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__rearrange__cols__rows_8c_a519e1f0226b4c77be8294be93d6b3d65}{swap\+\_\+values}} (int sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__rearrange__cols__rows_8c_a7cb808c8f75e5fd9eab7594043f2172d}{beyond\+\_\+boundary\+\_\+1}} (int sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__rearrange__cols__rows_8c_a85258676a03ea7e26afdeb5fba497a21}{beyond\+\_\+boundary\+\_\+2}} (int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__rearrange__cols__rows_8c_a12141ed19eac73472f257c4ed978f397}{beyond\+\_\+range\+\_\+1}} (int sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__rearrange__cols__rows_8c_a53f93cfa3eb6818c5713a5e463065a5a}{beyond\+\_\+range\+\_\+2}} (int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__rearrange__cols__rows_8c_ae7aa5a66c5566aec25638c6dd9216589}{identical\+\_\+sudokus}} (int sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Purpose \+: This function is used to test the \mbox{\hyperlink{rearrange__cols__rows_8c}{rearrange\+\_\+cols\+\_\+rows.\+c}} function
+
+Language \+: C
+
+Author \+: Prasanth Kota -\/ \href{mailto:prasanthkota@cmail.carleton.ca}{\texttt{ prasanthkota@cmail.\+carleton.\+ca}}
+
+Date \+: 19 June, 2020. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__rearrange__cols__rows_8c_a7cb808c8f75e5fd9eab7594043f2172d}\label{test__rearrange__cols__rows_8c_a7cb808c8f75e5fd9eab7594043f2172d}} 
+\index{test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}!beyond\_boundary\_1@{beyond\_boundary\_1}}
+\index{beyond\_boundary\_1@{beyond\_boundary\_1}!test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{beyond\_boundary\_1()}{beyond\_boundary\_1()}}
+{\footnotesize\ttfamily \+\_\+\+Bool beyond\+\_\+boundary\+\_\+1 (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function is to check whether the input parameter is within the 9x9 boundaries 
+
+Definition at line 156 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{test__rearrange__cols__rows_8c_a85258676a03ea7e26afdeb5fba497a21}\label{test__rearrange__cols__rows_8c_a85258676a03ea7e26afdeb5fba497a21}} 
+\index{test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}!beyond\_boundary\_2@{beyond\_boundary\_2}}
+\index{beyond\_boundary\_2@{beyond\_boundary\_2}!test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{beyond\_boundary\_2()}{beyond\_boundary\_2()}}
+{\footnotesize\ttfamily \+\_\+\+Bool beyond\+\_\+boundary\+\_\+2 (\begin{DoxyParamCaption}\item[{int}]{rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function is to check whether the output parameter is within the 9x9 boundaries 
+
+Definition at line 204 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{test__rearrange__cols__rows_8c_a12141ed19eac73472f257c4ed978f397}\label{test__rearrange__cols__rows_8c_a12141ed19eac73472f257c4ed978f397}} 
+\index{test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}!beyond\_range\_1@{beyond\_range\_1}}
+\index{beyond\_range\_1@{beyond\_range\_1}!test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{beyond\_range\_1()}{beyond\_range\_1()}}
+{\footnotesize\ttfamily \+\_\+\+Bool beyond\+\_\+range\+\_\+1 (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function is to check the values of the i/p parameter should not be beyond the range \mbox{[}1,9\mbox{]} 
+
+Definition at line 251 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{test__rearrange__cols__rows_8c_a53f93cfa3eb6818c5713a5e463065a5a}\label{test__rearrange__cols__rows_8c_a53f93cfa3eb6818c5713a5e463065a5a}} 
+\index{test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}!beyond\_range\_2@{beyond\_range\_2}}
+\index{beyond\_range\_2@{beyond\_range\_2}!test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{beyond\_range\_2()}{beyond\_range\_2()}}
+{\footnotesize\ttfamily \+\_\+\+Bool beyond\+\_\+range\+\_\+2 (\begin{DoxyParamCaption}\item[{int}]{rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function is to check the values of the o/p parameter should not be beyond the range \mbox{[}1,9\mbox{]} 
+
+Definition at line 311 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{test__rearrange__cols__rows_8c_ae7aa5a66c5566aec25638c6dd9216589}\label{test__rearrange__cols__rows_8c_ae7aa5a66c5566aec25638c6dd9216589}} 
+\index{test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}!identical\_sudokus@{identical\_sudokus}}
+\index{identical\_sudokus@{identical\_sudokus}!test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{identical\_sudokus()}{identical\_sudokus()}}
+{\footnotesize\ttfamily \+\_\+\+Bool identical\+\_\+sudokus (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function is to check the i/p and o/p parameters are identical or not 
+
+Definition at line 375 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{test__rearrange__cols__rows_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{test__rearrange__cols__rows_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}!main@{main}}
+\index{main@{main}!test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{test__rearrange__cols__rows_8c_a519e1f0226b4c77be8294be93d6b3d65}\label{test__rearrange__cols__rows_8c_a519e1f0226b4c77be8294be93d6b3d65}} 
+\index{test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}!swap\_values@{swap\_values}}
+\index{swap\_values@{swap\_values}!test\_rearrange\_cols\_rows.c@{test\_rearrange\_cols\_rows.c}}
+\doxysubsubsection{\texorpdfstring{swap\_values()}{swap\_values()}}
+{\footnotesize\ttfamily \+\_\+\+Bool swap\+\_\+values (\begin{DoxyParamCaption}\item[{int}]{sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+This function is to check whether the rearrange\+\_\+rows\+\_\+cols is actually swapping randomly selected numbers in the input parameter. 
+
+Definition at line 110 of file test\+\_\+rearrange\+\_\+cols\+\_\+rows.\+c.
+

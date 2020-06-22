@@ -1,68 +1,68 @@
 POSTCONDITION: positive test cases and the expected outputs
------------------------------------------------------------
+---------------------------------------------------
 
 apply_mask function called for difficulty level: 0
---------------------------------------------------
-0 0 0 0 5 6 7 8 9 
-4 0 6 0 0 9 1 0 3 
-7 8 9 0 2 3 4 5 6 
-0 0 0 0 0 0 0 9 7 
-0 0 0 8 0 7 2 0 1 
-0 9 7 0 0 0 0 0 0 
-3 0 0 6 4 5 0 7 0 
-0 4 0 0 7 8 3 1 2 
-9 7 0 0 0 2 0 0 0 
+-----------------------------------------------
+0 2 0 4 5 6 7 0 9 
+0 5 6 7 8 0 0 0 0 
+0 0 9 0 2 3 4 5 6 
+0 0 0 5 0 0 0 0 0 
+0 6 0 8 9 0 2 0 1 
+0 0 7 2 0 0 0 0 4 
+0 0 2 6 0 0 0 0 8 
+6 4 5 9 0 8 3 0 2 
+0 0 8 3 0 2 6 0 5 
 *****Passed the test*****
 Number of cells masked: 41
 Numbers shown on Sudoku game: 40
 
 apply_mask function called for difficulty level: 1
---------------------------------------------------
-1 0 0 4 0 0 0 0 9 
-4 0 6 7 8 0 1 2 0 
-7 0 0 0 0 0 0 0 6 
-0 3 1 5 0 0 8 0 0 
-0 6 0 0 9 7 0 0 0 
-0 9 7 0 3 1 5 0 0 
-3 0 0 0 4 0 9 0 8 
-6 0 0 9 0 0 0 1 0 
-9 7 8 0 0 0 6 0 0 
+-----------------------------------------------
+1 0 0 4 5 6 7 8 0 
+0 5 0 0 8 9 0 0 3 
+0 8 0 0 0 0 0 5 0 
+2 3 1 0 6 4 0 0 7 
+0 0 4 0 0 0 0 0 0 
+0 0 0 2 0 0 0 6 0 
+0 1 0 0 4 5 0 7 8 
+0 0 0 9 0 8 3 1 0 
+0 7 8 3 1 0 0 0 0 
 *****Passed the test*****
 Number of cells masked: 47
 Numbers shown on Sudoku game: 34
 
 apply_mask function called for difficulty level: 2
---------------------------------------------------
-0 2 3 0 0 0 7 0 0 
-0 5 0 0 0 9 0 2 0 
-0 0 9 0 0 0 4 0 0 
-2 0 0 0 6 4 8 9 7 
-0 0 0 0 0 7 0 0 1 
-0 0 0 2 3 0 0 0 4 
-0 0 0 0 4 5 9 0 0 
-0 0 0 9 7 0 3 0 2 
-9 0 0 0 0 0 0 4 0 
+-----------------------------------------------
+1 2 0 4 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 
+7 0 0 0 0 0 0 0 6 
+2 3 0 0 0 0 8 0 0 
+5 0 4 8 9 0 0 0 0 
+8 0 0 2 0 0 0 6 4 
+3 0 2 6 4 0 0 0 0 
+6 0 5 0 0 8 3 1 0 
+0 7 8 0 0 2 0 0 0 
 *****Passed the test*****
 Number of cells masked: 53
 Numbers shown on Sudoku game: 28
 
 apply_mask function called for difficulty level: 3
---------------------------------------------------
-0 0 0 0 0 0 0 8 9 
-4 0 0 7 8 0 0 0 0 
-0 8 0 0 2 0 0 5 6 
-2 3 0 5 0 4 0 0 0 
-0 6 0 0 0 0 2 0 0 
-8 0 0 2 0 0 5 0 0 
-0 1 0 0 4 0 0 0 8 
-0 0 5 0 7 0 0 0 0 
-0 0 0 0 0 0 6 0 0 
+-----------------------------------------------
+1 0 0 4 0 0 0 0 0 
+4 0 0 7 8 0 1 0 3 
+0 0 0 0 0 3 0 0 6 
+0 0 1 0 0 0 0 9 0 
+0 0 0 0 0 0 0 0 0 
+0 0 7 0 0 0 0 6 0 
+0 0 0 6 0 0 9 0 8 
+6 4 0 9 7 8 3 1 0 
+0 0 0 0 0 0 0 0 5 
 *****Passed the test*****
 Number of cells masked: 57
 Numbers shown on Sudoku game: 24
 
 PRECONDITION: negative test cases and the expected outputs
-----------------------------------------------------------
+---------------------------------------------------
 PRECONDITIONs were asserted at the function level. 
 When incorrect input values are passed to the apply_mask function, the function displays an Error Message to the screen and terminates.
 
@@ -70,7 +70,7 @@ The rearranged_sudoku array size not being 9x9,  testing with 4x9 array
 The rearranged_sudoku array value(s) not being from 1 to 9
 The diff_level value not being 0, 1, 2 or 3
 
-*****************The outcome of the test*****************
+**************The outcome of the test**************
 Once invalid input is encountered, the following Error Message will display to the screen and the program terminates.
 The rearranged_sudoku array value(s), data type, or array size is incorrect.
 The difficulty level entered was not 0, 1, 2, or 3
