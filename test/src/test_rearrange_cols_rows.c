@@ -256,6 +256,7 @@ _Bool beyond_range_1(int sudoku[][9]){
     FILE *log = fopen(log_location, "a"); /*Append access to the log file */
     fputs("->Reference to Test 4 \n------------\n",log);
     fputs("  Check the values of sudoku_template in the range [1,9]\n\n",log);
+    generate_sudoku_template(sudoku);
     for(i=0;i<9;i++){ /* checking rows for in [1,9] */
 	    for(j=0;j<9;j++){
 		    if((sudoku[i][j] <=9) && (sudoku[i][j]>=1)){
@@ -374,6 +375,7 @@ _Bool beyond_range_2(int rearranged_sudoku[][9]){
  */
 _Bool identical_sudokus(int sudoku[][9], int rearranged_sudoku[][9]){
     generate_sudoku_template(sudoku);
+    rearrange_cols_rows(sudoku,rearranged_sudoku);
     char* log_location = "../log/rearrange_rows_cols.log"; /*Define the path*/
     FILE *log = fopen(log_location, "a"); /*Append access to the log file */
     fputs("->Reference to Test 6, Identical sudokus\n------------\n",log);
