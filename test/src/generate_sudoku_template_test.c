@@ -27,22 +27,23 @@ int main() {
     _Bool b;
     generate_sudoku_template(sudoku_temp);
     int i,j;
-    fprintf(log,".........The function will return this matrix.............\n\n");
+    fprintf(log,".........The function will return this matrix..........\n\n");
     for(i=0;i<9;i++){
         fprintf(log,"   ");
-	for(j=0;j<9;j++){
-	    fprintf(log,"%d ",sudoku_temp[i][j]);
+	    for(j=0;j<9;j++){
+	        fprintf(log,"%d ",sudoku_temp[i][j]);
         }
         fprintf(log,"\n");
     }
 
     for(i=0;i<9;i++){
        	for(j=0;j<9;j++){
-	    if(sudoku_temp[i][j]==0){
+	        if(sudoku_temp[i][j]==0){
                 count++;
             }
         }
     }
+    
     if(count == 0 ){
         fputs("\n\nThe function successfully generated and returned the 9X9 matrix",log);
     } else { 
