@@ -73,11 +73,10 @@ int main(void){
     int no_sudoku, diff_level;
     int sudoku_template[ROWS][COLS];
     int rearranged_sudoku[ROWS][COLS];
-    _Bool tester;
     int masked_sudoku[ROWS][COLS];
     int sudoku_solution [ROWS][COLS];
     int solver_output [ROWS][COLS];
-    char ch;
+ 
 
     srand(time(0)); /*Initialize the randomizer function*/
 
@@ -114,6 +113,7 @@ int main(void){
     printf("Sudoku generator has finished creating %d sudoku(s).\n", no_sudoku);
     printf("Press enter to exit\n");
     getchar();
+
     return 0;
 }
 
