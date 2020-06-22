@@ -1,24 +1,6 @@
 REARRANGE SUDOKU ROWS, COLUMNS TESTING RESULT
 -----------------------------------------------
-Test 1, All the 4 numbers in each row are swapped randomly in the input parameter sudoku_template.
---> rearrange_cols_rows function has ****PASSED**** the swapping test.
------------------------------------------------
-Test 2, Input parameter of the function is within the 9X9 boundaries.
---> rearrange_cols_rows function has ***PASSED*** the input boundary test.
------------------------------------------------
-Test 3, Output parameter of the function is within the 9X9 boundaries.
---> rearrange_cols_rows function has ***PASSED*** the output boundary test.
------------------------------------------------
-Test 4, Input parameter sudoku_template has the values in the range [1,9] in rows,columns,3x3 block. 
---> rearrange_cols_rows function input has ***PASSED*** the range test.
------------------------------------------------
-Test 5, Output parameter sudoku_template has the values in the range [1,9] in rows,columns,3x3 block. 
-rearrange_cols_rows function output has ***PASSED*** the range test.
------------------------------------------------
-Test 6, Input and output parameters of the function are not identical.
---> rearrange_cols_rows function has ***PASSED*** the identical test.
------------------------------------------------
-->Reference to Test 1 
+->Test 1 
 ------------
   Input parameter sudoku_template: 
   1   2   3   4   5   6   7   8   9 
@@ -31,27 +13,36 @@ Test 6, Input and output parameters of the function are not identical.
   6   4   5   9   7   8   3   1   2 
   9   7   8   3   1   2   6   4   5 
   Output paramter rearranged_sudoku: 
-  6   2   3   4   5   9   7   1   8 -- 4 numbers swapped 
-  4   5   9   7   1   8   6   2   3 -- 4 numbers swapped 
-  7   1   8   6   2   3   4   5   9 -- 4 numbers swapped 
-  2   3   6   5   9   4   1   8   7 -- 4 numbers swapped 
-  5   9   4   1   8   7   2   3   6 -- 4 numbers swapped 
-  1   8   7   2   3   6   5   9   4 -- 4 numbers swapped 
-  3   6   2   9   4   5   8   7   1 -- 4 numbers swapped 
-  9   4   5   8   7   1   3   6   2 -- 4 numbers swapped 
-  8   7   1   3   6   2   9   4   5 -- 4 numbers swapped 
---------------------------
-->Reference to Test 2, within 9x9 boundary 
+  9   2   1   4   3   6   7   8   5 -- 4 numbers swapped 
+  4   3   6   7   8   5   9   2   1 -- 4 numbers swapped 
+  7   8   5   9   2   1   4   3   6 -- 4 numbers swapped 
+  2   1   9   3   6   4   8   5   7 -- 4 numbers swapped 
+  3   6   4   8   5   7   2   1   9 -- 4 numbers swapped 
+  8   5   7   2   1   9   3   6   4 -- 4 numbers swapped 
+  1   9   2   6   4   3   5   7   8 -- 4 numbers swapped 
+  6   4   3   5   7   8   1   9   2 -- 4 numbers swapped 
+  5   7   8   1   9   2   6   4   3 -- 4 numbers swapped 
+---
+All the 4 numbers in each row are swapped randomly in the input parameter sudoku_template.
+--> rearrange_cols_rows function has ****PASSED**** the swapping test.
+-----------------------------------------------
+->Test 2, Within 9x9 boundary 
 ------------
 The row boundary of the input parameter sudoku_template is: 9
 The column boundary of the input parameter sudoku_template is: 9
---------------------------
-->Reference to Test 3, Within 9X9 boundary 
+---
+Input parameter of the function is within the 9X9 boundaries.
+--> rearrange_cols_rows function has ***PASSED*** the input boundary test.
+-----------------------------------------------
+->Test 3, Within 9X9 boundary 
 ------------
 The row boundary of the input parameter rearranged_sudoku is: 9
 The column boundary of the input parameter rearranged_sudoku is: 9
---------------------------
-->Reference to Test 4 
+---
+Output parameter of the function is within the 9X9 boundaries.
+--> rearrange_cols_rows function has ***PASSED*** the output boundary test.
+-----------------------------------------------
+->Test 4 
 ------------
   Check the values of sudoku_template in the range [1,9]
 
@@ -64,22 +55,28 @@ The column boundary of the input parameter rearranged_sudoku is: 9
   3   1   2   6   4   5   9   7   8 
   6   4   5   9   7   8   3   1   2 
   9   7   8   3   1   2   6   4   5 
---------------------------
-->Reference to Test 5 
+---
+Input parameter sudoku_template has the values in the range [1,9] in rows,columns,3x3 block. 
+--> rearrange_cols_rows function input has ***PASSED*** the range test.
+-----------------------------------------------
+->Test 5 
 ------------
   Check the values of rearranged_sudoku in the range [1,9]
 
-  5   3   2   4   7   6   1   8   9 
-  8   9   1   2   5   3   4   7   6 
-  7   6   4   1   8   9   2   5   3 
-  3   2   5   7   6   4   8   9   1 
-  6   4   7   8   9   1   5   3   2 
-  9   1   8   5   3   2   7   6   4 
-  4   7   6   9   1   8   3   2   5 
-  2   5   3   6   4   7   9   1   8 
-  1   8   9   3   2   5   6   4   7 
---------------------------
-->Reference to Test 6, Identical sudokus
+  7   3   2   8   6   1   5   4   9 
+  4   9   5   2   7   3   8   6   1 
+  6   1   8   5   4   9   2   7   3 
+  3   2   7   6   1   8   4   9   5 
+  9   5   4   7   3   2   6   1   8 
+  1   8   6   4   9   5   7   3   2 
+  5   4   9   3   2   7   1   8   6 
+  8   6   1   9   5   4   3   2   7 
+  2   7   3   1   8   6   9   5   4 
+---
+ Output parameter sudoku_template has the values in the range [1,9] in rows,columns,3x3 block. 
+rearrange_cols_rows function output has ***PASSED*** the range test.
+-----------------------------------------------
+->Test 6, Identical sudokus
 ------------
   Input parameter rearranged_sudoku: 
   1   2   3   4   5   6   7   8   9 
@@ -93,15 +90,18 @@ The column boundary of the input parameter rearranged_sudoku is: 9
   9   7   8   3   1   2   6   4   5 
 
   Output parameter rearranged_sudoku: 
-  5   3   2   4   7   6   1   8   9 
-  8   9   1   2   5   3   4   7   6 
-  7   6   4   1   8   9   2   5   3 
-  3   2   5   7   6   4   8   9   1 
-  6   4   7   8   9   1   5   3   2 
-  9   1   8   5   3   2   7   6   4 
-  4   7   6   9   1   8   3   2   5 
-  2   5   3   6   4   7   9   1   8 
-  1   8   9   3   2   5   6   4   7 
+  4   5   1   8   2   3   6   7   9 
+  8   3   2   7   6   9   1   4   5 
+  7   9   6   4   1   5   2   8   3 
+  1   4   5   2   3   8   9   6   7 
+  6   7   9   1   5   4   3   2   8 
+  2   8   3   6   9   7   5   1   4 
+  3   2   8   9   7   6   4   5   1 
+  5   1   4   3   8   2   7   9   6 
+  9   6   7   5   4   1   8   3   2 
 
   Check the numbers with the input parameter.
---------------------------
+---
+Input and output parameters of the function are not identical.
+--> rearrange_cols_rows function has ***PASSED*** the identical test.
+-----------------------------------------------
