@@ -2,7 +2,8 @@
 /**
  * @file test_sudoku_test.c
  *
- * Purpose  : This function tests whether the regenerated sudoku meets all the sudoku rules or not .
+ * Purpose  : This function tests whether the regenerated sudoku meets all the 
+ *              sudoku rules or not .
  *
  * Language : C
  *
@@ -35,11 +36,12 @@ int main(){
     fprintf(log,"         REARRANGED SUDOKU:\n");
     for(i=0;i<9;i++){ /* checking for same numbers */
        	for(j=0;j<9;j++){
-	    fprintf(log,"  %d ", rearranged_sudoku[i][j]);	
-	}
-	fprintf(log,"\n");
+	        fprintf(log,"  %d ", rearranged_sudoku[i][j]);	
+	    }
+	    fprintf(log,"\n");
     }
-    if(main_test(sudoku_temp,rearranged_sudoku)){ /* Testing for any errors in rows, columns and 3X3*/
+    if(main_test(sudoku_temp,rearranged_sudoku)){ /* Testing for any errors in 
+                                                    rows, columns and 3X3*/
     	fputs("Test 1:All rows,columns and 3X3 contains 1 to 9 numbers and\n"
                "sum equals 45. Sudoku met all the rules.\n",log);
     } else {
@@ -100,7 +102,7 @@ _Bool testing_3X3(int sudoku_temp[9][9],int rearranged_sudoku[9][9]) {
  * This function tests for any errors in columns and returns a bool value.
  */
 _Bool testing_cols(int sudoku_temp[9][9],int rearranged_sudoku[9][9]) {
-char* log_location = "../log/test_sudoku_test.log"; /*Define the path*/
+    char* log_location = "../log/test_sudoku_test.log"; /*Define the path*/
     FILE *log = fopen(log_location, "a"); /*Appends access to the log file*/
     _Bool b;
     int a[9];
@@ -132,7 +134,7 @@ _Bool testing_rows(int sudoku_temp[9][9],int rearranged_sudoku[9][9]) {
     for(i=1;i<=9;i++){
        	a[i-1] = i; /* Copying the values from 1 to 9 */
     }
-    b=test_rows(rearranged_sudoku,a);
+    b = test_rows(rearranged_sudoku,a);
     if (b==0) {
         fprintf(log,"             Test 2 'PASSED'            \n"
                      "..........No Errors over all..........\n\n");

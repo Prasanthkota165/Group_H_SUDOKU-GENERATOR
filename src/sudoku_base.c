@@ -1,7 +1,8 @@
 /**
 * @file sudoku_base.c 
 *
-* Purpose   : This is the main function to generate the sudoku puzzle and solution.
+* Purpose   : This is the main function to generate the sudoku puzzle and 
+                solution.
 *
 * Language  : C
 *
@@ -89,8 +90,8 @@ int main(void){
             /* This function will generate the sudoku template */
             generate_sudoku_template(sudoku_template);
 
-            /* Rearranging the sudoku template to generate different combinations 
-            of sudoku */ 
+            /* Rearranging the sudoku template to generate different 
+            combinations of sudoku */ 
             rearrange_cols_rows(sudoku_template, rearranged_sudoku);
         
         /*Tests the rearranged sudoku for sudoku rules*/

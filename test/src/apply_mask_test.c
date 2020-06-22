@@ -8,8 +8,6 @@
     #include "../../include/sudoku.h"
 #endif
 
-//#include "../../src/apply_mask.c"
-
 #define ROWS 9
 #define COLS 9
 
@@ -41,7 +39,8 @@ int main(){
                                     {6, 4, 5, 9, 7, 8, 3, 1, 2},
                                     {9, 7, 8, 3, 1, 2, 6, 4, 5}};
 
-    printf("\n*****apply_mask function test: test results are written to a log file (test/log/apply_mask_test_log.txt)*****\n");
+    printf("\n*****apply_mask function test: test results are written to a log "
+            "file (test/log/apply_mask_test_log.txt)*****\n");
     printf("\n");
 
     fp = fopen ("../log/apply_mask_test_log.txt", "w+");
@@ -51,8 +50,9 @@ int main(){
         _Exit(EXIT_FAILURE);
     }
 
-    fprintf(fp, "%s", "POSTCONDITION: positive test cases and the expected outputs\n");
-    fprintf(fp, "%s", "-----------------------------------------------------------\n");
+    fprintf(fp, "%s", "POSTCONDITION: positive test cases and the expected "
+                        "outputs\n");
+    fprintf(fp, "%s", "---------------------------------------------------\n");
 
     for(int i = 0; i < array_size; i++){
         cells_tobe_masked = 0;
@@ -60,9 +60,10 @@ int main(){
 
         apply_mask(rearranged_sudoku1, diff_level [i], masked_sudoku);
 
-        fprintf(fp, "%s %d", "\napply_mask function called for difficulty level:", diff_level [i]);
+        fprintf(fp, "%s %d", "\napply_mask function called for difficulty level:", 
+                        diff_level [i]);
         fprintf(fp, "%s", "\n");
-        fprintf(fp, "%s", "--------------------------------------------------\n");
+        fprintf(fp, "%s", "-----------------------------------------------\n");
 
         for(int k = 0; k < 9; k++){
             for(int m = 0; m < 9; m++){
@@ -73,33 +74,43 @@ int main(){
                     numbers_tobe_shown++;
                 }
 
-            fprintf(fp, "%d ", masked_sudoku[k][m]);
+                fprintf(fp, "%d ", masked_sudoku[k][m]);
             }
             fprintf(fp, "%s", "\n");
         }
         fprintf(fp, "%s", "*****Passed the test*****\n");
         fprintf(fp, "%s %d", "Number of cells masked:",  cells_tobe_masked);
-        fprintf(fp, "%s %d", "\nNumbers shown on Sudoku game:", numbers_tobe_shown);
+        fprintf(fp, "%s %d", "\nNumbers shown on Sudoku game:", 
+                                                        numbers_tobe_shown);
         fprintf(fp, "%s", "\n");
     }
 
-    fprintf(fp, "%s", "\nPRECONDITION: negative test cases and the expected outputs\n");
-    fprintf(fp, "%s", "----------------------------------------------------------\n");
+    fprintf(fp, "%s", "\nPRECONDITION: negative test cases and the expected "
+                        "outputs\n");
+    fprintf(fp, "%s", "---------------------------------------------------\n");
     fprintf(fp, "%s", "PRECONDITIONs were asserted at the function level. \n");
-    fprintf(fp, "%s", "When incorrect input values are passed to the apply_mask function, the function displays an Error Message to the screen and terminates.\n");
+    fprintf(fp, "%s", "When incorrect input values are passed to the apply_mask "
+                        "function, the function displays an Error Message to "
+                        "the screen and terminates.\n");
 
     fprintf(fp, "%s", "\n");
     
-    fprintf(fp, "%s", "The rearranged_sudoku array size not being 9x9,  testing with 4x9 array\n");
-    /* The case where the rearranged_sudoku array size not being 9x9, in this case being 4x9 */
+    fprintf(fp, "%s", "The rearranged_sudoku array size not being 9x9,  testing "
+                        "with 4x9 array\n");
+    /* The case where the rearranged_sudoku array size not being 9x9, in this 
+        case being 4x9 */
     int rearranged_sudoku2 [4][9] = {{1, 2, 3, 4, 5, 6, 7, 8, 9},
                                      {4, 5, 6, 7, 8, 9, 1, 2, 3},
                                      {7, 8, 9, 1, 2, 3, 4, 5, 6},
-                                     {2, 3, 1, 5, 6, 4, 8, 9, 7}};    /* apply_mask function being called with rearranged_sudoku array size 4x9 instead of 9x9 */
-
+                                     {2, 3, 1, 5, 6, 4, 8, 9, 7}};    
+    
+    /* apply_mask function being called with rearranged_sudoku array size 4x9 
+        instead of 9x9 */
     apply_mask(rearranged_sudoku2, 1 , masked_sudoku);
-    fprintf(fp, "%s", "The rearranged_sudoku array value(s) not being from 1 to 9\n");
-    /* apply_mask function being called with rearranged_sudoku value not being 9x9, in this case row 9 and column 2 being 77 */
+    fprintf(fp, "%s", "The rearranged_sudoku array value(s) not being from 1 "
+                        "to 9\n");
+    /* apply_mask function being called with rearranged_sudoku value not being 
+        9x9, in this case row 9 and column 2 being 77 */
     int rearranged_sudoku3 [9][9] = {{1, 2, 3, 4, 5, 6, 7, 8, 9},
                                      {4, 5, 6, 7, 8, 9, 1, 2, 3},
                                      {7, 8, 9, 1, 2, 3, 4, 5, 6},
@@ -108,14 +119,18 @@ int main(){
                                      {8, 9, 7, 2, 3, 1, 5, 6, 4},
                                      {3, 1, 2, 6, 4, 5, 9, 7, 8},
                                      {6, 4, 5, 9, 7, 8, 3, 1, 2},
-                                     {9, 77, 8, 3, 1, 2, 6, 4, 5}};    /* The case where the rearranged_sudoku array value(s) not being from 1 to 9 */
+                                     {9, 77, 8, 3, 1, 2, 6, 4, 5}};    
+    /* The case where the rearranged_sudoku array value(s) not being from 1 to 9 */
 
     /* apply_mask(rearranged_sudoku3, 2, masked_sudoku); */
     fprintf(fp, "%s", "The diff_level value not being 0, 1, 2 or 3\n");
     fprintf(fp, "%s", "\n");
-    fprintf(fp, "%s", "*****************The outcome of the test*****************\n");
-    fprintf(fp, "%s", "Once invalid input is encountered, the following Error Message will display to the screen and the program terminates.\n");
-    fprintf(fp, "%s", "The rearranged_sudoku array value(s), data type, or array size is incorrect.\n");
+    fprintf(fp, "%s", "**************The outcome of the test**************\n");
+    fprintf(fp, "%s", "Once invalid input is encountered, the following Error "
+                        "Message will display to the screen and the program "
+                        "terminates.\n");
+    fprintf(fp, "%s", "The rearranged_sudoku array value(s), data type, or "
+                        "array size is incorrect.\n");
     fprintf(fp, "%s", "The difficulty level entered was not 0, 1, 2, or 3\n");
 
     fclose(fp);

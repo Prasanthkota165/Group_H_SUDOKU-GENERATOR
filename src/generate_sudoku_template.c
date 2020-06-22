@@ -15,7 +15,7 @@
 #include "../include/sudoku.h"
 
 /**
- * This fnction generates the sudoku templete of size 9X9.      
+ * This function generates the sudoku templete of size 9X9.      
  */
 void generate_sudoku_template(int sudoku_temp [9][9]){
     int i,j;
