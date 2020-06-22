@@ -118,7 +118,7 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    FILE *p_sudoku_file; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">/*Variables*/</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="apply__mask__test__log_8txt.html#a5b17d9c7a3ecae3e6f4b72ffd43f8161">value</a>, seperator;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">char</span> value, seperator;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> k = 0;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">/*Initial Naming of the ouput file*/</span></div>
@@ -160,8 +160,8 @@ $(function() {
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j&lt;9;j++){</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            k = sudoku[i][j]; </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="apply__mask__test__log_8txt.html#a5b17d9c7a3ecae3e6f4b72ffd43f8161">value</a> = k ? <span class="charliteral">&#39;0&#39;</span> + k : <span class="charliteral">&#39; &#39;</span>; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            fputc(<a class="code" href="apply__mask__test__log_8txt.html#a5b17d9c7a3ecae3e6f4b72ffd43f8161">value</a>,p_sudoku_file);<span class="comment">/*If the digit is a number between </span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            value = k ? <span class="charliteral">&#39;0&#39;</span> + k : <span class="charliteral">&#39; &#39;</span>; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            fputc(value,p_sudoku_file);<span class="comment">/*If the digit is a number between </span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">                                            1 and 9, then the character of the </span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">                                            digit will be written in the file. </span></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">                                            If the digit is 0, then an empty </span></div>
@@ -186,7 +186,6 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aoutput__sudoku_8c_html_af3eb0b2202456a45163decc8fb6f3843"><div class="ttname"><a href="output__sudoku_8c.html#af3eb0b2202456a45163decc8fb6f3843">output_sudoku</a></div><div class="ttdeci">void output_sudoku(int sudoku_solution[9][9], int sudoku_puzzle[9][9], int diff_lvl)</div><div class="ttdef"><b>Definition:</b> <a href="output__sudoku_8c_source.html#l00034">output_sudoku.c:34</a></div></div>
-<div class="ttc" id="aapply__mask__test__log_8txt_html_a5b17d9c7a3ecae3e6f4b72ffd43f8161"><div class="ttname"><a href="apply__mask__test__log_8txt.html#a5b17d9c7a3ecae3e6f4b72ffd43f8161">value</a></div><div class="ttdeci">POSTCONDITION the function displays an Error Message to the screen and terminates The rearranged_sudoku array size not testing with array The rearranged_sudoku array value(s) not being from 1 to 9 The diff_level value not being 0</div></div>
 <div class="ttc" id="aoutput__sudoku_8c_html_a2e67792bfca0aad9ca6eab62ee4c3a44"><div class="ttname"><a href="output__sudoku_8c.html#a2e67792bfca0aad9ca6eab62ee4c3a44">create_sudoku_file</a></div><div class="ttdeci">void create_sudoku_file(int sudoku[][9], char *sudoku_type, int diff_lvl, int output_count)</div><div class="ttdef"><b>Definition:</b> <a href="output__sudoku_8c_source.html#l00068">output_sudoku.c:68</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
