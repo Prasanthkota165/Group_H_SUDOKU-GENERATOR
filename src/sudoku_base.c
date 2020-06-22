@@ -20,8 +20,9 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include<time.h>
+#include <time.h>
 #include "../include/sudoku.h"
+
 /**
  * @brief Primary function of the Sudoku Generator.
  * 
