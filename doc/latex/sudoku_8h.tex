@@ -1,0 +1,688 @@
+\hypertarget{sudoku_8h}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/include/sudoku.h File Reference}
+\label{sudoku_8h}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/include/sudoku.h@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/include/sudoku.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}~9
+\item 
+\#define \mbox{\hyperlink{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}~9
+\item 
+\#define \mbox{\hyperlink{sudoku_8h_a77d30e1642d48f4032cd2c317506fe6c}{R\+E\+A\+R\+R\+A\+N\+G\+E\+\_\+\+C\+O\+L\+S\+\_\+\+R\+O\+W\+S\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{sudoku_8h_a7b5348da6051650dce112daf43004841}{I\+N\+P\+U\+T\+\_\+\+S\+U\+D\+O\+K\+U\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{sudoku_8h_a0173f1f36f2bfc52ea85112c4b006b53}{T\+E\+S\+T\+\_\+\+S\+U\+D\+O\+K\+U\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sudoku_8h_abf2fcbaf110b279ce221e2a6e3fb4ce3}{input\+\_\+sudoku}} (int $\ast$, int $\ast$)
+\item 
+void \mbox{\hyperlink{sudoku_8h_a21f82fd792e235a7f0d61274e83ba536}{generate\+\_\+sudoku\+\_\+template}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+void \mbox{\hyperlink{sudoku_8h_a618249361a8f35f1bc81ba456a5b6a74}{rearrange\+\_\+cols\+\_\+rows}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a070cb53b896e01435491868f87eaf3d3}{test\+\_\+sudoku\+\_\+rules}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+void \mbox{\hyperlink{sudoku_8h_a815ccf75d284d92170f9e8dd63e7f4c6}{apply\+\_\+mask}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int, int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a1137b9d44fc20ad8a6814fc746ba4376}{solver\+\_\+sudoku}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Primary function to solve the Sudoku Puzzle. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a624e3970b2c24d84a7d6c99581e7c653}{apply\+\_\+solver}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Recursive function to solve the Sudoku Puzzle. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a59a8731a89911f425578a77031031696}{find\+\_\+next\+\_\+empty}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Function that finds the next empty slot in a Sudoku Puzzle. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_acfb725ce3efc2eb6602bd5d5d4a2ced0}{no\+\_\+conflict}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int, int, int)
+\begin{DoxyCompactList}\small\item\em Verifies if there is a possible conflict if a number is assigned at that location. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a2b992b802ebd68ab0e8a4ea04eb9701b}{used\+\_\+in\+\_\+row}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int, int)
+\begin{DoxyCompactList}\small\item\em Verifies if the number is already in the row. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a570c12ded39debe1b3032c9cf8f26d16}{used\+\_\+in\+\_\+col}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int, int)
+\begin{DoxyCompactList}\small\item\em Verifies if the number is already in the column. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a8bab6c93249f819bc84e59570ccd8c66}{used\+\_\+in\+\_\+box}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int, int, int)
+\begin{DoxyCompactList}\small\item\em Verifies if the number is already in the box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_a50a39f08f3109dc92fc21e9b72d6ec15}{output\+\_\+sudoku}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, int)
+\begin{DoxyCompactList}\small\item\em Primary function to create the Sudoku Puzzle and Solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_a948b0af487a678e0b001d41136f26ce0}{create\+\_\+sudoku\+\_\+file}} (int\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku__test_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{C\+O\+LS}}\mbox{]}, char $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em Sub function to create a Sudoku file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sudoku_8h_a17427eb881c978219ba0357da04cab95}{choose\+\_\+number}} (int, int)
+\begin{DoxyCompactList}\small\item\em This function is used to generate random numbers between rangelow and rangehigh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_a8b5a96f19e4eb5163300ab14597da28f}{swap}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to select different numbers in the sudoku template and swap them accordingly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_a18319e7238d77ba413e70dbd0b6dbc6f}{change\+\_\+columns}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int, int, int)
+\begin{DoxyCompactList}\small\item\em This function is to change the randomly rearrange columns\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_a38925a16c4a239f230f6834a34fd6a6b}{change\+\_\+rows}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int, int, int)
+\begin{DoxyCompactList}\small\item\em This function is to change the randomly rearrange rows\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_a2a5bd5c49033206257ea6426d5660c62}{col\+\_\+groups}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}, int\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}, int\mbox{[}9\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to randomly rearrange the sudoku template in 3 column groups of size 9x3. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_a8b4c70daeb36d3153391a0eeb3709bc4}{row\+\_\+groups}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}3\mbox{]}\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to randomly rearrange the sudoku template in 3 row groups of size 3x9. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a6b24c0b278bd48abde3399ca87ff22ea}{test\+\_\+rows}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to check the sudoku rules for all the rows. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_a64da8015dab4035b1611e4f3b32dab24}{test\+\_\+cols}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to check the sudoku rules for all the columns. \end{DoxyCompactList}\item 
+\+\_\+\+Bool \mbox{\hyperlink{sudoku_8h_af3711d96e5bce8c51465f25cc83cd295}{test\+\_\+3\+X3}} (int\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to check the sudoku rules for all the 3X3 matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sudoku_8h_a7194ef021ed7d2294ce5daff2aefe458}{delete\+\_\+1}} (int, int\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function will leave the array a\mbox{[}\mbox{]} with the elements which has to be appeared in the row/column/3x3 block because those elements are overwritten by the repeated values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}\label{sudoku_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}} 
+\index{sudoku.h@{sudoku.h}!COLS@{COLS}}
+\index{COLS@{COLS}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{COLS}{COLS}}
+{\footnotesize\ttfamily \#define C\+O\+LS~9}
+
+
+
+Definition at line 6 of file sudoku.\+h.
+
+\mbox{\Hypertarget{sudoku_8h_a7b5348da6051650dce112daf43004841}\label{sudoku_8h_a7b5348da6051650dce112daf43004841}} 
+\index{sudoku.h@{sudoku.h}!INPUT\_SUDOKU\_H@{INPUT\_SUDOKU\_H}}
+\index{INPUT\_SUDOKU\_H@{INPUT\_SUDOKU\_H}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{INPUT\_SUDOKU\_H}{INPUT\_SUDOKU\_H}}
+{\footnotesize\ttfamily \#define I\+N\+P\+U\+T\+\_\+\+S\+U\+D\+O\+K\+U\+\_\+H}
+
+
+
+Definition at line 368 of file sudoku.\+h.
+
+\mbox{\Hypertarget{sudoku_8h_a77d30e1642d48f4032cd2c317506fe6c}\label{sudoku_8h_a77d30e1642d48f4032cd2c317506fe6c}} 
+\index{sudoku.h@{sudoku.h}!REARRANGE\_COLS\_ROWS\_H@{REARRANGE\_COLS\_ROWS\_H}}
+\index{REARRANGE\_COLS\_ROWS\_H@{REARRANGE\_COLS\_ROWS\_H}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{REARRANGE\_COLS\_ROWS\_H}{REARRANGE\_COLS\_ROWS\_H}}
+{\footnotesize\ttfamily \#define R\+E\+A\+R\+R\+A\+N\+G\+E\+\_\+\+C\+O\+L\+S\+\_\+\+R\+O\+W\+S\+\_\+H}
+
+
+
+Definition at line 283 of file sudoku.\+h.
+
+\mbox{\Hypertarget{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}\label{sudoku_8h_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\index{sudoku.h@{sudoku.h}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily \#define R\+O\+WS~9}
+
+
+
+Definition at line 5 of file sudoku.\+h.
+
+\mbox{\Hypertarget{sudoku_8h_a0173f1f36f2bfc52ea85112c4b006b53}\label{sudoku_8h_a0173f1f36f2bfc52ea85112c4b006b53}} 
+\index{sudoku.h@{sudoku.h}!TEST\_SUDOKU\_H@{TEST\_SUDOKU\_H}}
+\index{TEST\_SUDOKU\_H@{TEST\_SUDOKU\_H}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{TEST\_SUDOKU\_H}{TEST\_SUDOKU\_H}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+S\+U\+D\+O\+K\+U\+\_\+H}
+
+
+
+Definition at line 381 of file sudoku.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sudoku_8h_a815ccf75d284d92170f9e8dd63e7f4c6}\label{sudoku_8h_a815ccf75d284d92170f9e8dd63e7f4c6}} 
+\index{sudoku.h@{sudoku.h}!apply\_mask@{apply\_mask}}
+\index{apply\_mask@{apply\_mask}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{apply\_mask()}{apply\_mask()}}
+{\footnotesize\ttfamily void apply\+\_\+mask (\begin{DoxyParamCaption}\item[{int}]{rearranged\+\_\+sudoku\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{diff\+\_\+level,  }\item[{int}]{masked\+\_\+sudoku\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+Function apply\+\_\+mask creates unique masks in turn creates a unique Sudoku game. Numbers are masked from rearrange\+\_\+cols\+\_\+rows \mbox{[}\mbox{]}\mbox{[}\mbox{]} array locations based on the diffculty level. The difficulty levels are catagorized as easy, medium, hard, and very hard, where 40, 34, 28, 24 numbers are only shown on the Sudoku game respectively. A Sudoku game have a total of 81 cells, and function apply\+\_\+mask generates random numbers between 1 to 81, where each radomly generated numbers are representing a location at the 2D array and this location information is then used to map the rearrange\+\_\+cols\+\_\+rows \mbox{[}\mbox{]}\mbox{[}\mbox{]} array locations to mask numbers based on the difficulty level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rearranged\+\_\+sudoku} & \mbox{[}in\mbox{]}, Array containing the rearranged Sudoku game. \\
+\hline
+{\em diff\+\_\+level} & \mbox{[}in\mbox{]}, Difficulty level dectates how many numbers should be shown on Sudoku game. \\
+\hline
+{\em masked\+\_\+sudoku} & \mbox{[}out\mbox{]}, Array containing the masked Sudoku game.\\
+\hline
+{\em rearranged\+\_\+sudoku} & \mbox{[}in\mbox{]}, Array containing the rearranged Sudoku game. \\
+\hline
+{\em diff\+\_\+level} & \mbox{[}in\mbox{]}, Difficulty level dectates how many numbers should be shown on Sudoku game. \\
+\hline
+{\em masked\+\_\+sudoku} & \mbox{[}out\mbox{]}, Array containing the masked Sudoku game. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file apply\+\_\+mask.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a624e3970b2c24d84a7d6c99581e7c653}\label{sudoku_8h_a624e3970b2c24d84a7d6c99581e7c653}} 
+\index{sudoku.h@{sudoku.h}!apply\_solver@{apply\_solver}}
+\index{apply\_solver@{apply\_solver}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{apply\_solver()}{apply\_solver()}}
+{\footnotesize\ttfamily \+\_\+\+Bool apply\+\_\+solver (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Recursive function to solve the Sudoku Puzzle. 
+
+This function takes a partially filled Sudoku Puzzle and attempts to assign values to all E\+M\+P\+TY locations in such a way to meet the requirements for a Sudoku Solution (no conflict across rows, columns, and boxes).
+
+First, it searches for an E\+M\+P\+TY slot in the Sudoku Puzzle by using the function \mbox{\hyperlink{sudoku_8h_a59a8731a89911f425578a77031031696}{find\+\_\+next\+\_\+empty()}}. If it can\textquotesingle{}t find one, then the Sudoku Puzzle has been resolved, and the function will return T\+R\+UE. If it finds an E\+M\+P\+TY slot, then the function \mbox{\hyperlink{sudoku_8h_a59a8731a89911f425578a77031031696}{find\+\_\+next\+\_\+empty()}} will return F\+A\+S\+LE and also return the row and column of that empty E\+M\+P\+TY slot.
+
+Afterwards, it will verify each whole number between 1 and 9 inclusively and detremine if there is a conflict with either the row, column or boxe related to that empty slot\+:
+\begin{DoxyItemize}
+\item If there is no conflict, then the function will call itself to continue searching for the next E\+M\+P\+TY slot. This recursivity will end once all slots are no longer E\+M\+P\+TY and no slots conflicting with one another.
+\item If there is a conflict with one of the numbers, then it will move on to the next one until all numbers have been used. Once all numbers are confirmed to be in conflict, then the function will return F\+A\+L\+SE and return back to the previous call of \mbox{\hyperlink{sudoku_8h_a624e3970b2c24d84a7d6c99581e7c653}{apply\+\_\+solver()}}.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}in/out\mbox{]}} & sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} partial sudoku puzzle to be solved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the sudoku puzzle has been solved, F\+A\+L\+SE if it can\textquotesingle{}t be solved. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sudoku_8h_a18319e7238d77ba413e70dbd0b6dbc6f}\label{sudoku_8h_a18319e7238d77ba413e70dbd0b6dbc6f}} 
+\index{sudoku.h@{sudoku.h}!change\_columns@{change\_columns}}
+\index{change\_columns@{change\_columns}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{change\_columns()}{change\_columns()}}
+{\footnotesize\ttfamily void change\+\_\+columns (\begin{DoxyParamCaption}\item[{int}]{col\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{p,  }\item[{int}]{q,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+This function is to change the randomly rearrange columns\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em col\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter updates the sudoku template after the rearrangement of the columns combinations consecutively. \\
+\hline
+\mbox{\texttt{ in}}  & {\em p} & -- This parameter is used to take the values of the column number. \\
+\hline
+\mbox{\texttt{ in}}  & {\em q} & -- This paramter is used to take the values of the consecutive column number after the pth column. \\
+\hline
+\mbox{\texttt{ in}}  & {\em r} & -- This parameter is used to take the values of the consecutive column number after the qth column.\\
+\hline
+\end{DoxyParams}
+Randomly interchange the columns\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. 
+
+Definition at line 132 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a38925a16c4a239f230f6834a34fd6a6b}\label{sudoku_8h_a38925a16c4a239f230f6834a34fd6a6b}} 
+\index{sudoku.h@{sudoku.h}!change\_rows@{change\_rows}}
+\index{change\_rows@{change\_rows}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{change\_rows()}{change\_rows()}}
+{\footnotesize\ttfamily void change\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{row\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+This function is to change the randomly rearrange rows\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em row\+\_\+matrix\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter updates the sudoku template after the rearrangement of the rows combination consecutively. \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & -- This parameter is used to take the values of the row number. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & -- This paramter is used to take the values of the consecutive row number after the xth row. \\
+\hline
+\mbox{\texttt{ in}}  & {\em z} & -- This parameter is used to take the values of the consecutive row number after the yth row.\\
+\hline
+\end{DoxyParams}
+Randolmy interchange the rows\+: 1, 2 and 3 within themselves; 4, 5 and 6 within themselves; and 7, 8 and 9 within themselves. 
+
+Definition at line 164 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a17427eb881c978219ba0357da04cab95}\label{sudoku_8h_a17427eb881c978219ba0357da04cab95}} 
+\index{sudoku.h@{sudoku.h}!choose\_number@{choose\_number}}
+\index{choose\_number@{choose\_number}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{choose\_number()}{choose\_number()}}
+{\footnotesize\ttfamily int choose\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{rangelow,  }\item[{int}]{rangehigh }\end{DoxyParamCaption})}
+
+
+
+This function is used to generate random numbers between rangelow and rangehigh. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rangelow} & -- This parameter determines the lowest number in the range. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rangehigh} & -- This parameter determines the highest number in the range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function returns a number between rangelow and rangehigh.
+\end{DoxyReturn}
+Randomly choose a number between any range of rangelow and rangehigh. ~\newline
+ 
+
+Definition at line 56 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a2a5bd5c49033206257ea6426d5660c62}\label{sudoku_8h_a2a5bd5c49033206257ea6426d5660c62}} 
+\index{sudoku.h@{sudoku.h}!col\_groups@{col\_groups}}
+\index{col\_groups@{col\_groups}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{col\_groups()}{col\_groups()}}
+{\footnotesize\ttfamily void col\+\_\+groups (\begin{DoxyParamCaption}\item[{int}]{column\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{b\+\_\+1\mbox{[}9\mbox{]}\mbox{[}3\mbox{]},  }\item[{int}]{b\+\_\+2\mbox{[}9\mbox{]}\mbox{[}3\mbox{]},  }\item[{int}]{b\+\_\+3\mbox{[}9\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to randomly rearrange the sudoku template in 3 column groups of size 9x3. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em column\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter updates the sudoku template after the rearrangement of 3 column groups (9x3 size). \\
+\hline
+\mbox{\texttt{ in}}  & {\em b\+\_\+1\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}} & -- This parameter is used to copy the first 9x3 size of sudoku template and overwrite it\textquotesingle{}s values. \\
+\hline
+\mbox{\texttt{ in}}  & {\em b\+\_\+2\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}} & -- This parameter is used to copy the second 9x3 size of sudoku template and overwrite it\textquotesingle{}s values. \\
+\hline
+\mbox{\texttt{ in}}  & {\em b\+\_\+3\mbox{[}9\mbox{]}\mbox{[}3\mbox{]}} & -- This parameter is used to copy the third 9x3 size of sudoku template and overwrite it\textquotesingle{}s values.\\
+\hline
+\end{DoxyParams}
+Swapping between the 3 column groups of size 9x3 of the sudoku template. 
+
+Definition at line 192 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a948b0af487a678e0b001d41136f26ce0}\label{sudoku_8h_a948b0af487a678e0b001d41136f26ce0}} 
+\index{sudoku.h@{sudoku.h}!create\_sudoku\_file@{create\_sudoku\_file}}
+\index{create\_sudoku\_file@{create\_sudoku\_file}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{create\_sudoku\_file()}{create\_sudoku\_file()}}
+{\footnotesize\ttfamily void create\+\_\+sudoku\+\_\+file (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{char $\ast$}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Sub function to create a Sudoku file. 
+
+This function takes-\/in an 9x9 array which representes a Sudoku grid (This can be either a Sudoku Puzzle or a Sudoku Solution). It will create a single C\+SV file in the ../output directory. The function will use three parameters to name the file\+: ~\newline
+ \begin{DoxyVerb}- The Sudoku type (Puzzle or Solution);
+- The difficulty level (easy, normal, hard, very hard);
+- The current iteration of the Sudoku. 
+\end{DoxyVerb}
+
+
+Once the file name is made, the file itself is created and each element of the array is written on the file as a character. If the element is\+: \begin{DoxyVerb}- an int between 1 and 9, then the corresponding character between 
+    1 and 9 will be written; and
+- int 0, then ' ' will be written.
+\end{DoxyVerb}
+
+
+Once it has gone through the entire array, the function will then close file stream and end the function. ~\newline
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku} & The Sudoku with the data inside. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+type} & The Sudoku type chosen by the user. \\
+\hline
+\mbox{\texttt{ in}}  & {\em diff\+\_\+lvl} & The difficulty level of the Sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em output\+\_\+count} & The current number of times a Sudoku pair has been created. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sudoku_8h_a7194ef021ed7d2294ce5daff2aefe458}\label{sudoku_8h_a7194ef021ed7d2294ce5daff2aefe458}} 
+\index{sudoku.h@{sudoku.h}!delete\_1@{delete\_1}}
+\index{delete\_1@{delete\_1}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{delete\_1()}{delete\_1()}}
+{\footnotesize\ttfamily void delete\+\_\+1 (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function will leave the array a\mbox{[}\mbox{]} with the elements which has to be appeared in the row/column/3x3 block because those elements are overwritten by the repeated values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em check} & -- This parameter is used to pass the values of the rearranged\+\_\+sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\mbox{[}9\mbox{]}} & -- This parameter is to check the sudoku rules for each row/column/3x3 block. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 142 of file test\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a59a8731a89911f425578a77031031696}\label{sudoku_8h_a59a8731a89911f425578a77031031696}} 
+\index{sudoku.h@{sudoku.h}!find\_next\_empty@{find\_next\_empty}}
+\index{find\_next\_empty@{find\_next\_empty}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{find\_next\_empty()}{find\_next\_empty()}}
+{\footnotesize\ttfamily \+\_\+\+Bool find\+\_\+next\+\_\+empty (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Function that finds the next empty slot in a Sudoku Puzzle. 
+
+This function searches the sudoku\+\_\+puzzle parameter in order to find a slot that is E\+M\+P\+TY. If found, the reference parameters row, col will be set with the location of the E\+M\+P\+TY slot and true is returned. If no E\+M\+P\+TY slots remain in the Sudoku Puzzle, then F\+A\+L\+SE will be returned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check for E\+M\+P\+TY slots. \\
+\hline
+\mbox{\texttt{ out}}  & {\em slot\mbox{[}2\mbox{]}} & An array to store the location of the E\+M\+P\+TY slot.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if an E\+M\+P\+TY slot is found, F\+A\+L\+SE if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sudoku_8h_a21f82fd792e235a7f0d61274e83ba536}\label{sudoku_8h_a21f82fd792e235a7f0d61274e83ba536}} 
+\index{sudoku.h@{sudoku.h}!generate\_sudoku\_template@{generate\_sudoku\_template}}
+\index{generate\_sudoku\_template@{generate\_sudoku\_template}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{generate\_sudoku\_template()}{generate\_sudoku\_template()}}
+{\footnotesize\ttfamily void generate\+\_\+sudoku\+\_\+template (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+This function generates a pre-\/defined sudoku template using a two dimentional array which is of size 9X9 that is rearranged in a different function called \mbox{\hyperlink{rearrange__cols__rows_8c}{rearrange\+\_\+cols\+\_\+rows.\+c}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+temp\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},Two} & dimentional array of size 9X9 containing the sudoku template. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sudoku_8h_abf2fcbaf110b279ce221e2a6e3fb4ce3}\label{sudoku_8h_abf2fcbaf110b279ce221e2a6e3fb4ce3}} 
+\index{sudoku.h@{sudoku.h}!input\_sudoku@{input\_sudoku}}
+\index{input\_sudoku@{input\_sudoku}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{input\_sudoku()}{input\_sudoku()}}
+{\footnotesize\ttfamily void input\+\_\+sudoku (\begin{DoxyParamCaption}\item[{int $\ast$}]{diff\+\_\+level,  }\item[{int $\ast$}]{no\+\_\+sudoku }\end{DoxyParamCaption})}
+
+This function askes for the difficulty level of the sudokus and the number of sudokus that the user wants to generate. The difficulty levels can be entered as 0,1,2,3 for easy, medium, hard and very hard respectively. It checks the user input for these values and if user enters any other values, say characters, strings, symbols etc., it simply voids them and continues to ask the user until it gets the valid difficulty level. Later the function asks the user to input to enter the number of sudokus that the user wants to generate and the limit that this program can generate is set to 40. So it continues to ask the user for the number of sudokus until the user enters valid number which is between 1 to 40 inclusive. Then this function returns these to values for furthur use in the software. ~\newline
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em diff\+\_\+level,This} & parameter takes the difficulty level from user.\\
+\hline
+\mbox{\texttt{ in}}  & {\em no\+\_\+sudoku,This} & parameter takes the number of sudokus that user want to generate.\\
+\hline
+\end{DoxyParams}
+This functions asks the difficulty level and number of sudokus from the user and checks whether they meet the pre-\/defined conditions and range. It also tracks the incorrect attempts made by the user and exits the program if the maximum allowed attempts are reached. 
+
+Definition at line 31 of file input\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_acfb725ce3efc2eb6602bd5d5d4a2ced0}\label{sudoku_8h_acfb725ce3efc2eb6602bd5d5d4a2ced0}} 
+\index{sudoku.h@{sudoku.h}!no\_conflict@{no\_conflict}}
+\index{no\_conflict@{no\_conflict}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{no\_conflict()}{no\_conflict()}}
+{\footnotesize\ttfamily \+\_\+\+Bool no\+\_\+conflict (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Verifies if there is a possible conflict if a number is assigned at that location. 
+
+This function checks if the number is already placed in either the row, the column, or the 3x3 box of the location.
+
+The function uses three seperate functions where each function verifies a specific area of the S\+Udoku Puzzle (row, column or box). Each will return a \+\_\+\+\_\+\+Bool value which indicates if the area is free of the requested number.
+
+If at least one of the areas have an instance of the number already in place, then the function \mbox{\hyperlink{sudoku_8h_acfb725ce3efc2eb6602bd5d5d4a2ced0}{no\+\_\+conflict()}} will return F\+A\+L\+SE. If none of the areas have the requested number, then the function will return T\+R\+UE.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check for a conflict. \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & The row of the location to check for conflict. \\
+\hline
+\mbox{\texttt{ in}}  & {\em col} & The column of the location to check for conflict. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & The number that needs to be verified for conflict.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns T\+R\+UE if the location is free to place the number, F\+A\+L\+SE if it will create a conflict. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sudoku_8h_a50a39f08f3109dc92fc21e9b72d6ec15}\label{sudoku_8h_a50a39f08f3109dc92fc21e9b72d6ec15}} 
+\index{sudoku.h@{sudoku.h}!output\_sudoku@{output\_sudoku}}
+\index{output\_sudoku@{output\_sudoku}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{output\_sudoku()}{output\_sudoku()}}
+{\footnotesize\ttfamily void output\+\_\+sudoku (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Primary function to create the Sudoku Puzzle and Solution. 
+
+This function takes-\/in two sudoku grid (Sudoku Puzzle and Sudoku Solution) and calls on the function \mbox{\hyperlink{sudoku_8h_a948b0af487a678e0b001d41136f26ce0}{create\+\_\+sudoku\+\_\+file()}} to create a.\+C\+SV file for each Sudoku. It also creates the destination directory /output, in the event that the directory doesn\textquotesingle{}t exist.
+
+The function also contains a static variable that allows it to count the number of times outpu\+\_\+sudoku has been used. This value is used in the naming of the files in the function \mbox{\hyperlink{sudoku_8h_a948b0af487a678e0b001d41136f26ce0}{create\+\_\+sudoku\+\_\+file()}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+solution} & The Sudoku Solution that will be created. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle} & The Sudoku Puzzle that will be created. \\
+\hline
+\mbox{\texttt{ in}}  & {\em diff\+\_\+lvl} & The difficulty level of the Sudoku Puzzle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sudoku_8h_a618249361a8f35f1bc81ba456a5b6a74}\label{sudoku_8h_a618249361a8f35f1bc81ba456a5b6a74}} 
+\index{sudoku.h@{sudoku.h}!rearrange\_cols\_rows@{rearrange\_cols\_rows}}
+\index{rearrange\_cols\_rows@{rearrange\_cols\_rows}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{rearrange\_cols\_rows()}{rearrange\_cols\_rows()}}
+{\footnotesize\ttfamily void rearrange\+\_\+cols\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+The function rearrange\+\_\+cols\+\_\+rows takes in the sudoku template created in the generate\+\_\+sudoku\+\_\+template function and goes on step-\/by-\/step random procedure to generate different types of sudoku template. Firstly, it interchanges the 4 different numbers selecting randomly in each row. Then, it rearranges the columns,rows between them in the combination of three (Ex\+: 1,2,3 columns/rows rearrange themselves, followed by 4,5,6 rearranging and then 7,8,9 columns/rows). After successful rearrangement, it also swaps the 3 column groups of 9x3 size between them and followed by the swapping of the 3 row groups of size 3x9. Finally, outputs the rearranged\+\_\+sudoku of size 9x9.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+template\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},This} & parameter takes the template generating in the function \mbox{\hyperlink{generate__sudoku__template_8c}{generate\+\_\+sudoku\+\_\+template.\+c}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},This} & parameter is the updated randomized sudoku template. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sudoku_8h_a8b4c70daeb36d3153391a0eeb3709bc4}\label{sudoku_8h_a8b4c70daeb36d3153391a0eeb3709bc4}} 
+\index{sudoku.h@{sudoku.h}!row\_groups@{row\_groups}}
+\index{row\_groups@{row\_groups}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{row\_groups()}{row\_groups()}}
+{\footnotesize\ttfamily void row\+\_\+groups (\begin{DoxyParamCaption}\item[{int}]{r\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+1\mbox{[}3\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+2\mbox{[}3\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{c\+\_\+3\mbox{[}3\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to randomly rearrange the sudoku template in 3 row groups of size 3x9. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r\+\_\+group\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter updates the sudoku template after the rearrangement of 3 row groups (3x9 size). \\
+\hline
+\mbox{\texttt{ in}}  & {\em c\+\_\+1\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter is used to copy the first 3x9 size of sudoku template and overwrite it\textquotesingle{}s values. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c\+\_\+1\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter is used to copy the second 3x9 size of sudoku template and overwrite it\textquotesingle{}s values. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c\+\_\+1\mbox{[}3\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter is used to copy the third 3x9 size of sudoku template and overwrite it\textquotesingle{}s values.\\
+\hline
+\end{DoxyParams}
+Swapping between the 3 row groups of size 3x9 of the sudoku template. 
+
+Definition at line 270 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a1137b9d44fc20ad8a6814fc746ba4376}\label{sudoku_8h_a1137b9d44fc20ad8a6814fc746ba4376}} 
+\index{sudoku.h@{sudoku.h}!solver\_sudoku@{solver\_sudoku}}
+\index{solver\_sudoku@{solver\_sudoku}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{solver\_sudoku()}{solver\_sudoku()}}
+{\footnotesize\ttfamily \+\_\+\+Bool solver\+\_\+sudoku (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Primary function to solve the Sudoku Puzzle. 
+
+This function takes in a Sudoku puzzle and verifies if the Sudoku puzzle is solvable. It begins by copying the Sudoku Puzzle into a temporary 2D int array which can be called a temporary sudoku. The temporary sudoku is then used as a parameter to the function \mbox{\hyperlink{sudoku_8h_a624e3970b2c24d84a7d6c99581e7c653}{apply\+\_\+solver()}}. The return of the function \mbox{\hyperlink{sudoku_8h_a624e3970b2c24d84a7d6c99581e7c653}{apply\+\_\+solver()}} will either return T\+R\+UE if it is solvable. If the temporary sudoku puzzle is not solvable, then the function will return F\+A\+L\+SE and print a message saying \char`\"{}\+No solution exists for this puzzle.\char`\"{}
+
+The reason for copying the Sudoku Puzzle is that the function \mbox{\hyperlink{sudoku_8h_a624e3970b2c24d84a7d6c99581e7c653}{apply\+\_\+solver()}} modifies the parameter as the sudoku gets solved. It is important that the sudoku\+\_\+puzzle does not get modified as it will be used further on in the program to write its data in a file, including the empty spaces. As such, a copy is needed to solve te Sudoku Puzzle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to be verified. \\
+\hline
+\mbox{\texttt{ out}}  & {\em temp\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Solution when solved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if it is solvable, F\+A\+S\+LE if it is not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sudoku_8h_a8b5a96f19e4eb5163300ab14597da28f}\label{sudoku_8h_a8b5a96f19e4eb5163300ab14597da28f}} 
+\index{sudoku.h@{sudoku.h}!swap@{swap}}
+\index{swap@{swap}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int}]{table\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to select different numbers in the sudoku template and swap them accordingly. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em table\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter updates the sudoku template after successful swapping of the values.\\
+\hline
+\end{DoxyParams}
+Four different numbers will be randomly selected from each row and swap between them. 
+
+Definition at line 71 of file rearrange\+\_\+cols\+\_\+rows.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_af3711d96e5bce8c51465f25cc83cd295}\label{sudoku_8h_af3711d96e5bce8c51465f25cc83cd295}} 
+\index{sudoku.h@{sudoku.h}!test\_3X3@{test\_3X3}}
+\index{test\_3X3@{test\_3X3}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{test\_3X3()}{test\_3X3()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+3\+X3 (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to check the sudoku rules for all the 3X3 matrices. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter determines the generated sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\mbox{[}9\mbox{]}} & -- This parameter is to check the sudoku rules for each 3X3 matrix.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-- If the columns follow the sudoku rules then return true or else false. 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file test\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a64da8015dab4035b1611e4f3b32dab24}\label{sudoku_8h_a64da8015dab4035b1611e4f3b32dab24}} 
+\index{sudoku.h@{sudoku.h}!test\_cols@{test\_cols}}
+\index{test\_cols@{test\_cols}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{test\_cols()}{test\_cols()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+cols (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to check the sudoku rules for all the columns. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter determines the generated sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\mbox{[}9\mbox{]}} & -- This parameter is to check the sudoku rules for each column.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-- If the columns follow the sudoku rules then return true or else false. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file test\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a6b24c0b278bd48abde3399ca87ff22ea}\label{sudoku_8h_a6b24c0b278bd48abde3399ca87ff22ea}} 
+\index{sudoku.h@{sudoku.h}!test\_rows@{test\_rows}}
+\index{test\_rows@{test\_rows}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{test\_rows()}{test\_rows()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to check the sudoku rules for all the rows. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]}} & -- This parameter determines the generated sudoku. \\
+\hline
+\mbox{\texttt{ in}}  & {\em a\mbox{[}9\mbox{]}} & -- This parameter is to check the sudoku rules for each row.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-- If the rows follow the sudoku rules then return true or else false. 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file test\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{sudoku_8h_a070cb53b896e01435491868f87eaf3d3}\label{sudoku_8h_a070cb53b896e01435491868f87eaf3d3}} 
+\index{sudoku.h@{sudoku.h}!test\_sudoku\_rules@{test\_sudoku\_rules}}
+\index{test\_sudoku\_rules@{test\_sudoku\_rules}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{test\_sudoku\_rules()}{test\_sudoku\_rules()}}
+{\footnotesize\ttfamily \+\_\+\+Bool test\+\_\+sudoku\+\_\+rules (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+The function test\+\_\+sudoku\+\_\+rules checks the rearranged sudoku (which is generated in the function rearrange\+\_\+cols\+\_\+rows) for the sudoku rules. It examines the rows, coloums and 3X3 matrix for any repeated values. According to sudoku rules, a row, column and 3X3 should contain all the elements from 1 to 9 and the sum of all the elements of any row, column or 3x3 should be 45. This function checks all these conditions and returns a bool value. When the bool value is returned as 0, it means that the rearranged sudoku met all the sudoku rules and proceeds for masking. If the bool value is 1, it means that there is an error while rearranging the sudoku and the program will not proceed furthur and redirects the program to generate another sudoku.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}$\,$\mbox{]}\mbox{[}9\mbox{]},This} & parameter takes the rearranged sudoku which is the output of the function \mbox{\hyperlink{rearrange__cols__rows_8c}{rearrange\+\_\+cols\+\_\+rows.\+c}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sudoku_8h_a8bab6c93249f819bc84e59570ccd8c66}\label{sudoku_8h_a8bab6c93249f819bc84e59570ccd8c66}} 
+\index{sudoku.h@{sudoku.h}!used\_in\_box@{used\_in\_box}}
+\index{used\_in\_box@{used\_in\_box}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{used\_in\_box()}{used\_in\_box()}}
+{\footnotesize\ttfamily \+\_\+\+Bool used\+\_\+in\+\_\+box (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Verifies if the number is already in the box. 
+
+This functions checks if the requested number is already in the 3x3 by simply verifying each individual slot in the box.
+
+To determine which box the function needs to verify, the current row and column are needed to determine the starting point in the box. By dividing and multiplying the row and column by 3, the function can determine the starting point of the box verification.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & The row of the current location. \\
+\hline
+\mbox{\texttt{ in}}  & {\em col} & The column of the current location. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & The number that needs to be verified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns T\+R\+UE if the box has the number already there, F\+A\+L\+SE if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sudoku_8h_a570c12ded39debe1b3032c9cf8f26d16}\label{sudoku_8h_a570c12ded39debe1b3032c9cf8f26d16}} 
+\index{sudoku.h@{sudoku.h}!used\_in\_col@{used\_in\_col}}
+\index{used\_in\_col@{used\_in\_col}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{used\_in\_col()}{used\_in\_col()}}
+{\footnotesize\ttfamily \+\_\+\+Bool used\+\_\+in\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Verifies if the number is already in the column. 
+
+This functions checks if the requested number is already in the column by simply verifying each individual row of the column.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em col} & The column to verify if the number is already there. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & The number that needs to be verified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns T\+R\+UE if the colum has the number already there, F\+A\+L\+SE if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sudoku_8h_a2b992b802ebd68ab0e8a4ea04eb9701b}\label{sudoku_8h_a2b992b802ebd68ab0e8a4ea04eb9701b}} 
+\index{sudoku.h@{sudoku.h}!used\_in\_row@{used\_in\_row}}
+\index{used\_in\_row@{used\_in\_row}!sudoku.h@{sudoku.h}}
+\doxysubsubsection{\texorpdfstring{used\_in\_row()}{used\_in\_row()}}
+{\footnotesize\ttfamily \+\_\+\+Bool used\+\_\+in\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+S\mbox{]},  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Verifies if the number is already in the row. 
+
+This functions checks if the requested number is already in the row by simply verifying each individual column of the row.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & The row to verify if the number is already there. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & The number that needs to be verified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns T\+R\+UE if the row has the number already there, F\+A\+L\+SE if not. 
+\end{DoxyReturn}

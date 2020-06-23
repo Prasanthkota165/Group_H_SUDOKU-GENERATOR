@@ -1,0 +1,104 @@
+\hypertarget{test__sudoku__test_8h}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/test/include/test\+\_\+sudoku\+\_\+test.h File Reference}
+\label{test__sudoku__test_8h}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/include/test\_sudoku\_test.h@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/test/include/test\_sudoku\_test.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku__test_8h_a0e6717cf99b04cd157ec2fc26c0ac167}{main\+\_\+test}} (int\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku__test_8h_ac9f1e5de9f41e24a3d60ada3ac624ac9}{testing\+\_\+rows}} (int\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku__test_8h_a118958a87db7c53ad3a992b019821c7e}{testing\+\_\+cols}} (int\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{test__sudoku__test_8h_a10894f429eb5d399a7a7850c7b84f292}{testing\+\_\+3\+X3}} (int\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}, int\mbox{[}9\mbox{]}\mbox{[}9\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__sudoku__test_8h_a0e6717cf99b04cd157ec2fc26c0ac167}\label{test__sudoku__test_8h_a0e6717cf99b04cd157ec2fc26c0ac167}} 
+\index{test\_sudoku\_test.h@{test\_sudoku\_test.h}!main\_test@{main\_test}}
+\index{main\_test@{main\_test}!test\_sudoku\_test.h@{test\_sudoku\_test.h}}
+\doxysubsubsection{\texorpdfstring{main\_test()}{main\_test()}}
+{\footnotesize\ttfamily \+\_\+\+Bool main\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function tests for any errors in rows, columns and 3x3 matrices.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & input parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & output parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the test passed. False if the test failed
+\end{DoxyReturn}
+This function tests for any errors in rows,columns and 3X3 matrix and returns a bool value. 
+
+Definition at line 152 of file test\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{test__sudoku__test_8h_a10894f429eb5d399a7a7850c7b84f292}\label{test__sudoku__test_8h_a10894f429eb5d399a7a7850c7b84f292}} 
+\index{test\_sudoku\_test.h@{test\_sudoku\_test.h}!testing\_3X3@{testing\_3X3}}
+\index{testing\_3X3@{testing\_3X3}!test\_sudoku\_test.h@{test\_sudoku\_test.h}}
+\doxysubsubsection{\texorpdfstring{testing\_3X3()}{testing\_3X3()}}
+{\footnotesize\ttfamily \+\_\+\+Bool testing\+\_\+3\+X3 (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function tests for any errors in 3x3 matrices.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & input parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & output parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the test passed. False if the test failed
+\end{DoxyReturn}
+This function tests for any errors in 3X3 and returns a bool value. 
+
+Definition at line 80 of file test\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{test__sudoku__test_8h_a118958a87db7c53ad3a992b019821c7e}\label{test__sudoku__test_8h_a118958a87db7c53ad3a992b019821c7e}} 
+\index{test\_sudoku\_test.h@{test\_sudoku\_test.h}!testing\_cols@{testing\_cols}}
+\index{testing\_cols@{testing\_cols}!test\_sudoku\_test.h@{test\_sudoku\_test.h}}
+\doxysubsubsection{\texorpdfstring{testing\_cols()}{testing\_cols()}}
+{\footnotesize\ttfamily \+\_\+\+Bool testing\+\_\+cols (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function tests for any errors in columns.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & input parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & output parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the test passed. False if the test failed
+\end{DoxyReturn}
+This function tests for any errors in columns and returns a bool value. 
+
+Definition at line 104 of file test\+\_\+sudoku\+\_\+test.\+c.
+
+\mbox{\Hypertarget{test__sudoku__test_8h_ac9f1e5de9f41e24a3d60ada3ac624ac9}\label{test__sudoku__test_8h_ac9f1e5de9f41e24a3d60ada3ac624ac9}} 
+\index{test\_sudoku\_test.h@{test\_sudoku\_test.h}!testing\_rows@{testing\_rows}}
+\index{testing\_rows@{testing\_rows}!test\_sudoku\_test.h@{test\_sudoku\_test.h}}
+\doxysubsubsection{\texorpdfstring{testing\_rows()}{testing\_rows()}}
+{\footnotesize\ttfamily \+\_\+\+Bool testing\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+temp\mbox{[}9\mbox{]}\mbox{[}9\mbox{]},  }\item[{int}]{rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]} }\end{DoxyParamCaption})}
+
+Testing function tests for any errors in rows.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & input parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\mbox{\texttt{ in}}  & {\em rearranged\+\_\+sudoku\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & output parameter to the function rearrange\+\_\+rows\+\_\+cols function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the test passed. False if the test failed
+\end{DoxyReturn}
+This function tests for any errors in columns and returns a bool value. 
+
+Definition at line 128 of file test\+\_\+sudoku\+\_\+test.\+c.
+

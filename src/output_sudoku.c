@@ -35,9 +35,10 @@ void output_sudoku(int sudoku_solution[9][9], int sudoku_puzzle[9][9],
                         int diff_lvl){
            
     int k = 0;
-    static int output_count = 1;/*Output counter indicating the number of times the 
-                                    function creates a Sudokus puzzle and Solution
-                                    during the entire run of the program*/
+    static int output_count = 1;/*Output counter indicating the number of times 
+                                    the function creates a Sudokus puzzle and 
+                                    Solution during the entire run of the 
+                                    program*/
     
     #if defined(_WIN32)||defined (WIN32) /*Create output folder if Microsoft OS*/                           
     mkdir("..\\output");                    

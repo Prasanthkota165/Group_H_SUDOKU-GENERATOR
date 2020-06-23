@@ -1,0 +1,252 @@
+\hypertarget{solver__sudoku_8c}{}\doxysection{C\+:/\+Users/mathi/\+Documents/\+Git\+Hub/\+Group\+\_\+\+H\+\_\+\+S\+U\+D\+O\+K\+U-\/\+G\+E\+N\+E\+R\+A\+T\+O\+R/src/solver\+\_\+sudoku.c File Reference}
+\label{solver__sudoku_8c}\index{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/solver\_sudoku.c@{C:/Users/mathi/Documents/GitHub/Group\_H\_SUDOKU-\/GENERATOR/src/solver\_sudoku.c}}
+{\ttfamily \#include \char`\"{}../include/sudoku.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{solver__sudoku_8c_a2b7cf2a3641be7b89138615764d60ba3}{E\+M\+P\+TY}}~0 /$\ast$A constant for empty spaces in a Sudoku puzzle$\ast$/
+\item 
+\#define \mbox{\hyperlink{solver__sudoku_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}}~1 /$\ast$A constant for \+\_\+\+Bool$\ast$/
+\item 
+\#define \mbox{\hyperlink{solver__sudoku_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}}~0 /$\ast$A constant for \+\_\+\+Bool$\ast$/
+\item 
+\#define \mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~9 /$\ast$A constant for the basic size of a Sudoku$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{solver__sudoku_8c_a44caf96b5c2a81bd864a750cf508ece7}{solver\+\_\+sudoku}} (int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int temp\+\_\+sudoku\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{solver__sudoku_8c_aee1f24d88c4db2f10c134513344fbae1}{apply\+\_\+solver}} (int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{solver__sudoku_8c_ab5bb3c69fa22fbc0f433c0cf2c4d6673}{find\+\_\+next\+\_\+empty}} (int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int slot\mbox{[}2\mbox{]})
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{solver__sudoku_8c_a1c6dccf97ca94e6f583860d573cb3fe6}{no\+\_\+conflict}} (int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int row, int col, int num)
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{solver__sudoku_8c_a1ce970be8933a5cb76fc5d75a02b9baf}{used\+\_\+in\+\_\+row}} (int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int row, int num)
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{solver__sudoku_8c_af62b152315e186ea25e6c28a46493b44}{used\+\_\+in\+\_\+col}} (int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int col, int num)
+\item 
+\+\_\+\+Bool \mbox{\hyperlink{solver__sudoku_8c_ab6842fec22ff0f18f1517194901ba2a0}{used\+\_\+in\+\_\+box}} (int sudoku\+\_\+puzzle\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int row, int col, int num)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Purpose \+: Contains the functions to determine if a Sudoku puzzle is solvable.
+
+Language \+: C
+
+Author \+: Mathieu Falardeau 101173923 Gabriel Seyoum 100333091 ~\newline
+ Git\+Hub ID \+: Mathieufalardeau3, gabriels2018 Date \+: 06 June 2020 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{solver__sudoku_8c_a2b7cf2a3641be7b89138615764d60ba3}\label{solver__sudoku_8c_a2b7cf2a3641be7b89138615764d60ba3}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!EMPTY@{EMPTY}}
+\index{EMPTY@{EMPTY}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{EMPTY}{EMPTY}}
+{\footnotesize\ttfamily \#define E\+M\+P\+TY~0 /$\ast$A constant for empty spaces in a Sudoku puzzle$\ast$/}
+
+
+
+Definition at line 24 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_aa93f0eb578d23995850d61f7d61c55c1}\label{solver__sudoku_8c_aa93f0eb578d23995850d61f7d61c55c1}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{FALSE}{FALSE}}
+{\footnotesize\ttfamily \#define F\+A\+L\+SE~0 /$\ast$A constant for \+\_\+\+Bool$\ast$/}
+
+
+
+Definition at line 26 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}\label{solver__sudoku_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!N@{N}}
+\index{N@{N}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~9 /$\ast$A constant for the basic size of a Sudoku$\ast$/}
+
+
+
+Definition at line 27 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_aa8cecfc5c5c054d2875c03e77b7be15d}\label{solver__sudoku_8c_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{TRUE}{TRUE}}
+{\footnotesize\ttfamily \#define T\+R\+UE~1 /$\ast$A constant for \+\_\+\+Bool$\ast$/}
+
+
+
+Definition at line 25 of file solver\+\_\+sudoku.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{solver__sudoku_8c_aee1f24d88c4db2f10c134513344fbae1}\label{solver__sudoku_8c_aee1f24d88c4db2f10c134513344fbae1}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!apply\_solver@{apply\_solver}}
+\index{apply\_solver@{apply\_solver}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{apply\_solver()}{apply\_solver()}}
+{\footnotesize\ttfamily \+\_\+\+Bool apply\+\_\+solver (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+Recursive function that applies the main mechanic to solve the Sudoku puzzle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}} & A partially solved Sudoku puzzle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the Sudoku Puzzle has been solved, F\+A\+L\+SE if it 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_ab5bb3c69fa22fbc0f433c0cf2c4d6673}\label{solver__sudoku_8c_ab5bb3c69fa22fbc0f433c0cf2c4d6673}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!find\_next\_empty@{find\_next\_empty}}
+\index{find\_next\_empty@{find\_next\_empty}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{find\_next\_empty()}{find\_next\_empty()}}
+{\footnotesize\ttfamily \+\_\+\+Bool find\+\_\+next\+\_\+empty (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{slot\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+A part of the main function to finds the next empty slot in a Sudoku Puzzle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}} & The Sudoku Puzzle to check for E\+M\+P\+TY slots. \\
+\hline
+\mbox{\texttt{ out}}  & {\em slot\mbox{[}2\mbox{]}} & An array to store the location of the E\+M\+P\+TY slot.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if an E\+M\+P\+TY slot is found, F\+A\+L\+SE if not. 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_a1c6dccf97ca94e6f583860d573cb3fe6}\label{solver__sudoku_8c_a1c6dccf97ca94e6f583860d573cb3fe6}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!no\_conflict@{no\_conflict}}
+\index{no\_conflict@{no\_conflict}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{no\_conflict()}{no\_conflict()}}
+{\footnotesize\ttfamily \+\_\+\+Bool no\+\_\+conflict (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+Checks if there is a confict in either the row, column or box at a slots location (row, col).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check for a conflict. \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & The row of the location to check for conflict. \\
+\hline
+\mbox{\texttt{ in}}  & {\em col} & The column of the location to check for conflict. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & The number that needs to be verified for conflict.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns T\+R\+UE if the location is free to place the number, F\+A\+L\+SE if it will create a conflict. 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_a44caf96b5c2a81bd864a750cf508ece7}\label{solver__sudoku_8c_a44caf96b5c2a81bd864a750cf508ece7}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!solver\_sudoku@{solver\_sudoku}}
+\index{solver\_sudoku@{solver\_sudoku}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{solver\_sudoku()}{solver\_sudoku()}}
+{\footnotesize\ttfamily \+\_\+\+Bool solver\+\_\+sudoku (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{temp\+\_\+sudoku\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+Determines if the sudoku puzzle is solvable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}} & The Sudoku puzzle to be verified. \\
+\hline
+\mbox{\texttt{ out}}  & {\em temp\+\_\+sudoku\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}} & The Sudoku puzzle to be verified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if it is solvable, F\+A\+S\+LE if it is not. ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_ab6842fec22ff0f18f1517194901ba2a0}\label{solver__sudoku_8c_ab6842fec22ff0f18f1517194901ba2a0}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!used\_in\_box@{used\_in\_box}}
+\index{used\_in\_box@{used\_in\_box}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{used\_in\_box()}{used\_in\_box()}}
+{\footnotesize\ttfamily \+\_\+\+Bool used\+\_\+in\+\_\+box (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+Checks if the 3x3 box of the current location already contains the requested number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & The row of the current location. \\
+\hline
+\mbox{\texttt{ in}}  & {\em col} & The column of the current location. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & The number that needs to be verified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns T\+R\+UE if the box has the number already there, F\+A\+L\+SE if not. 
+\end{DoxyReturn}
+
+
+Definition at line 204 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_af62b152315e186ea25e6c28a46493b44}\label{solver__sudoku_8c_af62b152315e186ea25e6c28a46493b44}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!used\_in\_col@{used\_in\_col}}
+\index{used\_in\_col@{used\_in\_col}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{used\_in\_col()}{used\_in\_col()}}
+{\footnotesize\ttfamily \+\_\+\+Bool used\+\_\+in\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{col,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+Checks if the column already has the requested number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em col} & The column to verify if the number is already there. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & The number that needs to be verified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns T\+R\+UE if the column has the number already there, F\+A\+L\+SE if not. 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file solver\+\_\+sudoku.\+c.
+
+\mbox{\Hypertarget{solver__sudoku_8c_a1ce970be8933a5cb76fc5d75a02b9baf}\label{solver__sudoku_8c_a1ce970be8933a5cb76fc5d75a02b9baf}} 
+\index{solver\_sudoku.c@{solver\_sudoku.c}!used\_in\_row@{used\_in\_row}}
+\index{used\_in\_row@{used\_in\_row}!solver\_sudoku.c@{solver\_sudoku.c}}
+\doxysubsubsection{\texorpdfstring{used\_in\_row()}{used\_in\_row()}}
+{\footnotesize\ttfamily \+\_\+\+Bool used\+\_\+in\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{sudoku\+\_\+puzzle\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{row,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+Checks if the row already has the requested number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sudoku\+\_\+puzzle\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}} & The Sudoku Puzzle to check in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em row} & The row to verify if the number is already there. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num} & The number that needs to be verified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns T\+R\+UE if the row has the number already there, F\+A\+L\+SE if not. 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file solver\+\_\+sudoku.\+c.
+

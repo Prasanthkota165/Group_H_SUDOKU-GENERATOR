@@ -1,0 +1,37 @@
+.................Testing for input_sudoku.c............
+
+...............Test function for integer values..........
+Input Parameters:
+  Difficulty level= 2, Number of sudokus= 3
+Expected output: 
+  Difficulty level= 2, Number of sudokus= 3
+Actual Output:
+  Difficulty level= 2  Number of sudokus= 3 
+
+................Test function for float values...........
+Input Parameters:
+  Difficulty level= 2.5, Number of sudokus=3.5
+Expected output: 
+  Invalid difficulty level
+  Invalid number of sudokus
+Actual Output:
+  Invalid difficulty level
+  Invalid number of sudokus
+..................Test function for characters.............
+Input Parameters:
+  Difficulty level= 'c', Number of sudokus= 'd'
+Expected output: 
+  Invalid difficulty level
+  Invalid number of sudokus
+Actual Output:
+  Invalid difficulty level
+  Invalid number of sudokus
+..................Test function for symbols..............
+Input Parameters:
+  Difficulty level= '$', No of sudokus= '$'
+Expected output: 
+  Invalid difficulty level
+  Invalid number of sudokus
+Actual Output:
+  Invalid difficulty level
+  Invalid number of sudokus
