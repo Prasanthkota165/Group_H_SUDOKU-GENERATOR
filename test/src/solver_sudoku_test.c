@@ -6,7 +6,7 @@
 * Language  : C
 *
 * Author    : Mathieu Falardeau 101173923
-	      Gabriel Seyoum 100333091
+	      Gabriel Seyoum  
 * GitHub ID : Mathieufalardeau3, gabriels2018
 * Date      : 06 June 2020
 *
